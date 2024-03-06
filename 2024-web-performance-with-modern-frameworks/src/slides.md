@@ -1,102 +1,74 @@
 ---
 theme: default
-background: https://source.unsplash.com/collection/94734566/1920x1080
-class: text-center
-highlighter: shiki
-lineNumbers: false
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+title: Výkonnost webu s moderními frameworky
+author: Lukas Trumm
+keywords: web,performance,javascript,core-web-vitals
 
-  Learn more at [Sli.dev](https://sli.dev)
-drawings:
-  persist: false
-defaults:
-  foo: true
-transition: slide-left
-title: Welcome to Slidev
-mdc: true
-monaco: true
-monacoTypesSource: local # or cdn or none
+colorSchema: light
+themeConfig:
+  primary: "#dd2786"
+favicon: https://lukastrumm.com/favicon.ico
+fonts:
+  sans: Montserrat
+  mono: Fira Mono
+
+htmlAttrs:
+  lang: cs
 ---
 
-# Welcome to Slidev
+# Výkonnost webu<br>s moderními frameworky
 
-Presentation slides for developers
+<br>
+Lukáš Trumm
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+Frontend architekt v Quanti
 
 ---
 
-## transition: fade-out
+# Výkonnost webu
 
-# What is Slidev?
+<div class="font-bold">
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+- Čas do prvního načtení stránky
+- Svižnost přechodu mezi stránkami
+- Rychlost reakce na kliknutí
+- Plynulost skrolování
+- Poskakování stránky během načítání
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+</div>
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<v-click>
+<div class="text-gray-600">
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+- Konverze
+- Umístění ve vyhledávačích
+- Nároky na hardware
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+</div>
+</v-click>
+
+---
+
+<style scoped>
+.two-cols-header {
+  grid-template-rows: auto;  
+  grid-template-columns: 15ch 1fr;
 }
 </style>
 
-<!--
-Here is another comment.
--->
+# Moderní <v-click at="1">meta-</v-click>frameworky
 
----
-
-## layout: default
-
-# Table of contents
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-<Toc maxDepth="1"></Toc>
+|                                |                                                                                          |
+| ------------------------------ | ---------------------------------------------------------------------------------------- |
+| <logos-React /> React          | <v-click at="1">&#8594; &nbsp; <logos-Nextjs-icon width="auto" /> Next </v-click>        |
+| <logos-Vue /> Vue              | <v-click at="1">&#8594; &nbsp; <logos-Nuxt-icon width="auto" /> Nuxt </v-click>          |
+| <logos-Angular-icon /> Angular | <v-click at="1">&#8594; &nbsp; <logos-Analog width="auto" /> Analog </v-click>           |
+| <logos-Svelte-icon /> Svelte   | <v-click at="1">&#8594; &nbsp; <logos-SvelteKit width="auto" /> SvelteKit </v-click>     |
+| <logos-Solidjs-icon /> Solid   | <v-click at="1">&#8594; &nbsp; <logos-Solidjs-icon width="auto" /> SolidStart </v-click> |
+| <logos-Qwik-icon /> Qwik       | <v-click at="1">&#8594; &nbsp; <logos-Qwik-icon width="auto" /> QwikCity </v-click>      |
 
 ---
 
@@ -145,12 +117,12 @@ Use code snippets and get the highlighting directly, and even types hover![^1]
 // and errors in markdown code blocks
 // More at https://shiki.style/packages/twoslash
 
-import { computed, ref } from "vue";
+import { computed, ref } from "vue"
 
-const count = ref(0);
-const doubled = computed(() => count.value * 2);
+const count = ref(0)
+const doubled = computed(() => count.value * 2)
 
-doubled.value = 2;
+doubled.value = 2
 ```
 
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
@@ -208,7 +180,7 @@ const author = reactive({
     "Vue 3 - Basic Guide",
     "Vue 4 - The Mystery",
   ],
-});
+})
 ```
 
 ```ts {*|1-2|3-4|3-4,8}
@@ -224,9 +196,9 @@ export default {
           "Vue 4 - The Mystery",
         ],
       },
-    };
+    }
   },
-};
+}
 ```
 
 ```ts
@@ -242,7 +214,7 @@ export default {
       ],
     },
   }),
-};
+}
 ```
 
 Non-code blocks are ignored.
@@ -257,7 +229,7 @@ const author = {
     "Vue 3 - Basic Guide",
     "Vue 4 - The Mystery",
   ],
-};
+}
 </script>
 ```
 ````
@@ -561,16 +533,17 @@ hide: false
 
 ---
 
+
 ---
 
 # Monaco Editor
 
 ```ts {monaco}
-import { ref } from "vue";
-import hello from "./external";
+import { ref } from "vue"
+import hello from "./external"
 
-const code = ref("const a = 1");
-hello();
+const code = ref("const a = 1")
+hello()
 ```
 
 ---
