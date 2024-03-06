@@ -1,0 +1,23 @@
+[build]
+  publish = "dist"
+  command = "pnpm run build"
+
+[[redirects]]
+  from = "/2024/web-performance/src"
+  to = "https://github.com/lttr/talks/tree/main/2024-web-performance-with-modern-frameworks"
+  status = 302
+
+[[redirects]]
+  from = "2024-web-performance-with-modern-frameworks"
+  to = "https://talks.lukastrumm.com/2024/web-performance/"
+  status = 301
+
+[[redirects]]
+  from = "/2024/web-performance/*"
+  to = "/2024/web-performance/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "https://lukastrumm.com/talks"
+  status = 302

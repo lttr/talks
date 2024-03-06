@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "build": "rimraf dist && pnpm -r run build",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.48.0-beta.19",
+    "@slidev/theme-default": "^0.25.0",
+    "eslint": "^8.57.0"
+  }
+}
