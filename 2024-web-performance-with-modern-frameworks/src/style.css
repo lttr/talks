@@ -1,5 +1,8 @@
 .slidev-layout h1 {
   color: var(--slidev-theme-primary);
   font-weight: 600;
-  margin-bottom: 2rem;
+}
+
+.slidev-layout h1 + p {
+  opacity: 1;
 }

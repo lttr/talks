@@ -3,7 +3,6 @@ theme: default
 title: Výkonnost webu s moderními frameworky
 author: Lukas Trumm
 keywords: web,performance,javascript,core-web-vitals
-
 colorSchema: light
 themeConfig:
   primary: "#dd2786"
@@ -11,7 +10,6 @@ favicon: https://lukastrumm.com/favicon.ico
 fonts:
   sans: Montserrat
   mono: Fira Mono
-
 htmlAttrs:
   lang: cs
 ---
@@ -22,6 +20,98 @@ htmlAttrs:
 Lukáš Trumm
 
 Frontend architekt v Quanti
+
+<!--
+sdf
+-->
+
+---
+src: ./pages/loading0.md
+---
+
+---
+src: ./pages/loading1.md
+---
+
+---
+src: ./pages/loading2.md
+---
+
+---
+src: ./pages/loading3.md
+---
+
+---
+layout: center
+---
+
+<h1 class="" style="font-size: 5rem;">
+Proč?
+</h1>
+
+---
+layout: two-cols-header
+clicks: 10
+---
+
+<style scoped>
+.two-cols-header {
+  grid-template-rows: auto 1fr;
+}
+</style>
+
+# Proč?
+
+<style scoped>
+.slidev-vclick-hidden {
+  display: none;
+}
+</style>
+
+::left::
+
+<v-clicks depth="2">
+
+- Proč je web pomalý?
+  - hodně JavaScriptu
+  - komplexita vývoje
+- Proč to řešit?
+  - abychom nemuseli čekat
+  - aby se lidi vůbec dostali k tomu,<br>
+    co potřebují
+- Proč stále vznikají nové frameworky?<br>
+  Co furt řeší?
+  - vývojáři to chtějí mít dokonalé a nikdo<br>
+    to nechce staré
+  - jeden jazyk pro vývoj na serveru i v&nbsp;prohlížečích
+
+</v-clicks>
+
+::right::
+
+<div v-click=[2,3]>
+
+![](/medium.png)
+
+<div class="text-gray-600 text-sm">
+
+https://medium.com
+
+</div>
+
+</div>
+
+<div v-click=[3,4]>
+
+<Transform scale="0.8" class="ml-4">
+  <img src="/roadmap.png" />
+</Transform>
+
+<div class="absolute right-0 bottom-0 text-sm text-gray-600 bg-white px-2 shadow-md">
+<a href="https://roadmap.sh/frontend">roadmap.sh/frontend</a>
+</div>
+
+</div>
 
 ---
 
@@ -46,10 +136,13 @@ Frontend architekt v Quanti
 - Konverze
 - Umístění ve vyhledávačích
 - Nároky na hardware
+- ...
 
 </div>
 </v-click>
 
+---
+clicks: 2
 ---
 
 <style scoped>
@@ -59,500 +152,98 @@ Frontend architekt v Quanti
 }
 </style>
 
-# Moderní <v-click at="1">meta-</v-click>frameworky
+# Moderní <v-click at="0">meta-</v-click>frameworky
 
-|                                |                                                                                          |
-| ------------------------------ | ---------------------------------------------------------------------------------------- |
-| <logos-React /> React          | <v-click at="1">&#8594; &nbsp; <logos-Nextjs-icon width="auto" /> Next </v-click>        |
-| <logos-Vue /> Vue              | <v-click at="1">&#8594; &nbsp; <logos-Nuxt-icon width="auto" /> Nuxt </v-click>          |
-| <logos-Angular-icon /> Angular | <v-click at="1">&#8594; &nbsp; <logos-Analog width="auto" /> Analog </v-click>           |
-| <logos-Svelte-icon /> Svelte   | <v-click at="1">&#8594; &nbsp; <logos-SvelteKit width="auto" /> SvelteKit </v-click>     |
-| <logos-Solidjs-icon /> Solid   | <v-click at="1">&#8594; &nbsp; <logos-Solidjs-icon width="auto" /> SolidStart </v-click> |
-| <logos-Qwik-icon /> Qwik       | <v-click at="1">&#8594; &nbsp; <logos-Qwik-icon width="auto" /> QwikCity </v-click>      |
-
----
-
-transition: slide-up
-level: 2
+|                                |                                                                                                                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <logos-React /> React          | <v-click at="0">&#8594; &nbsp; <logos-Nextjs-icon width="auto" /> Next </v-click>                                                                                    |
+| <logos-Vue /> Vue              | <v-click at="0">&#8594; &nbsp; <logos-Nuxt-icon width="auto" /> Nuxt </v-click>                                                                                      |
+| <logos-Angular-icon /> Angular | <v-click at="0">&#8594; &nbsp; <logos-Analog width="auto" /> Analog </v-click>                                                                                       |
+| <logos-Svelte-icon /> Svelte   | <v-click at="0">&#8594; &nbsp; <logos-SvelteKit width="auto" /> SvelteKit </v-click>                                                                                 |
+| <logos-Solidjs-icon /> Solid   | <v-click at="0">&#8594; &nbsp; <logos-Solidjs-icon width="auto" /> SolidStart </v-click>                                                                             |
+| <logos-Qwik-icon /> Qwik       | <v-click at="0">&#8594; &nbsp; <logos-Qwik-icon width="auto" /> QwikCity </v-click>                                                                                  |
+|                                |                                                                                                                                                                      |
+|                                | <span class="text-gray-600"> <v-click at="1">&nbsp; <logos-Laravel /> Laravel &nbsp; <logos-Phoenix /> Phoenix &nbsp; <logos-dotnet /> Blazor ... </v-click> </span> |
 
 ---
 
-# Navigation
+# Měření výkonnosti
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+- [WebPageTest](https://www.webpagetest.org/)
+- [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-## Keyboard Shortcuts
+<br>
+<br>
 
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
+### Lighthouse
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
+<Transform scale="0.8">
 
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
+![Lighthouse](/lighthouse.png)
 
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+</Transform>
 
 ---
 
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+### Page Speed Insights
+
+![Page Speed Insights](/page-speed-insights.png)
 
 ---
 
-# Code
+# Core Web Vitals
 
-Use code snippets and get the highlighting directly, and even types hover![^1]
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from "vue"
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+<style scoped>
+.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
 </style>
 
-<!--
-Notes can also sync with clicks
+<div class="three mt-3rem">
+<img src="/lcp.svg" />
+<img src="/fid.svg" />
+<img src="/cls.svg" />
+</div>
 
-[click] This will be highlighted after the first click
+<div class="absolute left-3.5rem bottom-3.5rem text-sm">
 
-[click] Highlighted with `count = ref(0)`
+Zdroj: [web.dev/articles/vitals](https://web.dev/articles/vitals)
 
-[click:3] Last click (skip two clicks)
--->
+</div>
 
 ---
 
-## level: 2
+# Core Web Vitals (12. 3. 2024 !)
 
-# Shiki Magic Move
-
-(this feature is still experimental)
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: "John Doe",
-  books: [
-    "Vue 2 - Advanced Guide",
-    "Vue 3 - Basic Guide",
-    "Vue 4 - The Mystery",
-  ],
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: "John Doe",
-        books: [
-          "Vue 2 - Advanced Guide",
-          "Vue 3 - Basic Guide",
-          "Vue 4 - The Mystery",
-        ],
-      },
-    }
-  },
+<style scoped>
+.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
-```
+</style>
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: "John Doe",
-      books: [
-        "Vue 2 - Advanced Guide",
-        "Vue 3 - Basic Guide",
-        "Vue 4 - The Mystery",
-      ],
-    },
-  }),
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: "John Doe",
-  books: [
-    "Vue 2 - Advanced Guide",
-    "Vue 3 - Basic Guide",
-    "Vue 4 - The Mystery",
-  ],
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
+<div class="three mt-3rem">
+<img src="/lcp.svg" />
+  <Transform scale="0.9" origin="center top" class="self-end mb-1ex"> <img src="/inp.svg" /> </Transform>
+<img src="/cls.svg" />
 </div>
 
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
+<div class="absolute left-3.5rem bottom-3.5rem text-sm">
 
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-
-## class: px-20
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animations)
+Zdroj: [web.dev/articles/vitals](https://web.dev/articles/vitals)
 
 </div>
 
 ---
-
-## preload: false
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div v-motion :initial="{ x: -80 }" :enter="{ x: 0 }">Slidev</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
+layout: quote
 ---
 
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-{1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+<h1 class="text-center">
+Otázky?
+</h1>
 
 ---
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-
-src: ./pages/multiple-entries.md
-hide: false
-
----
-
-
----
-
-# Monaco Editor
-
-```ts {monaco}
-import { ref } from "vue"
-import hello from "./external"
-
-const code = ref("const a = 1")
-hello()
-```
-
----
-
-layout: center
-class: text-center
-
----
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
