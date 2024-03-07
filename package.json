@@ -7,9 +7,11 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@slidev/cli": "^0.48.0-beta.19",
+    "@iconify-json/logos": "^1.1.42",
+    "@slidev/cli": "^0.47.5",
     "@slidev/theme-default": "^0.25.0",
     "eslint": "^8.57.0",
+    "playwright-chromium": "^1.42.1",
     "prettier": "^3.2.5",
     "prettier-plugin-slidev": "^1.0.5"
   }

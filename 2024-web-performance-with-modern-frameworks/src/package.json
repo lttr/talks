@@ -5,8 +5,5 @@
     "dev": "slidev",
     "build": "slidev build --base /2024/web-performance/ --out ../../dist/2024/web-performance",
     "export": "slidev export --per-slide --output ../2024-web-performance.pdf"
-  },
-  "dependencies": {
-    "@iconify-json/logos": "^1.1.42"
   }
 }
