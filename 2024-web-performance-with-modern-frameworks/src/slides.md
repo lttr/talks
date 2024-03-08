@@ -169,9 +169,9 @@ clicks: 2
 
 # Měření výkonnosti
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-- [WebPageTest](https://www.webpagetest.org/)
-- [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) &ndash; v prohlížeči
+- [WebPageTest](https://www.webpagetest.org/) &ndash; reálná zařízení po světě
+- [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) &ndash; Google data z Chromu
 
 <br>
 <br>
@@ -186,7 +186,7 @@ clicks: 2
 
 ---
 
-### Page Speed Insights
+### Page Speed Insights <span class="ml-3 text-sm">(RUM data, 75. percentil)</span>
 
 ![Page Speed Insights](/page-speed-insights.png)
 
@@ -210,7 +210,7 @@ clicks: 2
 
 <div class="absolute left-3.5rem bottom-3.5rem text-sm">
 
-Zdroj: [web.dev/articles/vitals](https://web.dev/articles/vitals)
+<Source text="web.dev/articles/vitals" href="https://web.dev/articles/vitals" />
 
 </div>
 
@@ -232,11 +232,130 @@ Zdroj: [web.dev/articles/vitals](https://web.dev/articles/vitals)
 <img src="/cls.svg" />
 </div>
 
-<div class="absolute left-3.5rem bottom-3.5rem text-sm">
+<div class="absolute left-3.5rem bottom-3.5rem">
 
-Zdroj: [web.dev/articles/vitals](https://web.dev/articles/vitals)
+<Source text="web.dev/articles/vitals" href="https://web.dev/articles/vitals" />
 
 </div>
+
+---
+
+# Largest Contentful Paint (LCP)
+
+<br>
+
+![](/lcp-example.png)
+
+<Source text="web.dev/lcp" href="https://web.dev/lcp" />
+
+---
+
+# Cumulative Layout Shift (CLS)
+
+<Transform scale="0.9">
+
+<video controls="" loop="" muted="" poster="/layout-instability-poster.png" width="658" height="510">
+  <source src="https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm" type="video/webm; codecs=vp8">
+</video>
+
+</Transform>
+
+<Source text="web.dev/cls" href="https://web.dev/cls" />
+
+---
+
+# Interaction to Next Paint (INP)
+
+## & First Input Delay (FID)
+
+<br>
+
+**Příklad:** V baru &ndash; čekání na objednaný drink
+
+- FID: čas do začátku přípravy prvního drinku
+  - ale limonáda se připravuje rychleji než koktejl
+- INP: čas na přípravu samotnou všech drinků po dobu návštěvy baru
+
+<Source text="Harry Roberts" href="https://topenddevs.com/podcasts/javascript-jabber/episodes/unpacking-core-web-vitals-jsj-620" />
+
+---
+
+# Demo Lighthouse
+
+Zběžná analýza dvou e-shopů
+
+<br>
+
+- [czc.cz](https://www.czc.cz/)
+- [rohlik.cz](https://www.rohlik.cz/)
+
+<br>
+
+### Postup
+
+1. Google Chrome
+1. Incognito mode (bez doplňků)
+1. DevTools, záložka Lighthouse
+1. Mode: Navigation, Device: Mobile, click Analyze
+
+---
+
+# Specifika JavaScriptových frameworků
+
+<v-clicks>
+
+- velká míra kontroly nad chováním v prohlížeči = příliš mnoho možností
+- každých pár měsíců nebo let změna
+- příliš snadné přidat mnoho nepotřebných závislostí
+
+</v-clicks>
+
+---
+
+# Způsoby renderování HTML
+
+<div class="mt-7">
+  
+<style scoped>
+.slidev-vclick-hidden {
+  display: none;
+}
+</style>
+
+<img src="/rendering-client.svg" v-click.hide />
+<img src="/rendering-server.svg" v-after />
+
+</div>
+
+<Source text="Nuxt documentation" href="https://nuxt.com/docs/guide/concepts/rendering" />
+
+---
+
+# Zrychlení načítání JS aplikací a webů
+
+<v-clicks>
+
+- typ renderování HTML a kešování
+- optimalizace obrázků a fontů
+- redukce použití JavaScriptu
+  - použití externích knihoven
+  - skripty třetích stran
+  - Islands of (non)interactivity
+- vhodný efekt při načítání dat
+- použití CDNky
+- zkoumání a měření Core Web Vitals
+- ...
+
+</v-clicks>
+
+---
+
+# Demo on CrUX data
+
+- Chrome User Experience Report
+- <a href="https://lookerstudio.google.com/u/0/reporting/55bc8fad-44c2-4280-aa0b-5f3f0cd3d2be/page/M6ZPC?params=%7B%22df44%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580WordPress%25EE%2580%2580Nette%2520Framework%25EE%2580%2580Next.js%25EE%2580%2580Laravel%25EE%2580%2580Wix%25EE%2580%2580Nuxt.js%25EE%2580%2580Qwik%22,%22df48%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Nuxt.js%22,%22df33%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Czechia%22,%22df47%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Top%25201M%22%7D">Core web vitals report</a>
+
+<Source href="http://cwvtech.report/" text="cwvtech.report" />
 
 ---
 layout: quote
