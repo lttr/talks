@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "tsx scripts/picker.ts dev --open",
     "build": "rimraf dist && pnpm -r run build",
+    "preview": "pnpm dlx vite preview",
     "lint": "eslint ."
   },
   "devDependencies": {
