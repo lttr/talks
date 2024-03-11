@@ -7,6 +7,7 @@ colorSchema: light
 themeConfig:
   primary: "#dd2786"
 favicon: https://lukastrumm.com/favicon.ico
+highlighter: shiki
 fonts:
   sans: Montserrat
   mono: Fira Mono
@@ -53,12 +54,6 @@ Proč?
 layout: two-cols-header
 clicks: 10
 ---
-
-<style scoped>
-.two-cols-header {
-  grid-template-rows: auto 1fr;
-}
-</style>
 
 # Proč?
 
@@ -113,6 +108,12 @@ https://medium.com
 
 </div>
 
+<div v-click=[8,9]>
+
+![](/bicycle.jpg)
+
+</div>
+
 ---
 
 # Výkonnost webu
@@ -144,13 +145,6 @@ https://medium.com
 ---
 clicks: 2
 ---
-
-<style scoped>
-.two-cols-header {
-  grid-template-rows: auto;  
-  grid-template-columns: 15ch 1fr;
-}
-</style>
 
 # Moderní <v-click at="0">meta-</v-click>frameworky
 
@@ -312,7 +306,7 @@ Zběžná analýza dvou e-shopů
 
 ---
 
-# Způsoby renderování HTML
+## Kontrola nad způsobem renderování HTML
 
 <div class="mt-7">
   
@@ -330,25 +324,106 @@ Zběžná analýza dvou e-shopů
 <Source text="Nuxt documentation" href="https://nuxt.com/docs/guide/concepts/rendering" />
 
 ---
+layout: two-cols-header
+clicks: 11
+---
+
+<style scoped>
+.slidev-vclick-hidden {
+  display: none;
+}
+</style>
 
 # Zrychlení načítání JS aplikací a webů
 
-<v-clicks>
+::left::
 
-- redukce JavaScriptu
+<v-clicks depth="2">
+
+- redukce množství JavaScriptu
   - využít code splitting a lazy loading
   - omezit použití externích knihoven (UI, načítání dat, správa stavu)
   - izolovat skripty třetích stran
   - zkoumat Islands of (non)interactivity a další techniky
-- typ renderování HTML a kešování
-  - CSR, SSR, SSG, ISR, SWR, ...
+- redukce množství dat
+- typ renderování HTML
 - použití CDNky
 - optimalizace obrázků a fontů
-- vhodný efekt při načítání dat (zdánlivé zrychlení)
-- zkoumání a měření Core Web Vitals
+- vhodný efekt při načítání dat
 - ...
 
 </v-clicks>
+
+::right::
+
+<div v-click=[2,3]>
+
+```vue
+<LazyReviewsComponent />
+```
+
+</div>
+
+<div v-click=[5,6]>
+
+```
+- ReviewsComponent.vue
+- NonInterativeComponent.server.vue
+- BrowserOnlyComponent.client.vue
+```
+
+</div>
+
+<div v-click=[6,7]>
+
+```ts
+export default defineCachedEventHandler(
+  async (event) => {
+    const urls = [
+      /* some urls */
+    ]
+    return Promise.all(
+      urls.map(
+        /* several expensive requests */
+        (url) => fetch(url).then((r) => r.json()),
+        /* error handling etc. */
+      ),
+    )
+  },
+  { maxAge: 300 },
+)
+```
+
+</div>
+
+<div v-click=[7,8]>
+
+CSR, SSR, SSG, ISR, SWR, PPR
+
+<br>
+
+![](/ppr.avif)
+
+<br>
+<Source href="https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model" text="Vercel engineering blog" />
+
+</div>
+
+<div v-click=[9,10]>
+
+```vue
+<NuxtImg src="/photo.jpg" />
+```
+
+</div>
+
+<div v-click=[10,11]>
+
+<Transform scale="0.7">
+  <Skeleton />
+</Transform>
+
+</div>
 
 ---
 
@@ -363,7 +438,10 @@ Zběžná analýza dvou e-shopů
 
 # Shrnutí
 
-- Některé frameworky jsou vhodné pro malé projekty
+- měř
+- omez JavaScript v prohlížeči
+- zvol framework uvážlivě
+- drž složitost na uzdě
 
 ---
 layout: quote

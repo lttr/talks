@@ -6,3 +6,8 @@
 .slidev-layout h1 + p {
   opacity: 1;
 }
+
+.two-cols-header {
+  grid-template-rows: auto 1fr !important;
+  column-gap: 2rem;
+}
