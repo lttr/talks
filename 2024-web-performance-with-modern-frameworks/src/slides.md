@@ -67,6 +67,7 @@ clicks: 10
 
 <v-clicks depth="2">
 
+- Je to složitý!
 - Proč je web pomalý?
   - hodně JavaScriptu
   - komplexita vývoje
@@ -74,8 +75,7 @@ clicks: 10
   - abychom nemuseli čekat
   - aby se lidi vůbec dostali k tomu,<br>
     co potřebují
-- Proč stále vznikají nové frameworky?<br>
-  Co furt řeší?
+- Proč stále vznikají nové frameworky?
   - vývojáři to chtějí mít dokonalé a nikdo<br>
     to nechce staré
   - jeden jazyk pro vývoj na serveru i v&nbsp;prohlížečích
@@ -84,7 +84,7 @@ clicks: 10
 
 ::right::
 
-<div v-click=[2,3]>
+<div v-click=[3,4]>
 
 ![](/medium.png)
 
@@ -96,7 +96,7 @@ https://medium.com
 
 </div>
 
-<div v-click=[3,4]>
+<div v-click=[4,5]>
 
 <Transform scale="0.8" class="ml-4">
   <img src="/roadmap.png" />
@@ -108,7 +108,7 @@ https://medium.com
 
 </div>
 
-<div v-click=[8,9]>
+<div v-click=[9,10]>
 
 ![](/bicycle.jpg)
 
@@ -342,7 +342,7 @@ clicks: 11
 
 - redukce množství JavaScriptu
   - využít code splitting a lazy loading
-  - omezit použití externích knihoven (UI, načítání dat, správa stavu)
+  - omezit použití externích knihoven
   - izolovat skripty třetích stran
   - zkoumat Islands of (non)interactivity a další techniky
 - redukce množství dat
@@ -424,6 +424,11 @@ CSR, SSR, SSG, ISR, SWR, PPR
 </Transform>
 
 </div>
+
+<!--
+* redukce použití JavaScriptu - lze použít BE framework, nebo zkusit nový Qwik
+* noviny: above the fold, code splitting
+-->
 
 ---
 
