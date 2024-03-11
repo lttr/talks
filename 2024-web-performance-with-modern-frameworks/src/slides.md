@@ -335,14 +335,16 @@ Zběžná analýza dvou e-shopů
 
 <v-clicks>
 
+- redukce JavaScriptu
+  - využít code splitting a lazy loading
+  - omezit použití externích knihoven (UI, načítání dat, správa stavu)
+  - izolovat skripty třetích stran
+  - zkoumat Islands of (non)interactivity a další techniky
 - typ renderování HTML a kešování
-- optimalizace obrázků a fontů
-- redukce použití JavaScriptu
-  - použití externích knihoven
-  - skripty třetích stran
-  - Islands of (non)interactivity
-- vhodný efekt při načítání dat
+  - CSR, SSR, SSG, ISR, SWR, ...
 - použití CDNky
+- optimalizace obrázků a fontů
+- vhodný efekt při načítání dat (zdánlivé zrychlení)
 - zkoumání a měření Core Web Vitals
 - ...
 
@@ -358,11 +360,21 @@ Zběžná analýza dvou e-shopů
 <Source href="http://cwvtech.report/" text="cwvtech.report" />
 
 ---
+
+# Shrnutí
+
+- Některé frameworky jsou vhodné pro malé projekty
+
+---
 layout: quote
 ---
 
 <h1 class="text-center">
 Otázky?
 </h1>
+
+![](lt-talks.gif)
+
+&#8594; https://lukastrumm.com/talks/
 
 ---
