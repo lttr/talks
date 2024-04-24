@@ -3,6 +3,21 @@
   command = "pnpm run build"
 
 [[redirects]]
+  from = "/2024/web-performance-with-nuxt/src"
+  to = "https://github.com/lttr/talks/tree/master/2024-web-performance-with-nuxt"
+  status = 302
+
+[[redirects]]
+  from = "2024-web-performance-with-nuxt"
+  to = "https://talks.lukastrumm.com/2024/web-performance-with-nuxt/"
+  status = 301
+
+[[redirects]]
+  from = "/2024/web-performance-with-nuxt/*"
+  to = "/2024/web-performance-with-nuxt/index.html"
+  status = 200
+
+[[redirects]]
   from = "/2024/web-performance/src"
   to = "https://github.com/lttr/talks/tree/master/2024-web-performance-with-modern-frameworks"
   status = 302
