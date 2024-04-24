@@ -433,7 +433,7 @@ layout: quote
 Otázky?
 </h1>
 
-![](lt-talks.gif)
+![](/lt-talks.gif)
 
 &#8594; https://lukastrumm.com/talks/
 
