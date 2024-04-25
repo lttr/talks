@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /2024/web-performance/ --out ../../dist/2024/web-performance",
-    "export": "slidev export --per-slide --output ../2024-web-performance.pdf"
+    "build": "slidev build --base /2024-web-performance-with-modern-frameworks --out ../../dist/2024-web-performance-with-modern-frameworks"
   }
 }
