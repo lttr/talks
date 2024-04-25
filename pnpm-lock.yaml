@@ -38,6 +38,8 @@ importers:
 
   2024-web-performance-with-modern-frameworks/src: {}
 
+  2024-web-performance-with-nuxt/src: {}
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:

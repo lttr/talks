@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "pnpm install && pnpm run build"
+  command = "pnpm run build"
 
 [[redirects]]
   from = "/2024/web-performance-with-nuxt/src"

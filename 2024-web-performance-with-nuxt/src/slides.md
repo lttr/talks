@@ -427,7 +427,7 @@ export default defineCachedEventHandler(
 
 - CSR, SSR, SSG, ISR, SWR, PPR
 
-<div style="max-width: 55vw">
+<div style="max-width: 55ch">
 
 ![](/ppr.avif)
 
