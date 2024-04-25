@@ -26,6 +26,13 @@ Lukáš Trumm
 Quanti
 
 ---
+
+# Oťukávačka
+
+1. Víš co jsou Core Web Vitals?
+1. Víš co je hydratace (v kontextu webových frameworků)?
+
+---
 layout: two-cols-header
 clicks: 10
 ---
@@ -43,12 +50,12 @@ clicks: 10
 <v-clicks depth="2">
 
 - Je to složitý!
-- Proč je web pomalý?
+- Proč je web pomalý? Milion důvodů...
   - hodně JavaScriptu
   - komplexita vývoje
 - Proč to řešit?
   - abychom nemuseli čekat
-  - aby se lidi vůbec dostali k tomu,<br>
+  - aby se lidi vůbec dostali k tomu,
     co potřebují
 - Proč stále vznikají nové frameworky?
   - vývojáři to chtějí mít dokonalé a nikdo<br>
@@ -95,11 +102,11 @@ https://medium.com
 
 <div class="font-bold">
 
-- Čas do prvního načtení stránky (typické pro Lighthouse)
-- Svižnost přechodu mezi stránkami (Nuxt optimalizuje - SPA, prefetching)
-- Rychlost reakce na kliknutí
-- Plynulost skrolování
-- Poskakování stránky během načítání
+- Čas do prvního načtení stránky (TTFB, FCP, LCP)
+- Svižnost přechodu mezi stránkami (SPA)
+- Rychlost reakce na kliknutí (FID, INP)
+- Plynulost skrolování (Scroll-driven animations API)
+- Poskakování stránky během načítání (LCP)
 
 </div>
 
@@ -138,9 +145,10 @@ clicks: 2
 
 # Měření výkonnosti
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) &ndash; v prohlížeči
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) &ndash; Synthetic monitoring (v prohlížeči, CI nebo cli)
 - [WebPageTest](https://www.webpagetest.org/) &ndash; reálná zařízení po světě
 - [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) &ndash; Google data z Chromu
+- Vlastní měření (např. Newrelic, Sentry, ...) &ndash; Real User Monitoring
 
 <br>
 <br>
@@ -152,12 +160,6 @@ clicks: 2
 ![Lighthouse](/lighthouse.png)
 
 </Transform>
-
----
-
-### Page Speed Insights <span class="ml-3 text-sm">(RUM data, 75. percentil)</span>
-
-![Page Speed Insights](/page-speed-insights.png)
 
 ---
 
@@ -255,8 +257,8 @@ Zběžná analýza dvou e-shopů
 
 <br>
 
-- [czc.cz](https://www.czc.cz/)
-- [rohlik.cz](https://www.rohlik.cz/)
+- [czc.cz](https://www.czc.cz/) (LCP s Cookie modálem a bez něj)
+- [rohlik.cz](https://www.rohlik.cz/) (Nevyužitý JavaScript)
 
 <br>
 
@@ -266,6 +268,41 @@ Zběžná analýza dvou e-shopů
 1. Incognito mode (bez doplňků)
 1. DevTools, záložka Lighthouse
 1. Mode: Navigation, Device: Mobile, click Analyze
+
+---
+
+### Page Speed Insights <span class="ml-3 text-sm">(RUM data, 75. percentil)</span>
+
+![Page Speed Insights](/page-speed-insights.png)
+
+---
+
+### Newrelic - příklad 1
+
+![Newrelic example](/newrelic1.png)
+
+---
+
+### Newrelic - příklad 2
+
+![Newrelic example](/newrelic2.png)
+
+---
+
+# Měření výkonnosti &ndash; shrnutí
+
+- Syntetické měření během vývoje, kontrola chyb (podobně jako linting)
+- RUM během provozu
+- Vybrat jen některé metriky (Google udělal za nás: Core Web Vitals)
+
+---
+
+# Demo CrUX data
+
+- Chrome User Experience Report
+- <a href="https://lookerstudio.google.com/u/0/reporting/55bc8fad-44c2-4280-aa0b-5f3f0cd3d2be/page/M6ZPC?params=%7B%22df44%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580WordPress%25EE%2580%2580Nette%2520Framework%25EE%2580%2580Next.js%25EE%2580%2580Laravel%25EE%2580%2580Wix%25EE%2580%2580Nuxt.js%25EE%2580%2580Qwik%22,%22df48%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Nuxt.js%22,%22df33%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Czechia%22,%22df47%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Top%25201M%22%7D">Core web vitals report</a>
+
+<Source href="http://cwvtech.report/" text="cwvtech.report" />
 
 ---
 
@@ -299,21 +336,25 @@ Zběžná analýza dvou e-shopů
 <Source text="Nuxt documentation" href="https://nuxt.com/docs/guide/concepts/rendering" />
 
 ---
-layout: two-cols-header
-clicks: 11
+
+# Zrychlujeme (nezpomalujeme)
+
+### Takový metaframework už za nás dělá řadu věcí...
+
+<br>
+
+- Route/component based code splitting
+- Code minification
+- File name hashing for long-term caching
+- CSS inlining
+- Less transpilation for modern browsers
+- Tree shaking
+- Prefetching
+- Image/Picture component
+
 ---
 
-<style scoped>
-.slidev-vclick-hidden {
-  display: none;
-}
-</style>
-
-# Zrychlení načítání JS aplikací a webů
-
-::left::
-
-<v-clicks depth="2">
+# Zrychlujeme 2
 
 - redukce množství JavaScriptu
   - využít code splitting a lazy loading
@@ -322,6 +363,11 @@ clicks: 11
   - zkoumat Islands of (non)interactivity a další techniky (Nuxt islands)
   - omezit množství globálních skriptů (např. Nuxt plugins)
   - přesun kódu na server (Nuxt server API routes)
+
+---
+
+# Zrychlujeme 2
+
 - redukce množství dat (overfetching)
 - typ renderování HTML
 - použití CDNky
@@ -329,29 +375,15 @@ clicks: 11
 - vhodný efekt při načítání dat
 - ...
 
-</v-clicks>
-
-::right::
-
-<div v-click=[2,3]>
-
 ```vue
 <LazyReviewsComponent />
 ```
-
-</div>
-
-<div v-click=[5,6]>
 
 ```
 - ReviewsComponent.vue
 - NonInterativeComponent.server.vue
 - BrowserOnlyComponent.client.vue
 ```
-
-</div>
-
-<div v-click=[6,7]>
 
 ```ts
 export default defineCachedEventHandler(
@@ -371,55 +403,26 @@ export default defineCachedEventHandler(
 )
 ```
 
-</div>
-
-<div v-click=[7,8]>
-
 CSR, SSR, SSG, ISR, SWR, PPR
-
-<br>
 
 ![](/ppr.avif)
 
 <br>
 <Source href="https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model" text="Vercel engineering blog" />
 
-</div>
-
-<div v-click=[9,10]>
-
 ```vue
 <NuxtImg src="/photo.jpg" />
 ```
-
-</div>
-
-<div v-click=[10,11]>
 
 <Transform scale="0.7">
   <Skeleton />
 </Transform>
 
-</div>
-
-<!--
-* redukce použití JavaScriptu - lze použít BE framework, nebo zkusit nový Qwik
-* noviny: above the fold, code splitting
--->
-
----
-
-# Demo on CrUX data
-
-- Chrome User Experience Report
-- <a href="https://lookerstudio.google.com/u/0/reporting/55bc8fad-44c2-4280-aa0b-5f3f0cd3d2be/page/M6ZPC?params=%7B%22df44%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580WordPress%25EE%2580%2580Nette%2520Framework%25EE%2580%2580Next.js%25EE%2580%2580Laravel%25EE%2580%2580Wix%25EE%2580%2580Nuxt.js%25EE%2580%2580Qwik%22,%22df48%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Nuxt.js%22,%22df33%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Czechia%22,%22df47%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580Top%25201M%22%7D">Core web vitals report</a>
-
-<Source href="http://cwvtech.report/" text="cwvtech.report" />
-
 ---
 
 # Shrnutí
 
+- řeš hned od začátku
 - měř
 - omez JavaScript v prohlížeči
 - zvol framework uvážlivě
