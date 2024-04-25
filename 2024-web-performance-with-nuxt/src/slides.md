@@ -354,36 +354,54 @@ Zběžná analýza dvou e-shopů
 
 ---
 
-# Zrychlujeme 2
+# Zrychlujeme - redukce množství JavaScriptu 1
 
-- redukce množství JavaScriptu
-  - využít code splitting a lazy loading
-  - omezit použití externích knihoven
-  - izolovat skripty třetích stran
-  - zkoumat Islands of (non)interactivity a další techniky (Nuxt islands)
-  - omezit množství globálních skriptů (např. Nuxt plugins)
-  - přesun kódu na server (Nuxt server API routes)
-
----
-
-# Zrychlujeme 2
-
-- redukce množství dat (overfetching)
-- typ renderování HTML
-- použití CDNky
-- optimalizace obrázků a fontů
-- vhodný efekt při načítání dat
-- ...
+- využít code splitting a lazy loading ([Nuxt docs](https://nuxt.com/docs/guide/directory-structure/components#dynamic-imports))
 
 ```vue
 <LazyReviewsComponent />
 ```
 
+<br>
+
+```js
+const lazyDependency = await import("./lazy-loaded-code.js")
 ```
+
+<br>
+
+- lazy hydration ([nuxt-lazy-hydrate module](https://github.com/Baroshem/nuxt-lazy-hydrate))
+
+```vue
+<LazyHydrationWrapper :when-visible="{ rootMargin: '50px' }">
+  <!-- content -->
+</LazyHydrationWrapper>
+```
+
+---
+
+# Zrychlujeme - redukce množství JavaScriptu 2
+
+- Islands of (non)interactivity ([Nuxt docs](https://nuxt.com/docs/guide/directory-structure/components#server-components))
+
+```bash
 - ReviewsComponent.vue
 - NonInterativeComponent.server.vue
 - BrowserOnlyComponent.client.vue
 ```
+
+<br>
+
+- omezit použití externích knihoven
+- izolovat skripty třetích stran
+- omezit množství globálních skriptů (např. Nuxt plugins)
+
+---
+
+# Zrychlujeme - redukce množství JavaScriptu 3
+
+- přesun kódu na server ([Nuxt server API routes](https://nuxt.com/docs/guide/directory-structure/server#server-routes), middlewares)
+- redukce množství dat (overfetching)
 
 ```ts
 export default defineCachedEventHandler(
@@ -403,16 +421,50 @@ export default defineCachedEventHandler(
 )
 ```
 
-CSR, SSR, SSG, ISR, SWR, PPR
+---
+
+# Zrychlujeme - typ renderování
+
+- CSR, SSR, SSG, ISR, SWR, PPR
+
+<div style="max-width: 55vw">
 
 ![](/ppr.avif)
 
-<br>
+</div>
+
 <Source href="https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model" text="Vercel engineering blog" />
 
+---
+
+# Zrychlujeme - obrázky a fonty
+
+- optimalizace obrázků ([nuxt/image](https://image.nuxt.com/)) a fontů ([nuxt/fonts](https://github.com/nuxt/fonts))
+
+<br>
+
+Příklad NuxtImg s CMS Storyblok
+
 ```vue
-<NuxtImg src="/photo.jpg" />
+<NuxtImg
+  width="200"
+  format="webp"
+  provider="storyblok"
+  src="https://a.storyblok.com/f/39898/3310x2192/e4ec08624e/demo-image.jpeg"
+/>
 ```
+
+---
+layout: two-cols-header
+---
+
+# Zrychlujeme - zdánlivě
+
+::left::
+
+- vhodný efekt při načítání dat
+
+::right::
 
 <Transform scale="0.7">
   <Skeleton />
