@@ -474,6 +474,7 @@ layout: two-cols-header
 
 # Shrnutí
 
+- trpělivost, je to spousta malých kroků, ne jedna výhra
 - řeš hned od začátku
 - měř
 - omez JavaScript v prohlížeči
@@ -487,9 +488,5 @@ layout: quote
 <h1 class="text-center">
 Otázky?
 </h1>
-
-![](/lt-talks.gif)
-
-&#8594; https://lukastrumm.com/talks/
 
 ---
