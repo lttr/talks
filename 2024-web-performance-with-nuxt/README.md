@@ -1,5 +1,5 @@
 ---
-title: Web performance with nuxt (in czech)
+title: Web performance with nuxt
 slides: https://talks.lukastrumm.com/2024-web-performance-with-nuxt
 date: 2024-04-25
 lang: czech
