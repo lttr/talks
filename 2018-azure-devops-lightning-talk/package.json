@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "serve",
+    "build": "mkdir -p ../dist/2018-azure-devops-lightning-talk && cp -r index.html img ../dist/2018-azure-devops-lightning-talk"
+  }
+}
+

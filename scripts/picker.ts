@@ -28,7 +28,7 @@ async function startPicker(args: string[]) {
 
 	if (result.folder) {
 		await execa("pnpm", ["run", ...args], {
-			cwd: new URL(`../${result.folder}/src`, import.meta.url),
+			cwd: new URL(`../${result.folder}`, import.meta.url),
 			stdio: "inherit",
 		})
 	}

@@ -1,13 +1,11 @@
 ---
-title: NX, Angular and monorepos (in czech)
-date: 2019-10
+theme: default
+title: Development in monorepo using NX
 ---
 
-Lightning talk
+## Vývoj v monorepu pomocí NX
 
----
-
-### Notes
+<br>
 
 - Jaký programovají jazyk? **Typescript**
 - Jaký framework? **Angular a další**

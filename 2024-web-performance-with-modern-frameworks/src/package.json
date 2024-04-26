@@ -1,8 +1,0 @@
-{
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "slidev",
-    "build": "slidev build --base /2024-web-performance-with-modern-frameworks --out ../../dist/2024-web-performance-with-modern-frameworks"
-  }
-}

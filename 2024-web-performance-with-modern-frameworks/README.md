@@ -1,11 +1,11 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+---
+title: Web performance with modern frameworks
+date: 2024-03-12
+slides: https://talks.lukastrumm.com/2024-web-performance-with-modern-frameworks
+lang: czech
+---
 
-To start the slide show:
+Google collects website performance metrics using their Chrome browser. I will show you how and why Google does this and how these data can be used in development with the help of modern JavaScript frameworks.
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+---
 
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
