@@ -236,15 +236,54 @@ backgroundSize: contain
 
 ---
 
-# Utopia a modulární škály
+# Modulární škály
 
 <br>
+<br>
+
+<div class="absolute right-20 top-10">
 
 ![](/utopia.svg)
+
+</div>
+
+<div class="flex gap-8">
+
+  <div class="max-[20ch]">
+
+![](/desktop-scale.png)
+
+  </div>
+
+![](/utopia-tool.png)
+
+</div>
 
 ---
 
 # Every Layout
+
+<div class="absolute right-25 top-10">
+
+![](/every-layout-logo.png)
+
+</div>
+
+<div class="ms-10 max-w-[60%]">
+
+![](/every-layouts.png)
+
+</div>
+
+---
+
+# ITCSS
+
+<div class="h-100 grid place-items-center text-black">
+
+![ITCSS](inverted-triangle.svg)
+
+</div>
 
 ---
 layout: two-cols-header
@@ -264,19 +303,6 @@ layout: two-cols-header
 - nesting
 
 ::right::
-
-<switch>
-</switch>
-
----
-
-# ITCSS
-
-<div class="h-100 grid place-items-center text-black">
-
-![ITCSS](inverted-triangle.svg)
-
-</div>
 
 ---
 layout: two-cols-header
@@ -312,6 +338,8 @@ layout: quote
 <h1 class="text-center">
 Otázky?
 </h1>
+
+<br>
 
 ![](/lt-talks.gif)
 

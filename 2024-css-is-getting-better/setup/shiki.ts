@@ -5,8 +5,7 @@ import { defineShikiSetup } from "@slidev/types"
 export default defineShikiSetup((): ShikiSetupReturn => {
   return {
     themes: {
-      light: "min-dark",
-      dark: "min-dark",
+      light: "min-light",
     },
     langs: ["ts", "js", "vue", "html"],
   }
