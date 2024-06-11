@@ -16,3 +16,8 @@
   from = "/2024-web-performance-with-nuxt/*"
   to = "/2024-web-performance-with-nuxt/index.html"
   status = 200
+
+[[redirects]]
+  from = "/2024-css-is-getting-better/*"
+  to = "/2024-css-is-getting-better/index.html"
+  status = 200
