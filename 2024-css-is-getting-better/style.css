@@ -1,0 +1,21 @@
+.slidev-layout :is(h1, h2) {
+  color: var(--slidev-theme-primary);
+  font-weight: 600;
+}
+
+.two-cols-header {
+  grid-template-rows: auto 1fr !important;
+  column-gap: 2rem;
+}
+
+.slidev-runner-output {
+  display: none;
+}
+
+button[title="Run code"] {
+  display: none;
+}
+
+:root {
+  --pink-9: #a61e4d;
+}
