@@ -281,7 +281,7 @@ backgroundSize: contain
 
 <div class="h-100 grid place-items-center text-black">
 
-![ITCSS](inverted-triangle.svg)
+![ITCSS](/inverted-triangle.svg)
 
 </div>
 
