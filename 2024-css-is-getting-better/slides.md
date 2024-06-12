@@ -121,17 +121,16 @@ layout: center
 layout: two-cols-header
 ---
 
-# Nástroje
+# Nástroje - PostCSS
 
 ::left::
 
-- Postcss
-  - import
-  - nesting
-  - custom media queries <br>
-    `@media (--tablet)`
-  - new colors
-  - dark-theme-class
+- import
+- nesting
+- custom media queries <br>
+  `@media (--tablet)`
+- new colors
+- dark-theme-class
 
 ::right::
 
@@ -229,16 +228,19 @@ Zkompilovaný výstup
 - ITCSS
 
 ---
-layout: image
-image: /open-props.png
-backgroundSize: contain
----
+
+# Open Props
+
+<div>
+
+![](/open-props.png)
+
+</div>
 
 ---
 
 # Modulární škály
 
-<br>
 <br>
 
 <div class="absolute right-20 top-10">
@@ -258,6 +260,15 @@ backgroundSize: contain
 ![](/utopia-tool.png)
 
 </div>
+
+```css
+:root {
+  /* 18.0px => 20.0px */
+  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
 
 ---
 
@@ -286,50 +297,119 @@ backgroundSize: contain
 </div>
 
 ---
-layout: two-cols-header
----
 
 # CSS vlastnosti
 
-::left::
-
 - style scoped
-- layers
+- layers `@import url('knihovna.css') layer(base)`
 - custom properties
 - funkce `clamp()`
 - `:where()`
 - logické vlastnosti (`padding-inline`)
-- univerzální vlastnosti (`align-`, `gap`)
 - nesting
 
-::right::
-
----
-layout: two-cols-header
 ---
 
-# Demo
+# Ukázka
 
-::left::
+<div class="grid grid-cols-2 h-full">
 
-<<< @/snippets/card.html {monaco-run}
+```html
+<div class="card p-flow">
+  <h2 class="heading">Project</h2>
+  <p class="description">Enter new project name</p>
+  <div class="form-field">
+    <label class="p-secondary-text-bold">Name</label>
+    <input type="text" />
+  </div>
+  <div class="p-cluster">
+    <button>Cancel</button>
+    <button>Submit</button>
+  </div>
+</div>
 
-::right::
+<style scoped>
+  .card {
+    border-radius: var(--radius-default);
+    padding: var(--space-4);
+  }
 
-<Card />
+  .heading {
+    font-size: var(--font-size-body);
+  }
+  /* ... */
+</style>
+```
+
+<iframe class="w-full h-full min-h-[40ex]" src="/card-normal.html"></iframe>
+
+</div>
 
 ---
-layout: iframe-right
-url: /test.html
+
+# Ukázka přizpůsobení - CondensedCard
+
+<div class="grid grid-cols-2 h-full">
+
+```html
+<style>
+  :root {
+    --space-1: 2px;
+    --space-2: 0.3rem;
+    --space-3: 0.5rem;
+    --space-4: 0.7rem;
+  }
+</style>
+```
+
+<iframe class="w-full h-full min-h-[40ex]" src="/card-condensed.html"></iframe>
+
+</div>
+
 ---
 
-# Demo l
+# Ukázka přizpůsobení - TinyCard
+
+<div class="grid grid-cols-2">
+
+```html
+<style>
+  :root {
+    --font-size--1: 0.8rem;
+    --font-size-0: 0.9rem;
+  }
+</style>
+```
+
+<iframe class="w-full h-full min-h-[40ex]" src="/card-tiny.html"></iframe>
+
+</div>
+
+---
+
+# Knihovna Puleo CSS
+
+<div>
+
+&#8594; https://github.com/lttr/puleo
+
+</div>
+
+<div class="flex w-[50ch] mx-auto">
+
+![](/puleo.png)
+
+</div>
 
 ---
 
 # Shrnutí
 
-- tooling chybí
+- nativní podpora v prohlížečích se dost posunula
+- techniky a nástroje nejsou přímočaré nebo standardizované<br>
+  (narozdíl třeba od Tailwindu)
+- CSS je mocné a vlastní design je možné tvořit rychle<br>
+  (možné zatím neznamená jednoduché)
 
 ---
 layout: quote
@@ -344,5 +424,3 @@ Otázky?
 ![](/lt-talks.gif)
 
 &#8594; https://lukastrumm.com/talks/
-
----

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="is-light">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <style>
+      @import url("/puleo-0.0.4.post.css") layer(base);
+
+      main {
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+      }
+
+      :root {
+        --space-1: 2px;
+        --space-2: 0.3rem;
+        --space-3: 0.5rem;
+        --space-4: 0.7rem;
+      }
+
+      .p-flow * {
+        --flow-space: var(--space-4);
+      }
+
+      .card {
+        border-radius: var(--radius-2);
+        padding: var(--space-4);
+        box-shadow: var(--shadow-4);
+      }
+
+      .heading {
+        font-size: var(--font-size-0);
+      }
+
+      .description {
+        font-size: var(--font-size--1);
+        font-weight: var(--font-weight-light);
+      }
+
+      .form-field {
+        display: grid;
+        gap: var(--space-1);
+      }
+
+      .cancel {
+        --_text-color: var(--text-color-1);
+        --_bg-color: var(--surface-0);
+        --_bg-hover: var(--surface-1);
+        --_bg-active: var(--surface-2);
+      }
+
+      .submit {
+        --_bg-color: var(--brand-color);
+      }
+    </style>
+    <main>
+      <div class="card p-flow">
+        <h2 class="heading">Project</h2>
+        <p class="description">Enter new project name</p>
+        <div class="form-field">
+          <label for="name" class="p-secondary-text-bold">Name</label>
+          <input id="name" type="text" />
+        </div>
+        <div class="p-cluster">
+          <button class="cancel">Cancel</button>
+          <button class="submit">Submit</button>
+        </div>
+      </div>
+      <div></div>
+    </main>
+  </body>
+</html>
