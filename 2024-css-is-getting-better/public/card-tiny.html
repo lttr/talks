@@ -1,80 +1,82 @@
 <!doctype html>
 <html lang="en" class="is-light">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
 
-  <body>
-    <style>
-      @import url("/puleo-0.0.4.post.css") layer(base);
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-      main {
-        display: grid;
-        place-items: center;
-        padding: 1rem;
-      }
+<body>
+  <style>
+    @import url("puleo-0.0.4.post.css") layer(base);
 
-      :root {
-        --space-1: 2px;
-        --space-2: 0.4rem;
-        --space-3: 0.6rem;
-        --space-4: 0.8rem;
+    main {
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
 
-        --font-size--1: 0.8rem;
-        --font-size-0: 0.9rem;
-      }
+    :root {
+      --space-1: 2px;
+      --space-2: 0.4rem;
+      --space-3: 0.6rem;
+      --space-4: 0.8rem;
 
-      .p-flow * {
-        --flow-space: var(--space-4);
-      }
+      --font-size--1: 0.8rem;
+      --font-size-0: 0.9rem;
+    }
 
-      .card {
-        border-radius: var(--radius-2);
-        padding: var(--space-4);
-        box-shadow: var(--shadow-4);
-      }
+    .p-flow * {
+      --flow-space: var(--space-4);
+    }
 
-      .heading {
-        font-size: var(--font-size-0);
-      }
+    .card {
+      border-radius: var(--radius-2);
+      padding: var(--space-4);
+      box-shadow: var(--shadow-4);
+    }
 
-      .description {
-        font-size: var(--font-size--1);
-        font-weight: var(--font-weight-light);
-      }
+    .heading {
+      font-size: var(--font-size-0);
+    }
 
-      .form-field {
-        display: grid;
-        gap: var(--space-1);
-      }
+    .description {
+      font-size: var(--font-size--1);
+      font-weight: var(--font-weight-light);
+    }
 
-      .cancel {
-        --_text-color: var(--text-color-1);
-        --_bg-color: var(--surface-0);
-        --_bg-hover: var(--surface-1);
-        --_bg-active: var(--surface-2);
-      }
+    .form-field {
+      display: grid;
+      gap: var(--space-1);
+    }
 
-      .submit {
-        --_bg-color: var(--brand-color);
-      }
-    </style>
-    <main>
-      <div class="card p-flow">
-        <h2 class="heading">Project</h2>
-        <p class="description">Enter new project name</p>
-        <div class="form-field">
-          <label for="name" class="p-secondary-text-bold">Name</label>
-          <input id="name" type="text" />
-        </div>
-        <div class="p-cluster">
-          <button class="cancel">Cancel</button>
-          <button class="submit">Submit</button>
-        </div>
+    .cancel {
+      --_text-color: var(--text-color-1);
+      --_bg-color: var(--surface-0);
+      --_bg-hover: var(--surface-1);
+      --_bg-active: var(--surface-2);
+    }
+
+    .submit {
+      --_bg-color: var(--brand-color);
+    }
+  </style>
+  <main>
+    <div class="card p-flow">
+      <h2 class="heading">Project</h2>
+      <p class="description">Enter new project name</p>
+      <div class="form-field">
+        <label for="name" class="p-secondary-text-bold">Name</label>
+        <input id="name" type="text" />
       </div>
-      <div></div>
-    </main>
-  </body>
+      <div class="p-cluster">
+        <button class="cancel">Cancel</button>
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+    <div></div>
+  </main>
+</body>
+
 </html>

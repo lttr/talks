@@ -341,7 +341,7 @@ Zkompilovaný výstup
 </style>
 ```
 
-<iframe class="w-full h-full min-h-[40ex]" src="/card-normal.html"></iframe>
+<Iframe html-file="card-normal" />
 
 </div>
 
@@ -362,7 +362,7 @@ Zkompilovaný výstup
 </style>
 ```
 
-<iframe class="w-full h-full min-h-[40ex]" src="/card-condensed.html"></iframe>
+<Iframe html-file="card-condensed" />
 
 </div>
 
@@ -381,7 +381,7 @@ Zkompilovaný výstup
 </style>
 ```
 
-<iframe class="w-full h-full min-h-[40ex]" src="/card-tiny.html"></iframe>
+<Iframe html-file="card-tiny" />
 
 </div>
 
