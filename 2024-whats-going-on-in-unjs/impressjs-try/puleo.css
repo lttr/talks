@@ -1,0 +1,2381 @@
+/*
+* Building blocks (CSS custom properties)
+*/
+:where(html) {
+  --radius-1: 2px;
+  --radius-2: 5px;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+  --radius-round: 1e5px;
+ 
+  --border-size-1: 1px;
+  --border-size-2: 2px;
+ 
+  --size-xxs: 240px;
+  --size-xs: 360px;
+  --size-sm: 480px;
+  --size-md: 768px;
+  --size-lg: 1024px;
+  --size-xl: 1440px;
+  --size-xxl: 1920px;
+ 
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #495057;
+  --gray-8: #343a40;
+  --gray-9: #212529;
+  --gray-10: #16191d;
+  --gray-11: #0d0f12;
+  --gray-12: #030507;
+  --gray-5-hsl: 210 11% 71%;
+  --gray-12-hsl: 210 40% 2%;
+  --red-1: #ffe3e3;
+  --red-2: #ffc9c9;
+  --red-3: #ffa8a8;
+  --red-4: #ff8787;
+  --red-5: #ff6b6b;
+  --red-6: #fa5252;
+  --red-7: #f03e3e;
+  --red-8: #e03131;
+  --red-9: #c92a2a;
+  --red-10: #b02525;
+  --red-11: #962020;
+  --red-12: #7d1a1a;
+  --green-1: #d3f9d8;
+  --green-2: #b2f2bb;
+  --green-3: #8ce99a;
+  --green-4: #69db7c;
+  --green-5: #51cf66;
+  --green-6: #40c057;
+  --green-7: #37b24d;
+  --green-8: #2f9e44;
+  --green-9: #2b8a3e;
+  --green-10: #237032;
+  --green-11: #1b5727;
+  --green-12: #133d1b;
+  --blue-1: #d0ebff;
+  --blue-2: #a5d8ff;
+  --blue-3: #74c0fc;
+  --blue-4: #4dabf7;
+  --blue-5: #339af0;
+  --blue-6: #228be6;
+  --blue-7: #1c7ed6;
+  --blue-8: #1971c2;
+  --blue-9: #1864ab;
+  --blue-10: #145591;
+  --blue-11: #114678;
+  --blue-12: #0d375e;
+  --purple-3: #e599f7;
+  --purple-7: #ae3ec9;
+ 
+  --ease-1: cubic-bezier(.25, 0, .5, 1);
+  --ease-2: cubic-bezier(.25, 0, .4, 1);
+  --ease-3: cubic-bezier(.25, 0, .3, 1);
+  --ease-4: cubic-bezier(.25, 0, .2, 1);
+ 
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+ 
+  --size-content-1: 20ch;
+  --size-content-2: 45ch;
+  --size-content-3: 60ch;
+  --size-header-1: 20ch;
+  --size-header-2: 25ch;
+  --size-header-3: 35ch;
+ 
+  --font-lineheight-0: 1.1;
+  --font-lineheight-1: 1.25;
+  --font-lineheight-2: 1.375;
+  --font-lineheight-3: 1.5;
+  --font-lineheight-4: 1.75;
+ 
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+  --inner-shadow-highlight: inset 0 -.5px 0 0 #fff, inset 0 .5px 0 0 #0001;
+  --shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+  --shadow-2: 
+    0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+  --shadow-3: 
+    0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-4: 
+    0 -2px 5px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+  --shadow-5: 
+    0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-6: 
+    0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+    0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+  --inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+  --inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+  --inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+ 
+}
+@media (prefers-color-scheme: dark) {
+  :where(html:where(:not(.is-light))) {
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
+    --inner-shadow-highlight: inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007;
+  }
+}
+:where(html:where(.is-dark)) {
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
+    --inner-shadow-highlight: inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007;
+  }
+:where(html) {
+  /* 4.5px => 5.0px */
+  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.250rem);
+  /* 27.0px => 30.0px */
+  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+  /* 36.0px => 40.0px */
+  --space-6: clamp(2.250rem, 2.16rem + 0.43vw, 2.500rem);
+  /* 54.0px => 60.0px */
+  --space-7: clamp(3.375rem, 3.24rem + 0.65vw, 3.750rem);
+  /* 72.0px => 80.0px */
+  --space-8: clamp(4.500rem, 4.33rem + 0.87vw, 5.000rem);
+  /* 108.0px => 120.0px */
+  --space-9: clamp(6.750rem, 6.49rem + 1.30vw, 7.500rem);
+  /* 4.5px => 10.0px */
+  --space-1-2: clamp(0.281rem, 0.16rem + 0.60vw, 0.625rem);
+  /* 9.0px => 15.0px */
+  --space-2-3: clamp(0.563rem, 0.43rem + 0.65vw, 0.938rem);
+  /* 13.5px => 20.0px */
+  --space-3-4: clamp(0.844rem, 0.70rem + 0.71vw, 1.250rem);
+  /* 18.0px => 30.0px */
+  --space-4-5: clamp(1.125rem, 0.86rem + 1.30vw, 1.875rem);
+  /* 27.0px => 40.0px */
+  --space-5-6: clamp(1.688rem, 1.40rem + 1.41vw, 2.500rem);
+  /* 36.0px => 60.0px */
+  --space-6-7: clamp(2.250rem, 1.73rem + 2.61vw, 3.750rem);
+  /* 54.0px => 80.0px */
+  --space-7-8: clamp(3.375rem, 2.81rem + 2.83vw, 5.000rem);
+  /* 72.0px => 120.0px */
+  --space-8-9: clamp(4.500rem, 3.46rem + 5.22vw, 7.500rem);
+  /* 13.5px => 30.0px */
+  --space-3-5: clamp(0.844rem, 0.49rem + 1.79vw, 1.875rem);
+  /* 18.0px => 40.0px */
+  --space-4-6: clamp(1.125rem, 0.65rem + 2.39vw, 2.500rem);
+ 
+  /* 12.5px => 12.8px */
+  --font-size--2: clamp(0.781rem, 0.77rem + 0.03vw, 0.800rem);
+  /* 15.0px => 16.0px */
+  --font-size--1: clamp(0.938rem, 0.92rem + 0.11vw, 1.000rem);
+  /* 18.0px => 20.0px */
+  --font-size-0: clamp(1.125rem, 1.08rem + 0.22vw, 1.250rem);
+  /* 21.6px => 25.0px */
+  --font-size-1: clamp(1.350rem, 1.28rem + 0.37vw, 1.563rem);
+  /* 25.9px => 31.3px */
+  --font-size-2: clamp(1.620rem, 1.50rem + 0.58vw, 1.953rem);
+  /* 31.1px => 39.1px */
+  --font-size-3: clamp(1.944rem, 1.77rem + 0.87vw, 2.441rem);
+  /* 37.3px => 48.8px */
+  --font-size-4: clamp(2.333rem, 2.08rem + 1.25vw, 3.052rem);
+  /* 44.8px => 61.0px */
+  --font-size-5: clamp(2.799rem, 2.45rem + 1.77vw, 3.815rem);
+ 
+  --grid-max-width: 77.50rem;
+  --grid-gutter: var(--space-4-6);
+  --grid-columns: 12;
+ 
+}
+/*
+* Resets and base styles (generic styles and element specific styles)
+*/
+/*
+* Based on Open Props: theme.css and theme.light.css
+*/
+:where(html) {
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :where(html:where(:not(.is-light))) {
+    color-scheme: dark;
+  }
+}
+:where(html:where(.is-dark)) {
+    color-scheme: dark;
+  }
+/*
+* Based on Open Props: normalize.css and normalize.src.css
+*/
+*,
+::before,
+::after {
+  /* Is a design mistake in CSS, source: https://wiki.csswg.org/ideas/mistakes */
+  box-sizing: border-box;
+}
+/*
+* Remove default margins because it is more predictable to use layout utilities
+* for consistent spacing.
+*
+* margin: 0 for dialog would not place the dialog in the center of a viewport.
+*/
+:where(:not(dialog)) {
+  margin: 0;
+}
+:where(:not(fieldset, progress, meter)) {
+  border-width: 0;
+  border-style: solid;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+:where(html) {
+  block-size: 100%;
+  font-family: var(--font-family-body);
+
+  /*
+  * From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+  * Accessibility concerns: Use a minimum value of 1.5 for line-height for main
+  * paragraph content. 
+  */
+  line-height: var(--line-height-body);
+
+  /* 
+  * From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust):
+  * ...on a properly designed responsive site the text-size-adjust behavior is not
+  * needed, so developers can elect to turn it off by specifying a value of none.
+  * also see https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+  */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+:where(html) {
+    scroll-behavior: smooth;
+}
+  }
+@media (prefers-reduced-motion: no-preference) {
+  :where(:focus-visible) {
+    transition: outline-offset 145ms var(--ease-2);
+  }
+  :where(:not(:active):focus-visible) {
+    transition-duration: 0.25s;
+  }
+}
+:where(:focus-visible) {
+  outline-color: var(--focus-color, var(--link-color));
+  outline-width: 2px;
+  outline-style: solid;
+}
+:where(:focus-visible):not(:active) {
+    outline-offset: var(--outline-offset);
+  }
+:where(body) {
+  min-block-size: 100%;
+  /* Base font size that inherits. */
+  font-size: var(--font-size-body);
+  background-color: var(--bg-color-body);
+}
+:where(p, h1, h2, h3, h4, h5, h6) {
+  /* Soft wrap overflowing words when possible to prevent horizontal scrolling. */
+  overflow-wrap: break-word;
+}
+/* Set shorter line heights on headings and interactive elements */
+:where(button, input, label) {
+  line-height: var(--font-lineheight-1);
+}
+:where(h1, h2, h3, h4, h5, h6) {
+  line-height: var(--line-height-headings);
+  font-weight: var(--font-weight-headings);
+  text-wrap: balance;
+}
+:where(h1) {
+  font-size: var(--font-size-h1);
+  max-inline-size: var(--max-inline-size-h1, initial);
+}
+:where(h2) {
+  font-size: var(--font-size-h2);
+  max-inline-size: var(--max-inline-size-h2, initial);
+}
+:where(h3) {
+  font-size: var(--font-size-h3);
+}
+:where(h4) {
+  font-size: var(--font-size-h4);
+}
+:where(h5) {
+  font-size: var(--font-size-h5);
+}
+:where(h3, h4, h5, h6, dt) {
+  max-inline-size: var(--max-inline-size-other-headings, initial);
+}
+:where(p, ul, ol, dl, h6) {
+  font-size: var(--font-size-0);
+}
+:where(a, u, ins, abbr) {
+  text-underline-offset: 2px;
+}
+:where(
+    a[href],
+    area,
+    button,
+    input:not(
+        [type="text"],
+        [type="email"],
+        [type="number"],
+        [type="password"],
+        [type=""],
+        [type="tel"],
+        [type="url"]
+      ),
+    label[for],
+    select,
+    summary,
+    [tabindex]:not([tabindex*="-"])
+  ) {
+  cursor: pointer;
+}
+:where(
+    a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])
+  ) {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+:where(a) {
+  padding-inline: var(--space-1);
+  margin-inline: calc(var(--space-1) * -1);
+  padding-block: var(--space-1);
+  margin-block: calc(var(--space-1) * -1);
+}
+:where(a):where([href]) {
+    color: var(--link-color);
+    text-decoration-color: var(--link-color);
+  }
+:where(a):where([href]):where(:visited) {
+      color: var(--link-color-visited);
+      text-decoration-color: var(--link-color-visited);
+    }
+:where(a):where(:not(:hover)) {
+    text-decoration: inherit;
+  }
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  /* Don't consider these objects as inline. */
+  display: block;
+}
+:where(img, svg, video) {
+  /* Don't overflow from its container */
+  max-inline-size: 100%;
+  block-size: auto;
+}
+:where(svg:not([width])) {
+  inline-size: var(--space-8);
+}
+:where(code, kbd, samp, pre) {
+  font-family: var(--font-mono);
+}
+:where(:not(pre) > code, kbd) {
+  white-space: nowrap;
+}
+:where(pre) {
+  white-space: pre;
+  min-inline-size: 0;
+  max-inline-size: max-content;
+  -ms-writing-mode: lr;
+      writing-mode: lr;
+  direction: ltr;
+}
+:where(:not(pre) > code) {
+  padding: var(--space-1) var(--space-2);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  -ms-writing-mode: lr;
+      writing-mode: lr;
+}
+:where(kbd, var) {
+  padding: var(--space-1) var(--space-2);
+  border-width: var(--border-size-1);
+  border-color: var(--surface-4);
+  border-radius: var(--radius-2);
+}
+:where(mark) {
+  border-radius: var(--radius-2);
+  padding-inline: var(--space-1);
+}
+:where(ol, ul) {
+  padding-inline-start: var(--space-6);
+}
+:where(li) {
+  padding-inline-start: var(--space-2);
+}
+:where(li, dd, figcaption) {
+  max-inline-size: var(--max-inline-size-elements, initial);
+  text-wrap: pretty;
+}
+:where(p) {
+  max-inline-size: var(--max-inline-size-p, initial);
+  text-wrap: pretty;
+}
+:where(dt, summary) {
+  font-weight: var(--font-weight-body-bold);
+}
+:where(dt:not(:first-of-type)) {
+  margin-block-start: var(--space-5);
+}
+:where(small) {
+  font-size: max(0.5em, var(--font-size-0));
+}
+:where(hr) {
+  margin-block: var(--space-5);
+  height: var(--border-size-1);
+  background-color: var(--surface-3);
+}
+:where(figure) {
+  display: grid;
+  gap: var(--space-2);
+  place-items: center;
+}
+:where(figure) > :where(figcaption) {
+    font-size: var(--font-size-1);
+    text-wrap: balance;
+  }
+:where(blockquote, :not(blockquote) > cite) {
+  border-inline-start-width: var(--border-size-3);
+}
+:where(blockquote) {
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  padding-inline: var(--space-4);
+  max-inline-size: var(--max-inline-size-elements, initial);
+}
+:where(:not(blockquote) > cite) {
+  padding-inline-start: var(--space-2);
+}
+:where(summary) {
+  background: var(--bg-color-body);
+  padding: var(--space-2) var(--space-3);
+  margin: calc(var(--space-2) * -1) calc(var(--space-3) * -1);
+  border-radius: var(--radius-default);
+}
+:where(details) {
+  padding-inline: var(--space-3);
+  padding-block: var(--space-2);
+  background: var(--surface-1);
+  border-radius: var(--radius-default);
+}
+:where(details[open] > summary) {
+  margin-bottom: var(--space-2);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+:where(fieldset) {
+  border-radius: var(--radius-default);
+  border: var(--border-size-1) solid var(--surface-4);
+}
+:where(del) {
+  background: var(--red-9);
+  color: var(--red-2);
+}
+:where(ins) {
+  background: var(--green-9);
+  color: var(--green-1);
+}
+:where(abbr) {
+  text-decoration-color: var(--blue-5);
+}
+:where(dialog) {
+  background-color: var(--surface-1);
+  color: inherit;
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-6);
+}
+:where(dialog)::-ms-backdrop {
+    backdrop-filter: blur(25px);
+  }
+:where(dialog)::backdrop {
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+  }
+:where(html:has(dialog[open])) {
+  overflow: hidden;
+}
+:where(menu) {
+  padding-inline-start: 0;
+  display: flex;
+  gap: var(--space-3);
+}
+:where(sup) {
+  font-size: 0.5em;
+}
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* Sources:
+* https://layout-breakouts-builder.vercel.app/
+* https://www.youtube.com/watch?v=c13gpBrnGEw
+*/
+/* BASELINE available from 7/2024 */
+@property --popout-multiplier {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 4;
+}
+:is(.p-page-layout, .p-full-bg) {
+  --minimum-content-padding: var(--grid-gutter);
+  --popout-multiplier: 4;
+
+  /** TRACK WIDTHS **/
+  /* 1fr takes as much space as available. Specific values may be used for
+   * narrower page layout. */
+  --full-max-width: 1fr;
+  /* --grid-max-width comes from Utopia grid and is calculated in a way to make
+   * something like 12 columns grid possible and aligned with other values in
+   * this system. */
+  --content-max-width: var(--grid-max-width);
+  --popout-max-width: calc(
+    var(--grid-max-width) + var(--popout-multiplier) * var(--grid-gutter)
+  );
+  --inset-max-width: calc(
+    var(--grid-max-width) - var(--popout-multiplier) * var(--grid-gutter)
+  );
+
+  /** TRACK SIZES **/
+  /* Track sizes represent a fraction, that is subtracted from the available space. */
+
+  /* Makes sure the content always have a minimum padding. */
+  --full: minmax(var(--minimum-content-padding), var(--full-max-width));
+  /* Since the fraction is subtracted twice from the available space the formula
+   * uses 0.5 times. */
+  --popout: minmax(
+    0,
+    calc((var(--popout-max-width) - var(--content-max-width)) * 0.5)
+  );
+  /* The grid-gutter is subtracted as well from the available space in order to
+   * align with a definition of a grid in Utopia design. The container is padded
+   * with grid-gutter on each side.
+   * Source: https://utopia.fyi/grid/
+   */
+  --content: minmax(
+    0,
+    calc(
+      (var(--content-max-width) - var(--inset-max-width)) * 0.5 -
+        var(--grid-gutter)
+    )
+  );
+  /* A track that is representing the middle area. This track does not count
+   * twice so the formula is different than the others. It makes sure the
+   * content has a maximum width. */
+  --inset: min(
+    var(--inset-max-width),
+    100% - var(--minimum-content-padding) * 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [popout-start] var(--popout)
+    [content-start] var(--content)
+    [inset-start] var(--inset) [inset-end]
+    var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--full) [full-end];
+}
+/* If not specified with other classes otherwise, the elements inside the layout
+ * will span the middle content area. */
+:is(.p-page-layout, .p-full-bg) > * {
+  grid-column: content;
+}
+/** CLASSES **/
+.p-inset {
+  grid-column: inset;
+}
+.p-inset-start {
+  grid-column-start: inset-start;
+}
+.p-inset-end {
+  grid-column-end: inset-end;
+}
+.p-inset-padded {
+  grid-column: inset;
+  padding-inline: calc(2 * var(--minimum-content-padding));
+}
+.p-content {
+  grid-column: content;
+}
+.p-content-start {
+  grid-column-start: content-start;
+}
+.p-content-end {
+  grid-column-end: content-end;
+}
+.p-content-padded {
+  grid-column: content;
+  padding-inline: calc(2 * var(--minimum-content-padding));
+}
+@media (max-width: 479.98px) {
+  .p-content-padded {
+    grid-column: full;
+    border-radius: 0;
+    padding-inline: var(--minimum-content-padding);
+  }
+}
+.p-popout {
+  grid-column: popout;
+}
+.p-popout-start {
+  grid-column-start: popout-start;
+}
+.p-popout-end {
+  grid-column-end: popout-end;
+}
+.p-popout-padded {
+  grid-column: popout;
+  padding-inline: calc(2 * var(--minimum-content-padding));
+}
+.p-full {
+  grid-column: full;
+  border-radius: 0;
+}
+.p-full-start {
+  grid-column-start: full-start;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.p-full-end {
+  grid-column-end: full-end;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* Applies the page layout onto itself.
+ *
+ * Background spans the full width, while the content remains in the middle
+ * content track. */
+.p-full-bg {
+  grid-column: full;
+}
+/* Spans the full width, content is padded a little on both sides. */
+.p-full-padded {
+  grid-column: full;
+  padding-inline: var(--minimum-content-padding);
+}
+:where(table) {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid var(--surface-2);
+  background: var(--surface-2);
+  border-radius: var(--radius-default);
+
+  --nice-inner-radius: calc(var(--radius-default) - 2px);
+}
+:where(table:not(:has(tfoot)) tr:last-child td:first-child) {
+  border-bottom-left-radius: var(--nice-inner-radius);
+}
+:where(table:not(:has(tfoot)) tr:last-child td:last-child) {
+  border-bottom-right-radius: var(--nice-inner-radius);
+}
+:where(table thead th:first-child) {
+  border-top-left-radius: var(--nice-inner-radius);
+}
+:where(table thead th:last-child) {
+  border-top-right-radius: var(--nice-inner-radius);
+}
+:where(tfoot th:first-of-type) {
+  border-end-start-radius: var(--nice-inner-radius);
+}
+:where(tfoot th:last-of-type) {
+  border-end-end-radius: var(--nice-inner-radius);
+}
+:where(th) {
+  color: var(--text-color-1);
+  background-color: var(--surface-2);
+}
+:where(table :is(a, button, [contenteditable]):is(:focus-visible)) {
+  outline-offset: -2px;
+}
+:where(td) {
+  background: var(--surface-1);
+  max-inline-size: var(--size-content-2);
+  text-wrap: pretty;
+}
+:where(td, th) {
+  text-align: left;
+  padding: var(--space-2);
+}
+:where(:is(td, th):not([align])) {
+  text-align: center;
+}
+:where(thead) {
+  border-collapse: collapse;
+}
+:where(table tr:hover td),
+:where(tbody tr:nth-child(even):hover td) {
+  background-color: var(--gray-10);
+}
+@media (prefers-color-scheme: light) {
+:where(html:not(.is-dark)) :where(table tr:hover td),
+:where(html:not(.is-dark)) :where(tbody tr:nth-child(even):hover td) {
+    background-color: white;
+}
+  }
+:where(html.is-light) :where(table tr:hover td),
+:where(html.is-light) :where(tbody tr:nth-child(even):hover td) {
+    background-color: white;
+}
+:where(table > caption) {
+  margin: var(--space-3);
+}
+:where(tfoot button) {
+  padding-block: var(--space-1);
+  padding-inline: var(--space-3);
+}
+/* Based on Open Props buttons.css */
+/* https://github.com/argyleink/open-props/blob/main/src/extra/buttons.css */
+/* Let form controls to look like other elements. */
+:where(input[type="file"])::-webkit-file-upload-button {
+  /* API */
+  --_font-size: var(--font-size--1);
+  --_bg-color: var(--surface-2-inverse);
+  --_bg-hover: var(--surface-3-inverse);
+  --_bg-active: var(--surface-1-inverse);
+  --_text-color: var(--text-color-1-inverse);
+
+  /* Internal state */
+  --_border: var(--_bg);
+  --_text: var(--_text-color);
+  --_bg: var(--_bg-color);
+  --_icon-size: 3ch;
+  --_icon-color: var(--surface-1);
+
+  height: var(--button-height-default);
+  font-size: var(--_font-size);
+  background-color: var(--_bg);
+  color: var(--_text);
+  border: var(--border-size-1) solid var(--_border);
+  box-shadow:
+    var(--shadow-2),
+    0 1px var(--surface-3);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-buttons);
+  border-radius: var(--radius-default);
+  padding-block: 0.75ch;
+  padding-inline: var(--space-3);
+
+  -webkit-user-select: none;
+
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  /* API */
+  --_font-size: var(--font-size--1);
+  --_bg-color: var(--surface-2-inverse);
+  --_bg-hover: var(--surface-3-inverse);
+  --_bg-active: var(--surface-1-inverse);
+  --_text-color: var(--text-color-1-inverse);
+
+  /* Internal state */
+  --_border: var(--_bg);
+  --_text: var(--_text-color);
+  --_bg: var(--_bg-color);
+  --_icon-size: 3ch;
+  --_icon-color: var(--surface-1);
+
+  height: var(--button-height-default);
+  font-size: var(--_font-size);
+  background-color: var(--_bg);
+  color: var(--_text);
+  border: var(--border-size-1) solid var(--_border);
+  box-shadow:
+    var(--shadow-2),
+    0 1px var(--surface-3);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-buttons);
+  border-radius: var(--radius-default);
+  padding-block: 0.75ch;
+  padding-inline: var(--space-3);
+
+  -webkit-user-select: none;
+
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :where(input[type="file"])::-webkit-file-upload-button {
+    --_bg-hover: var(--surface-1-inverse);
+    --_bg-active: var(--surface-3-inverse);
+}
+:where(html:not(.is-light)) :where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ),
+    :where(html:not(.is-light)) :where(input[type="file"])::-webkit-file-upload-button,
+    :where(html:not(.is-light)) :where(input[type="file"])::file-selector-button {
+    --_bg-hover: var(--surface-1-inverse);
+    --_bg-active: var(--surface-3-inverse);
+}
+  }
+:where(html.is-dark) :where(input[type="file"])::-webkit-file-upload-button {
+    --_bg-hover: var(--surface-1-inverse);
+    --_bg-active: var(--surface-3-inverse);
+}
+:where(html.is-dark) :where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ),
+    :where(html.is-dark) :where(input[type="file"])::-webkit-file-upload-button,
+    :where(html.is-dark) :where(input[type="file"])::file-selector-button {
+    --_bg-hover: var(--surface-1-inverse);
+    --_bg-active: var(--surface-3-inverse);
+}
+@media (prefers-reduced-motion: no-preference) {
+:where(input[type="file"])::-webkit-file-upload-button {
+    -webkit-transition:
+      border-color 0.5s var(--ease-3),
+      box-shadow 145ms var(--ease-4),
+      outline-offset 145ms var(--ease-4);
+    transition:
+      border-color 0.5s var(--ease-3),
+      box-shadow 145ms var(--ease-4),
+      outline-offset 145ms var(--ease-4);
+}
+:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+    -webkit-transition:
+      border-color 0.5s var(--ease-3),
+      box-shadow 145ms var(--ease-4),
+      outline-offset 145ms var(--ease-4);
+    transition:
+      border-color 0.5s var(--ease-3),
+      box-shadow 145ms var(--ease-4),
+      outline-offset 145ms var(--ease-4);
+}
+  }
+/* disabled */
+[disabled]:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) {
+    --_bg: var(--surface-2);
+    --_border: var(--surface-2);
+    --_text: var(--gray-7);
+    cursor: not-allowed;
+    box-shadow: var(--shadow-1);
+  }
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) [disabled]:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) {
+      --_text: var(--gray-5);
+  }
+    }
+:where(html.is-dark) [disabled]:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) {
+      --_text: var(--gray-5);
+  }
+:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ):where(:hover) {
+    --_bg: var(--_bg-hover);
+  }
+:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ):where(:active) {
+    --_bg: var(--_bg-active);
+  }
+/* icons */
+:where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) > :where(svg) {
+    flex-shrink: 0;
+    block-size: var(--_icon-size);
+    inline-size: var(--_icon-size);
+    color: var(--_bg);
+    fill: var(--_icon-color);
+  }
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) > :where(svg) {
+      fill: var(--_icon-color);
+  }
+    }
+:where(html.is-dark) :where(
+    .p-button,
+    button,
+    input:is([type="button"], [type="submit"], [type="reset"])
+  ) > :where(svg) {
+      fill: var(--_icon-color);
+  }
+/* red reset */
+:where([type="reset"]) {
+  --_text: var(--red-3);
+}
+:where([type="reset"]):focus-visible {
+    outline-color: var(--red-6);
+  }
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :where([type="reset"]) {
+    --_text: var(--red-9);
+    --_border: var(--surface-3);
+}
+  }
+:where(html.is-dark) :where([type="reset"]) {
+    --_text: var(--red-9);
+    --_border: var(--surface-3);
+}
+:where(a.p-button) {
+  color: var(--text-color-1-inverse);
+}
+:where(a.p-button):hover {
+    text-decoration: none;
+  }
+/* file input */
+:where(input[type="file"]) {
+  max-inline-size: 100%;
+  padding-inline: var(--space-1);
+  padding-block: 0;
+  cursor: initial;
+  align-self: flex-start;
+  border-radius: var(--radius-2);
+  box-shadow: var(--inner-shadow-4);
+  color: var(--text-color-1);
+  border: 1px solid var(--gray-3);
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-buttons);
+  line-height: var(--line-height-headings);
+}
+.dropping:where(input[type="file"]) {
+    border: 1px solid transparent;
+    box-shadow: none;
+    outline: 2px dashed var(--text-color-2);
+  }
+@media (prefers-reduced-motion: no-preference) {
+.dropping:where(input[type="file"]) {
+      animation: drop-zone 1.5s var(--ease-5) infinite;
+  }
+    }
+:where(input[type="file"])::-webkit-file-upload-button {
+  margin-inline-end: var(--space-2);
+  cursor: pointer;
+  margin: var(--space-3);
+}
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  margin-inline-end: var(--space-2);
+  cursor: pointer;
+  margin: var(--space-3);
+}
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :where(input[type="file"])::-webkit-file-upload-button {
+    border-color: transparent;
+}
+:where(html:not(.is-light)) :where(input[type="file"])::-webkit-file-upload-button,
+:where(html:not(.is-light)) :where(input[type="file"])::file-selector-button {
+    border-color: transparent;
+}
+  }
+:where(html.is-dark) :where(input[type="file"])::-webkit-file-upload-button {
+    border-color: transparent;
+}
+:where(html.is-dark) :where(input[type="file"])::-webkit-file-upload-button,
+:where(html.is-dark) :where(input[type="file"])::file-selector-button {
+    border-color: transparent;
+}
+/*
+* Forms inputs normalization
+*/
+/* Let form controls to look like other other elements. */
+:where(input:not(:is([type="button"], [type="file"])), textarea, select) {
+  font: inherit;
+  font-size: var(--font-size--1);
+  color: inherit;
+  letter-spacing: inherit;
+}
+:-ms-input-placeholder {
+  color: var(--gray-7);
+  opacity: 0.75;
+}
+::placeholder {
+  color: var(--gray-7);
+  opacity: 0.75;
+}
+:where(
+    input:not(
+        [type="range"],
+        [type="checkbox"],
+        [type="radio"],
+        [type="button"],
+        [type="file"]
+      )
+  ) {
+  padding-block: 0.75ch;
+  padding-inline: var(--space-3);
+  height: var(--button-height-default);
+}
+:where(select) {
+  padding-inline: var(--space-3) 0;
+  padding-block: var(--space-1);
+}
+:where(
+    textarea,
+    select,
+    input:not([type="button"], [type="file"], [type="submit"], [type="reset"])
+  ) {
+  background-color: var(--surface-2);
+  border-radius: var(--input-radius);
+}
+:where(textarea) {
+  resize: block;
+}
+:where(input[type="checkbox"], input[type="radio"]) {
+  block-size: var(--space-4);
+  inline-size: var(--space-4);
+}
+@media (prefers-color-scheme: dark) {
+  :where(html:not(.is-light)) :where(
+      textarea,
+      select,
+      input:not([type="button"], [type="submit"], [type="reset"])
+    ) {
+    background-color: hsl(210 11% 10%);
+  }
+
+  :where(html:not(.is-light)) :where(dialog) {
+    background-color: var(--surface-2);
+  }
+
+  :where(html:not(.is-light)) :-ms-input-placeholder {
+    color: var(--gray-6);
+  }
+
+  :where(html:not(.is-light)) ::placeholder {
+    color: var(--gray-6);
+  }
+}
+:where(html.is-dark) :where(
+      textarea,
+      select,
+      input:not([type="button"], [type="submit"], [type="reset"])
+    ) {
+    background-color: hsl(210 11% 10%);
+  }
+:where(html.is-dark) :where(dialog) {
+    background-color: var(--surface-2);
+  }
+:where(html.is-dark) :-ms-input-placeholder {
+    color: var(--gray-6);
+  }
+:where(html.is-dark) ::placeholder {
+    color: var(--gray-6);
+  }
+/* custom forms */
+:root {
+  /* https://github.com/argyleink/open-props/discussions/65 ?? */
+  --icon-error: url(https://api.iconify.design/ic:baseline-error.svg?color=%23ff6b6b);
+  --icon-search: url(https://api.iconify.design/ic:search.svg?color=%2300000077);
+  --icon-email: url(https://api.iconify.design/ic:email.svg?color=%2300000077);
+  --icon-url: url(https://api.iconify.design/ic:link.svg?color=%2300000077);
+  --icon-user: url(https://api.iconify.design/ic:person.svg?color=%2300000077);
+  --icon-user-editing: url(https://api.iconify.design/ic:person-outline.svg?color=%2300000077);
+  --icon-tel: url(https://api.iconify.design/ic:phone.svg?color=%2300000077);
+  --icon-tel-editing: url(https://api.iconify.design/ic:phone-in-talk.svg?color=%2300000077);
+  --icon-password: url(https://api.iconify.design/ic:baseline-lock.svg?color=%2300000077);
+  --icon-password-editing: url(https://api.iconify.design/ic:baseline-lock-open.svg?color=%2300000077);
+  --icon-no-edit: url(https://api.iconify.design/ic:baseline-edit-off.svg?color=%2300000077);
+  --icon-arrow-down: url(https://api.iconify.design/ic:keyboard-arrow-down.svg?color=%2300000077);
+  --icon-arrow-up: url(https://api.iconify.design/ic:keyboard-arrow-up.svg?color=%2300000077);
+}
+@media (prefers-color-scheme: dark) {
+:root:where(:not(.is-light)) {
+    --icon-error: url(https://api.iconify.design/ic:baseline-error.svg?color=%23ff6b6b);
+    --icon-search: url(https://api.iconify.design/ic:search.svg?color=%23ffffff77);
+    --icon-email: url(https://api.iconify.design/ic:email.svg?color=%23ffffff77);
+    --icon-url: url(https://api.iconify.design/ic:link.svg?color=%23ffffff77);
+    --icon-user: url(https://api.iconify.design/ic:person.svg?color=%23ffffff77);
+    --icon-user-editing: url(https://api.iconify.design/ic:person-outline.svg?color=%23ffffff77);
+    --icon-tel: url(https://api.iconify.design/ic:phone.svg?color=%23ffffff77);
+    --icon-tel-editing: url(https://api.iconify.design/ic:phone-in-talk.svg?color=%23ffffff77);
+    --icon-password: url(https://api.iconify.design/ic:baseline-lock.svg?color=%23ffffff77);
+    --icon-password-editing: url(https://api.iconify.design/ic:baseline-lock-open.svg?color=%23ffffff77);
+    --icon-no-edit: url(https://api.iconify.design/ic:baseline-edit-off.svg?color=%23ffffff77);
+    --icon-arrow-down: url(https://api.iconify.design/ic:keyboard-arrow-down.svg?color=%23ffffff77);
+    --icon-arrow-up: url(https://api.iconify.design/ic:keyboard-arrow-up.svg?color=%23ffffff77);
+}
+  }
+:root:where(.is-dark) {
+    --icon-error: url(https://api.iconify.design/ic:baseline-error.svg?color=%23ff6b6b);
+    --icon-search: url(https://api.iconify.design/ic:search.svg?color=%23ffffff77);
+    --icon-email: url(https://api.iconify.design/ic:email.svg?color=%23ffffff77);
+    --icon-url: url(https://api.iconify.design/ic:link.svg?color=%23ffffff77);
+    --icon-user: url(https://api.iconify.design/ic:person.svg?color=%23ffffff77);
+    --icon-user-editing: url(https://api.iconify.design/ic:person-outline.svg?color=%23ffffff77);
+    --icon-tel: url(https://api.iconify.design/ic:phone.svg?color=%23ffffff77);
+    --icon-tel-editing: url(https://api.iconify.design/ic:phone-in-talk.svg?color=%23ffffff77);
+    --icon-password: url(https://api.iconify.design/ic:baseline-lock.svg?color=%23ffffff77);
+    --icon-password-editing: url(https://api.iconify.design/ic:baseline-lock-open.svg?color=%23ffffff77);
+    --icon-no-edit: url(https://api.iconify.design/ic:baseline-edit-off.svg?color=%23ffffff77);
+    --icon-arrow-down: url(https://api.iconify.design/ic:keyboard-arrow-down.svg?color=%23ffffff77);
+    --icon-arrow-up: url(https://api.iconify.design/ic:keyboard-arrow-up.svg?color=%23ffffff77);
+}
+body::after {
+  content: var(--icon-tel-editing) var(--icon-password-editing)
+    var(--icon-user-editing) var(--icon-arrow-up);
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+fieldset {
+  counter-reset: errors;
+  border-color: var(--surface-2);
+  box-shadow: var(--shadow-3);
+  padding-inline: var(--space-4);
+  padding-block: var(--space-2) var(--space-3);
+  transition: box-shadow 0.4s var(--ease-out-4);
+}
+fieldset:focus-within {
+    box-shadow: var(--shadow-6);
+  }
+fieldset:focus-within > legend {
+    color: var(--link);
+  }
+fieldset
+    > div:has(
+      :-ms-input-placeholder:required,
+      :not(:-ms-input-placeholder):invalid,
+      :not([placeholder]):required
+    )
+    > label {
+    position: relative;
+  }
+fieldset
+    > div:has(
+      :placeholder-shown:required,
+      :not(:placeholder-shown):invalid,
+      :not([placeholder]):required
+    )
+    > label {
+    position: relative;
+  }
+fieldset
+    > div:has(
+      :-ms-input-placeholder:required,
+      :not(:-ms-input-placeholder):invalid,
+      :not([placeholder]):required
+    )
+    > label::after {
+      content: "required";
+      position: absolute;
+      margin-block-start: 0.5ex;
+      margin-inline-start: 1ex;
+      text-indent: -200vw;
+      inline-size: 6px;
+      block-size: 6px;
+      border-radius: var(--radius-round);
+      background-color: var(--red-4);
+      box-shadow: 0 0 var(--space-2) var(--red-4);
+      /*       animation: var(--animation-ping); */
+    }
+fieldset
+    > div:has(
+      :placeholder-shown:required,
+      :not(:placeholder-shown):invalid,
+      :not([placeholder]):required
+    )
+    > label::after {
+      content: "required";
+      position: absolute;
+      margin-block-start: 0.5ex;
+      margin-inline-start: 1ex;
+      text-indent: -200vw;
+      inline-size: 6px;
+      block-size: 6px;
+      border-radius: var(--radius-round);
+      background-color: var(--red-4);
+      box-shadow: 0 0 var(--space-2) var(--red-4);
+      /*       animation: var(--animation-ping); */
+    }
+fieldset:has(:not(:-ms-input-placeholder):invalid) legend::after {
+    text-transform: initial;
+    color: var(--red-5);
+    content: " (" counter(errors) " errors)";
+  }
+fieldset:has(:not(:placeholder-shown):invalid) legend::after {
+    text-transform: initial;
+    color: var(--red-5);
+    content: " (" counter(errors) " errors)";
+  }
+fieldset:has(:not(:-ms-input-placeholder):invalid) {
+    counter-increment: errors;
+  }
+fieldset:has(:not(:placeholder-shown):invalid) {
+    counter-increment: errors;
+  }
+legend {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  min-block-size: 3ch;
+  border: 1px solid var(--surface-2);
+  padding-inline: 1.5ch;
+  border-radius: var(--radius-round);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letterspacing-3);
+  font-size: var(--font-size-0);
+}
+@media (prefers-color-scheme: light) {
+:where(html:not(.is-dark)) legend {
+    background: white;
+}
+  }
+:where(html.is-light) legend {
+    background: white;
+}
+:where(
+    input:not(
+        button,
+        [type="button"],
+        [type="file"],
+        [type="number"],
+        [type="range"],
+        [type="color"],
+        [type="checkbox"],
+        [type="radio"]
+      )
+  ) {
+  /* todo: touch-callout */
+  line-height: var(--font-lineheight-4);
+  padding-block: var(--space-1);
+  padding-inline: var(--space-4);
+  transition:
+    background-color 0.5s var(--ease-3),
+    outline-offset 145ms var(--ease-2);
+}
+:where(
+    input:not(
+        button,
+        [type="button"],
+        [type="file"],
+        [type="number"],
+        [type="range"],
+        [type="color"],
+        [type="checkbox"],
+        [type="radio"]
+      )
+  ) :-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+:where(
+    input:not(
+        button,
+        [type="button"],
+        [type="file"],
+        [type="number"],
+        [type="range"],
+        [type="color"],
+        [type="checkbox"],
+        [type="radio"]
+      )
+  ) :placeholder-shown {
+    text-overflow: ellipsis;
+  }
+@media (prefers-reduced-motion: no-preference) {
+    :where(
+    input:not(
+        button,
+        [type="button"],
+        [type="file"],
+        [type="number"],
+        [type="range"],
+        [type="color"],
+        [type="checkbox"],
+        [type="radio"]
+      )
+  ):not(:-ms-input-placeholder):invalid:not(:focus) {
+      animation: var(--animation-shake-x);
+      animation-duration: 0.4s;
+    }
+    :where(
+    input:not(
+        button,
+        [type="button"],
+        [type="file"],
+        [type="number"],
+        [type="range"],
+        [type="color"],
+        [type="checkbox"],
+        [type="radio"]
+      )
+  ):not(:placeholder-shown):invalid:not(:focus) {
+      animation: var(--animation-shake-x);
+      animation-duration: 0.4s;
+    }
+  }
+:where(
+    input:not(
+        button,
+        input[type="button"],
+        input[type="range"],
+        input[type="color"],
+        input[type="checkbox"],
+        input[type="radio"]
+      ),
+    textarea
+  ) {
+  box-shadow:
+    var(--shadow-2),
+    0 0 1px 1px var(--surface-2);
+}
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :where(
+    input:not(
+        button,
+        input[type="button"],
+        input[type="range"],
+        input[type="color"],
+        input[type="checkbox"],
+        input[type="radio"]
+      ),
+    textarea
+  ) {
+    box-shadow:
+      var(--inner-shadow-2),
+      0 1px 0px 0px var(--dark-surface) inset,
+      0 -0.5px 0px 0px var(--surface-2) inset;
+}
+  }
+:where(html.is-dark) :where(
+    input:not(
+        button,
+        input[type="button"],
+        input[type="range"],
+        input[type="color"],
+        input[type="checkbox"],
+        input[type="radio"]
+      ),
+    textarea
+  ) {
+    box-shadow:
+      var(--inner-shadow-2),
+      0 1px 0px 0px var(--dark-surface) inset,
+      0 -0.5px 0px 0px var(--surface-2) inset;
+}
+input:is(
+    [type="text"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="tel"]
+  ) {
+  padding-inline-end: 3.5ch;
+}
+input:is(
+    [type="text"],
+    [type="password"],
+    [type="url"],
+    [type="email"],
+    [type="tel"],
+    [type="search"]
+  ) {
+  flex-shrink: 1;
+  min-inline-size: 5ch;
+  max-inline-size: 100%;
+}
+input,
+textarea {
+  --dark-surface: var(--gray-11);
+}
+[readonly]:focus {
+  outline: none;
+}
+input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ),
+textarea,
+select {
+  color: var(--text-color-body);
+}
+@media (prefers-color-scheme: light) {
+:where(html:not(.is-dark)) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ),
+    :where(html:not(.is-dark)) textarea,
+    :where(html:not(.is-dark)) select {
+    background-color: white;
+}
+  }
+:where(html.is-light) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ),
+    :where(html.is-light) textarea,
+    :where(html.is-light) select {
+    background-color: white;
+}
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):is(:hover, :focus-within),
+    :where(html:not(.is-light)) textarea:is(:hover, :focus-within),
+    :where(html:not(.is-light)) select:is(:hover, :focus-within) {
+      background-color: var(--dark-surface);
+  }
+    }
+:where(html.is-dark) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):is(:hover, :focus-within),
+    :where(html.is-dark) textarea:is(:hover, :focus-within),
+    :where(html.is-dark) select:is(:hover, :focus-within) {
+      background-color: var(--dark-surface);
+  }
+input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:-ms-input-placeholder, :not([placeholder])):invalid, textarea:not(:-ms-input-placeholder, :not([placeholder])):invalid, select:not(:-ms-input-placeholder, :not([placeholder])):invalid {
+    background-image: var(--icon-error);
+    background-position: calc(100% - 1.5ch) center;
+  }
+input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:placeholder-shown, :not([placeholder])):invalid, textarea:not(:placeholder-shown, :not([placeholder])):invalid, select:not(:placeholder-shown, :not([placeholder])):invalid {
+    background-image: var(--icon-error);
+    background-position: calc(100% - 1.5ch) center;
+  }
+input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:-ms-input-placeholder):invalid, textarea:not(:focus-within):not(:-ms-input-placeholder):invalid, select:not(:focus-within):not(:-ms-input-placeholder):invalid {
+    text-decoration: underline wavy var(--red-6);
+  }
+input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:placeholder-shown):invalid, textarea:not(:focus-within):not(:placeholder-shown):invalid, select:not(:focus-within):not(:placeholder-shown):invalid {
+    -webkit-text-decoration: underline wavy var(--red-6);
+            text-decoration: underline wavy var(--red-6);
+  }
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:-ms-input-placeholder):invalid, :where(html:not(.is-light)) textarea:not(:focus-within):not(:-ms-input-placeholder):invalid, :where(html:not(.is-light)) select:not(:focus-within):not(:-ms-input-placeholder):invalid {
+      text-decoration: underline wavy var(--red-4);
+  }
+:where(html:not(.is-light)) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:placeholder-shown):invalid,
+    :where(html:not(.is-light)) textarea:not(:focus-within):not(:placeholder-shown):invalid,
+    :where(html:not(.is-light)) select:not(:focus-within):not(:placeholder-shown):invalid {
+      -webkit-text-decoration: underline wavy var(--red-4);
+              text-decoration: underline wavy var(--red-4);
+  }
+    }
+:where(html.is-dark) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:-ms-input-placeholder):invalid, :where(html.is-dark) textarea:not(:focus-within):not(:-ms-input-placeholder):invalid, :where(html.is-dark) select:not(:focus-within):not(:-ms-input-placeholder):invalid {
+      text-decoration: underline wavy var(--red-4);
+  }
+:where(html.is-dark) input:not(
+    button,
+    [disabled],
+    [readonly],
+    [type="file"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"]
+  ):not(:focus-within):not(:placeholder-shown):invalid,
+    :where(html.is-dark) textarea:not(:focus-within):not(:placeholder-shown):invalid,
+    :where(html.is-dark) select:not(:focus-within):not(:placeholder-shown):invalid {
+      -webkit-text-decoration: underline wavy var(--red-4);
+              text-decoration: underline wavy var(--red-4);
+  }
+input[readonly],
+input[disabled] {
+  cursor: not-allowed;
+}
+input[disabled] {
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: auto;
+}
+@keyframes drop-zone {
+  from {
+    box-shadow: 0 0 0 0 var(--link);
+  }
+  to {
+    box-shadow: 0 0 0 25px #0000;
+  }
+}
+input[type="number"] {
+  padding-block: 0.75ch;
+  padding-inline: 1.75ch 0.75ch;
+  min-inline-size: 10ch;
+}
+input[type="search"] {
+  background-image: var(--icon-search);
+  background-position: 1.5ch center;
+  padding-inline: 4ch 1.25ch;
+  border-radius: var(--radius-round);
+}
+input[type="search"]::-webkit-search-cancel-button {
+    margin-right: -5px;
+    padding: 0.1ch;
+  }
+input[type="search"][list]:-ms-input-placeholder {
+    background-image: var(--icon-search), var(--icon-arrow-down);
+    background-position:
+      1.5ch center,
+      calc(100% - 1.25ch) center;
+    background-size: auto, 2.25ch;
+  }
+input[type="search"][list]:placeholder-shown {
+    background-image: var(--icon-search), var(--icon-arrow-down);
+    background-position:
+      1.5ch center,
+      calc(100% - 1.25ch) center;
+    background-size: auto, 2.25ch;
+  }
+input[type="search"][list]:-ms-input-placeholder:focus {
+      background-image: var(--icon-search), var(--icon-arrow-up);
+    }
+input[type="search"][list]:placeholder-shown:focus {
+      background-image: var(--icon-search), var(--icon-arrow-up);
+    }
+input[type="search"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+  }
+input[type="text"][list] {
+  background-image: var(--icon-arrow-down);
+  background-position: calc(100% - 1.25ch) center;
+  background-size: 2.25ch;
+}
+input[type="text"][list]:focus {
+    background-image: var(--icon-arrow-up);
+  }
+input[type="text"][list]::-webkit-calendar-picker-indicator {
+    color: transparent;
+  }
+input[type="password"] {
+  background-image: var(--icon-password);
+  background-position: calc(100% - 1.5ch) center;
+}
+input[type="password"]:focus {
+    background-image: var(--icon-password-editing);
+  }
+input[type="email"] {
+  background-image: var(--icon-email);
+  background-position: calc(100% - 1.5ch) center;
+}
+input[readonly] {
+  background-image: var(--icon-no-edit);
+  background-position: calc(100% - 1.5ch) center;
+}
+input[type="url"] {
+  background-image: var(--icon-url);
+  background-position: calc(100% - 1.5ch) center;
+}
+input[type="tel"] {
+  background-image: var(--icon-tel);
+  background-position: calc(100% - 1.5ch) center;
+}
+input[type="tel"]:focus {
+    background-image: var(--icon-tel-editing);
+  }
+input:where([name*="username"], [id*="username"]) {
+  background-image: var(--icon-user);
+  background-position: calc(100% - 1.5ch) center;
+  background-size: 1.75ch;
+}
+input:where([name*="username"], [id*="username"]):focus {
+    background-image: var(--icon-user-editing);
+  }
+input[type="color"] {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: var(--space-8);
+  block-size: var(--space-8);
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  box-shadow: var(--shadow-5);
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+  }
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+textarea {
+  transition: background-color 0.5s var(--ease-3);
+}
+select {
+  /*  todo: share more with buttons or use a .btn class  */
+  --_bg-light: #fff;
+  --_bg-dark: var(--surface-3);
+  --_bg: var(--_bg-light);
+  background-color: var(--_bg);
+  box-shadow:
+    var(--shadow-3),
+    0 1px var(--surface-3);
+
+  appearance: none;
+  background-image: var(--icon-arrow-down);
+  background-position: calc(100% - 1ch) center;
+  background-size: 3ex;
+  padding-block: 0.75ch;
+  padding-inline: 1.75ch 3ch;
+  line-height: 1.5;
+}
+select:is(:hover, :focus) {
+    /* add button hover */
+    background-color: var(--_bg);
+  }
+select:is(:hover, :focus) {
+    background-image: var(--icon-arrow-up);
+  }
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) select {
+    --_bg: var(--_bg-dark);
+}
+  }
+:where(html.is-dark) select {
+    --_bg: var(--_bg-dark);
+}
+/* todo: ship unprefixed as well */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* todo: add checkmark icon */
+  -webkit-text-fill-color: var(--text-color-body);
+  -webkit-box-shadow: 0 0 0px 1e5px var(--gray-11) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+:-ms-input-placeholder {
+  color: var(--text-color-2);
+  font-style: italic;
+}
+::placeholder {
+  color: var(--text-color-2);
+  font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+:where(html:not(.is-light)) :-ms-input-placeholder {
+    color: var(--surface-4);
+}
+:where(html:not(.is-light)) ::placeholder {
+    color: var(--surface-4);
+}
+  }
+:where(html.is-dark) :-ms-input-placeholder {
+    color: var(--surface-4);
+}
+:where(html.is-dark) ::placeholder {
+    color: var(--surface-4);
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+fieldset,
+form > header {
+  display: grid;
+  gap: var(--space-2);
+}
+form {
+  display: grid;
+  gap: var(--space-4);
+}
+form label {
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-body-bold);
+}
+legend {
+  margin-inline-start: -2px;
+  color: var(--text-2);
+  font-weight: var(--font-weight-6);
+}
+fieldset {
+  gap: var(--space-3);
+  max-inline-size: max-content;
+}
+@media (min-width: 720.02px) {
+fieldset {
+    gap: var(--space-2);
+}
+  }
+fieldset > div {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: var(--space-2) var(--space-3);
+    align-items: center;
+  }
+@media (min-width: 720.02px) {
+fieldset > div {
+      grid-template-columns: var(--space-content-1) auto;
+  }
+    }
+fieldset > div > label {
+      justify-self: start;
+    }
+fieldset > footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-block-start: var(--space-6);
+  }
+fieldset > footer > menu:only-child {
+      margin-inline-start: auto;
+    }
+fieldset > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    gap: var(--space-2);
+  }
+fieldset > ul > li {
+      padding: 0;
+    }
+fieldset > ul > li > label {
+        display: inline-flex;
+        align-items: baseline;
+        gap: var(--space-4);
+        max-inline-size: var(--space-content-1);
+      }
+fieldset > ul > li > label > input {
+          margin-inline-start: 0;
+          flex-shrink: 0;
+        }
+search > form {
+    gap: var(--space-3);
+    grid-template-columns: minmax(20ch, 1fr) auto;
+  }
+search > form > label {
+      grid-column: span 2;
+    }
+:where(input[type="checkbox"], input[type="radio"]) {
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-6);
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  --isLTR: 1;
+  --isRTL: -1;
+}
+:where(input[type="checkbox"], input[type="radio"]):dir(rtl) {
+    --isLTR: -1;
+    --isRTL: 1;
+  }
+:where(input[type="checkbox"], input[type="radio"]):hover::before {
+    --thumb-scale: 1;
+  }
+@media (hover: none) {
+:where(input[type="checkbox"], input[type="radio"]) {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+}
+  }
+:where(input[type="checkbox"], input[type="radio"])::before {
+    --thumb-scale: 0.01;
+    --thumb-highlight-size: 225%;
+
+    content: "";
+    inline-size: var(--thumb-highlight-size);
+    block-size: var(--thumb-highlight-size);
+    clip-path: circle(50%);
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    background: hsl(0 0% 50% / 20%);
+    transform-origin: center center;
+    transform: translateX(calc(var(--isRTL) * 50%)) translateY(-50%)
+      translateZ(-1px) scale(var(--thumb-scale));
+    will-change: transform;
+  }
+@media (prefers-reduced-motion: no-preference) {
+:where(input[type="checkbox"], input[type="radio"])::before {
+      transition: transform 0.2s ease;
+  }
+    }
+input[type="range"] {
+  --track-height: 0.5ex;
+  --track-fill: 0%;
+  /*   --_track-fill: calc(100% * attr(value number, 0) / attr(max number, 100)); */
+  --track-color: var(--dark-surface);
+  --thumb-size: 3ex;
+  --thumb-offset: -1.25ex;
+  --thumb-highlight-color: lch(100 0 0 / 20%);
+  --thumb-highlight-size: 0px;
+
+  display: block;
+  inline-size: 100%;
+  margin: 1ex 0;
+  appearance: none;
+  background: transparent;
+  outline-offset: 5px;
+}
+@media (prefers-color-scheme: light) {
+:where(html:not(.is-dark)) input[type="range"] {
+    --thumb-highlight-color: lch(0 0 0 / 20%);
+    --track-color: var(--surface-2);
+}
+  }
+:where(html.is-light) input[type="range"] {
+    --thumb-highlight-color: lch(0 0 0 / 20%);
+    --track-color: var(--surface-2);
+}
+@media (hover: none) {
+    input[type="range"] {
+      --thumb-size: 30px;
+      --thumb-offset: -14px;
+    }
+  }
+input[type="range"]::-webkit-slider-runnable-track {
+    appearance: none;
+    block-size: var(--track-height);
+    border-radius: 5ex;
+    box-shadow: var(--inner-shadow-2);
+    background: linear-gradient(
+        to right,
+        transparent var(--track-fill),
+        var(--track-color) 0%
+      ),
+      var(--link);
+  }
+input[type="range"]::-moz-range-track {
+    appearance: none;
+    block-size: var(--track-height);
+    border-radius: 5ex;
+    box-shadow: var(--inner-shadow-2);
+    background: linear-gradient(
+        to right,
+        transparent var(--track-fill),
+        var(--track-color) 0%
+      ),
+      var(--link);
+  }
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    cursor: ew-resize;
+    border: 3px solid var(--surface-1);
+    block-size: var(--thumb-size);
+    inline-size: var(--thumb-size);
+    margin-block-start: var(--thumb-offset);
+    border-radius: 50%;
+    background: var(--link);
+    box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
+  }
+@media (prefers-reduced-motion: no-preference) {
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-transition: box-shadow 0.1s ease;
+        transition: box-shadow 0.1s ease;
+      }
+    }
+.fieldset-item:focus-within input[type="range"]::-webkit-slider-thumb {
+      border-color: var(--surface-2);
+    }
+input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    cursor: ew-resize;
+    border: 3px solid var(--surface-1);
+    block-size: var(--thumb-size);
+    inline-size: var(--thumb-size);
+    margin-block-start: var(--thumb-offset);
+    border-radius: 50%;
+    background: var(--link);
+    box-shadow: 0 0 0 var(--thumb-highlight-size) var(--thumb-highlight-color);
+  }
+@media (prefers-reduced-motion: no-preference) {
+      input[type="range"]::-moz-range-thumb {
+        -moz-transition: box-shadow 0.1s ease;
+        transition: box-shadow 0.1s ease;
+      }
+    }
+.fieldset-item:focus-within input[type="range"]::-moz-range-thumb {
+      border-color: var(--surface-2);
+    }
+input[type="range"]:is(:hover, :active) {
+    --thumb-highlight-size: 10px;
+  }
+@media (pointer: coarse) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    inline-size: var(--space-4);
+    block-size: var(--space-4);
+  }
+}
+.buttons-list {
+  /* display: flex; */
+  gap: var(--space-3);
+}
+#signin__example {
+  gap: var(--space-4);
+}
+#signin__example > div {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+#signin__example > footer {
+    margin-block-start: var(--space-2);
+  }
+#signin__example > footer > menu {
+      flex-direction: row-reverse;
+    }
+.p-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+.p-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+.p-auto-grid {
+  --auto-grid-min: var(--size-content-2);
+  --auto-grid-repeat: auto-fit;
+
+  display: grid;
+  column-gap: var(--grid-gutter);
+  row-gap: var(--space-3-4);
+  grid-template-columns: repeat(
+    var(--auto-grid-repeat),
+    minmax(min(100%, var(--auto-grid-min)), 1fr)
+  );
+}
+.p-flow > * + * {
+  --flow-space: 1em;
+
+  margin-block-start: var(--flow-space);
+}
+.p-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+}
+.p-stack {
+  --stack-space: var(--space-5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.p-stack:only-child {
+    block-size: 100%;
+  }
+.p-stack > * + * {
+    margin-block-start: var(--stack-space);
+  }
+.p-cluster {
+  --cluster-space: var(--space-3);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-space);
+}
+.p-switcher {
+  --switcher-space: var(--space-6);
+  --switcher-treshold: var(--size-content-3);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-space);
+}
+.p-switcher > * {
+    /*
+     * Applying different flex-grow for each child allows for different
+     * proportions, if needed.
+     */
+    flex-grow: 1;
+    /*
+     * The calc function produces very large positive or negative number.
+     * In case it is negative, this rule will be ignored by the browser.
+     * In case it is positive, it grabs an equal amount of space for each child.
+     */
+    flex-basis: calc(
+      (var(--switcher-treshold) - 100%) *
+        999
+    );
+  }
+.p-secondary-text-regular {
+  font-size: var(--font-size--1);
+}
+.p-additional-text-regular {
+  font-size: var(--font-size--2);
+}
+.p-base-text-bold {
+  font-weight: var(--font-weight-body-bold);
+  font-size: var(--font-size-0);
+}
+.p-secondary-text-bold {
+  font-weight: var(--font-weight-body-bold);
+  font-size: var(--font-size--1);
+}
+.p-additional-text-bold {
+  font-weight: var(--font-weight-body-bold);
+  font-size: var(--font-size--2);
+}
+.p-input-text {
+  font-size: var(--font-size--1);
+  font-weight: var(--font-weight-body);
+}
+.p-heading-1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-headings);
+}
+.p-heading-2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-headings);
+}
+.p-heading-3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-headings);
+}
+.p-heading-4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-headings);
+}
+/*
+* Settings are placed at the end since it is expected
+* to be overridden by the user.
+*/
+/*
+* Default values for semantic props (i.e. design tokens).
+*/
+:where(html) {
+  /* text */
+  --font-family-body: sans-serif;
+  --font-size-body: var(--font-size-0);
+  --font-size-h1: var(--font-size-4);
+  --font-size-h2: var(--font-size-3);
+  --font-size-h3: var(--font-size-2);
+  --font-size-h4: var(--font-size-1);
+  --font-size-h5: var(--font-size-0);
+  --font-weight-body-bold: var(--font-weight-6);
+  --font-weight-body: var(--font-weight-4);
+  --font-weight-buttons: var(--font-weight-6);
+  --font-weight-headings: var(--font-weight-6);
+  --font-weight-light: var(--font-weight-3);
+  --line-height-body: var(--font-lineheight-3);
+  --line-height-headings: var(--font-lineheight-1);
+
+  /* colors */
+  --text-color-1: var(--gray-12);
+  --text-color-2: var(--gray-7);
+  --text-color-1-inverse: var(--gray-1);
+  --text-color-2-inverse: var(--gray-4);
+
+  --surface-0: white;
+  --surface-1: var(--gray-1);
+  --surface-2: var(--gray-2);
+  --surface-3: var(--gray-3);
+  --surface-4: var(--gray-4);
+  --surface-0-inverse: var(--gray-10);
+  --surface-1-inverse: var(--gray-9);
+  --surface-2-inverse: var(--gray-8);
+  --surface-3-inverse: var(--gray-7);
+  --surface-4-inverse: var(--gray-6);
+
+  --accent-color: var(--brand-color);
+  --caret-color: var(--brand-color);
+  --focus-color: var(--brand-color);
+
+  --text-color-body: var(--text-color-1);
+  --text-color-headings: var(--text-color-1);
+  --bg-color-body: var(--surface-0);
+
+  --link-color: var(--blue-8);
+  --link-color-visited: var(--purple-7);
+
+  --positive-color: var(--green-9);
+  --negative-color: var(--red-8);
+
+  --error-alert-color: var(--red-11);
+  --error-alert-bg-color: var(--red-1);
+
+  --scrollthumb-color: var(--gray-7);
+
+  /* a11y */
+  --outline-offset: 2px;
+
+  /* inputs */
+  --input-radius: var(--radius-default);
+
+  /* buttons */
+  --button-height-default: 2.25rem;
+
+  /* borders */
+  --border-size-default: var(--border-size-1);
+  --radius-default: var(--radius-2);
+  --border-1: var(--border-size-1) solid var(--surface-2);
+  --border-2: var(--border-size-1) solid var(--surface-3);
+  --border-3: var(--border-size-1) solid var(--surface-4);
+  --border-4: var(--border-size-1) solid var(--text-color-2);
+  --border-5: var(--border-size-1) solid var(--text-color-1);
+
+  /* inline-size */
+  /* keep max-inline-size initial by default, this is opt-in */
+  /* --max-inline-size-h1: var(--size-header-1); */
+  /* --max-inline-size-h2: var(--size-header-2); */
+  /* --max-inline-size-other-headings: var(--size-header-3); */
+  /* --max-inline-size-elements: var(--size-content-2); */
+  /* --max-inline-size-p: var(--size-content-3); */
+}
+@media (prefers-color-scheme: dark) {
+  :where(html:where(:not(.is-light))) {
+    --text-color-1: var(--gray-1);
+    --text-color-2: var(--gray-4);
+    --text-color-1-inverse: var(--gray-12);
+    --text-color-2-inverse: var(--gray-7);
+
+    --surface-0: var(--gray-10);
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+    --surface-0-inverse: white;
+    --surface-1-inverse: var(--gray-1);
+    --surface-2-inverse: var(--gray-2);
+    --surface-3-inverse: var(--gray-3);
+    --surface-4-inverse: var(--gray-4);
+
+    --bg-color-body: var(--surface-1);
+
+    --scrollthumb-color: var(--gray-6);
+
+    --positive-color: var(--green-6);
+    --negative-color: var(--red-6);
+    --error-alert-color: var(--red-1);
+    --error-alert-bg-color: var(--red-11);
+
+    --link-color: var(--blue-4);
+    --link-color-visited: var(--purple-3);
+
+    --focus-color: var(--brand-color-bright);
+  }
+}
+:where(html:where(.is-dark)) {
+    --text-color-1: var(--gray-1);
+    --text-color-2: var(--gray-4);
+    --text-color-1-inverse: var(--gray-12);
+    --text-color-2-inverse: var(--gray-7);
+
+    --surface-0: var(--gray-10);
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+    --surface-0-inverse: white;
+    --surface-1-inverse: var(--gray-1);
+    --surface-2-inverse: var(--gray-2);
+    --surface-3-inverse: var(--gray-3);
+    --surface-4-inverse: var(--gray-4);
+
+    --bg-color-body: var(--surface-1);
+
+    --scrollthumb-color: var(--gray-6);
+
+    --positive-color: var(--green-6);
+    --negative-color: var(--red-6);
+    --error-alert-color: var(--red-1);
+    --error-alert-bg-color: var(--red-11);
+
+    --link-color: var(--blue-4);
+    --link-color-visited: var(--purple-3);
+
+    --focus-color: var(--brand-color-bright);
+  }
+/*
+* Based on Open Props: brand.css
+*
+* Default values for brand specific props.
+*/
+:where(html) {
+  --font-family-body: sans-serif;
+
+  --brand-color: var(--blue-7);
+  --brand-color-dim: var(--blue-8);
+  --brand-color-bright: var(--blue-5);
+
+  scrollbar-color: var(--scrollthumb-color) transparent;
+  accent-color: var(--brand-color, var(--link-color));
+  caret-color: var(--brand-color, var(--link-color));
+  color: var(--text-color-1);
+  background-color: var(--bg-color-body);
+}
