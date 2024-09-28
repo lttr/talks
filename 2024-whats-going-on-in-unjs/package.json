@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2024-whats-going-on-in-unjs --out ../dist/2024-whats-going-on-in-unjs"
+  }
+}
