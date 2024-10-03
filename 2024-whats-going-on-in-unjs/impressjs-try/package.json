@@ -1,8 +1,0 @@
-{
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "serve",
-    "build": "mkdir -p ../dist/2024-whats-going-on-in-unjs && cp -r index.html img ../dist/2024-whats-going-on-in-unjs"
-  }
-}
