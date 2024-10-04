@@ -62,7 +62,7 @@ Pro srovnání React: okolo 100 milionů / měsíc
 </div>
 
 <div class="flex justify-end">
-  <small>Zdroj: npm.chart.dev</small>
+  <small>npm.chart.dev</small>
 </div>
 
 ---
@@ -96,7 +96,7 @@ Pro srovnání React: okolo 100 milionů / měsíc
 <img src="/unplugin.svg" class="h-10 inline-block" /> <strong>Unplugin</strong>
 
 - Jednotný formát pluginů pro bundlery
-- Vite, Rollup, Webpack, Esbuild, Rolldown (!)
+- Vite, Rollup, Webpack, Esbuild
 </div>
 
 </div>
@@ -165,6 +165,3 @@ Otázky?
 lukastrumm.com
 
 </div>
-
----
-
