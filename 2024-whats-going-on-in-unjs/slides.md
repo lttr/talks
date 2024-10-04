@@ -109,6 +109,43 @@ layout: full
 
 <img src="/unjs-ecosystem.svg" class="h-135 mx-auto relative top--2rem" />
 
+<div v-click>
+
+<figure class="absolute bottom-2rem left-1rem flex flex-col items-center">
+<img src="/anthony-fu.png" class="h-30 rounded-full" />
+<figcaption class="font-mono">Anthony Fu</figcaption>
+</figure>
+
+<figure class="absolute top-2rem left-1rem flex flex-col items-center">
+<img src="/danielroe.jpg" class="h-30 rounded-full" />
+<figcaption class="font-mono">Daniel Roe</figcaption>
+</figure>
+
+<figure class="absolute top-2rem right-1rem flex flex-col items-center">
+<img src="/pooyaparsa.jpg" class="h-30 rounded-full" />
+<figcaption class="font-mono">Pooya Parsa</figcaption>
+</figure>
+
+</div>
+
+---
+
+<img src="/vite-conf.png" class="h-120 mx-auto relative top--1.5rem" />
+
+<div class="flex justify-center">
+  <small>Evan You, ViteConf 2024</small>
+</div>
+
+---
+
+<img src="/vite-vision.png" class="h-110 mx-auto relative top-0" />
+
+<br>
+
+<div class="flex justify-center">
+  <small>Evan You, ViteConf 2024</small>
+</div>
+
 ---
 layout: quote
 ---

@@ -1,6 +1,6 @@
 ---
 title: What's going on in UnJS
-date: 2024-11-09
+date: 2024-10-09
 lang: czech
 ---
 
