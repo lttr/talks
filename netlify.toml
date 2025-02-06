@@ -26,3 +26,8 @@
   from = "/2024-whats-going-on-in-unjs/*"
   to = "/2024-whats-going-on-in-unjs/index.html"
   status = 200
+
+[[redirects]]
+  from = "/2025-css-is-getting-better-for-quanti/*"
+  to = "/2025-css-is-getting-better-for-quanti/index.html"
+  status = 200
