@@ -7,8 +7,12 @@
   margin-bottom: 1rem;
 }
 
-.slidev-layout h3 {
+:where(:not(li)) h3 {
   margin-bottom: 1rem;
+}
+
+.slidev-layout li {
+  list-style-type: disc;
 }
 
 .two-cols-header {

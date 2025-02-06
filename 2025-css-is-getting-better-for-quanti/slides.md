@@ -63,7 +63,6 @@ layout: cover
 - používat syntaktické workaroundy (BEM) <fe-close class="w-8 h-8 relative -bottom-1 text-red-700" />
 - podporovat pouze 2 poslední verze prohlížečů <fe-close class="w-8 h-8 relative -bottom-1 text-red-700" />
 - bojovat proti kaskádě a specificitě <fe-close class="w-8 h-8 relative -bottom-1 text-red-700" />
-- <fe-close class="w-8 h-8 relative -bottom-1 text-red-700" /><fe-close class="w-8 h-8 relative -bottom-1 text-red-700" /><fe-close class="w-8 h-8 relative -bottom-1 text-red-700" />
 
 ---
 
@@ -145,9 +144,21 @@ layout: center
 
 ```css
 .parent {
-  /* parent styles */
+  /* parent rules */
   .child {
-    /* child of parent styles */
+    /* child of parent rules */
+  }
+}
+
+@media (min-width: 768px) {
+  .parent {
+    /* some rules */
+  }
+}
+
+.parent {
+  @media (min-width: 768px) {
+    /* some rules */
   }
 }
 ```
@@ -160,8 +171,23 @@ layout: center
 
 ### Omezení CSS pravidel na komponentu &rarr; <strong>scoping</strong>
 
-```css
+```html
+<div class="list">
+  <div class="item">
+    <slot class="slot"></slot>
+  </div>
+</div>
 
+<style>
+  @scope (.list) to (.slot) {
+    /* Scoped styles target only inside `.card` but not inside `.slot` */
+    :scope {
+    }
+
+    .item {
+    }
+  }
+</style>
 ```
 
 ---
@@ -173,7 +199,25 @@ layout: center
 ### Proměnné &rarr; <strong>custom properties</strong>
 
 ```css
+:root {
+  --brand-color: var(--blue-7);
+}
 
+.stack {
+  --stack-space: var(--space-5);
+}
+
+@container style(--theme-x) {
+}
+
+@media (--mobile) {
+}
+
+@property --accent-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rebeccapurple;
+}
 ```
 
 ---
@@ -185,8 +229,36 @@ layout: center
 ### Nedosažitelné a špatně se chovající barvy &rarr; <strong>color spaces, oklab()</strong>
 
 ```css
+.my-gradient {
+  --hdr-gradient: linear-gradient(
+    to right in oklab,
+    oklch(70% 0.5 340) 0%,
+    oklch(90% 0.5 200) 100%
+  );
+  --sdr-gradient: linear-gradient(to right, #ff00fa 0%, #0ff 100%);
 
+  background: var(--hdr-gradient);
+}
 ```
+
+<style>
+.my-gradient {
+  --hdr-gradient: linear-gradient(
+    to right in oklab,
+    oklch(70% 0.5 340) 0%,
+    oklch(90% 0.5 200) 100%
+  );
+  --sdr-gradient: linear-gradient(to right, #ff00fa 0%, #0ff 100%);
+  --my-gradient: var(--hdr-gradient);
+
+  background: var(--my-gradient);
+}
+</style>
+
+<div class="flex mt-3 gap-3 justify-center">
+  <div class="my-gradient w-100 h-20 grid items-center p-5" style="--my-gradient: var(--sdr-gradient)">sdr</div>
+  <div class="my-gradient w-100 h-20 grid items-center p-5">hdr</div>
+</div>
 
 ---
 
@@ -197,7 +269,12 @@ layout: center
 ### Priorita pravidel je moc složitá &rarr; <strong>cascading layers, :where()</strong>
 
 ```css
+:where(body) {
+  background: var(--bg-color-body);
+}
 
+@import "./base.css" layer(base);
+@import "./theme.css" layer(theme);
 ```
 
 ---
@@ -209,7 +286,13 @@ layout: center
 ### Lokální responzivita &rarr; <strong>container queries, clamp()</strong>
 
 ```css
+form {
+  container-type: inline-size;
+}
 
+@container (10em <= width <= 20em) {
+  /* styles */
+}
 ```
 
 ---
@@ -221,7 +304,17 @@ layout: center
 ### Preference uživatelů &rarr; <strong>prefers-color-scheme, prefers...</strong>
 
 ```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-1: var(--gray-1);
+  }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  ...
+    transition: outline-offset 145ms var(--ease-2);
+  ...
+}
 ```
 
 ---
@@ -233,20 +326,12 @@ layout: center
 ### Různorodé jazyky &rarr; <strong>logical properties</strong>
 
 ```css
-
+.card {
+  margin-inline: var(--space-4);
+  margin-block: var(--space-6);
+  max-inline-size: var(--size-content-2);
+}
 ```
-
----
-
-# CSS vlastnosti
-
-- style scoped
-- layers `@import url('knihovna.css') layer(base)`
-- custom properties
-- funkce `clamp()`
-- `:where()`
-- logické vlastnosti (`padding-inline`)
-- nesting
 
 ---
 layout: two-cols-header
@@ -256,12 +341,12 @@ layout: two-cols-header
 
 ::left::
 
-- import
-- nesting
+- @import závislostí
+- de-nesting
 - custom media queries <br>
   `@media (--tablet)`
-- new colors
 - dark-theme-class
+- ...
 
 ::right::
 
@@ -321,33 +406,6 @@ Zkompilovaný výstup
 .item[data-v-7ba5bd90] {
 }
 ```
-
----
-
-# Nástroje - native scoped CSS
-
-<div class="max-w-xl mx-auto mt-[3rem]">
-
-```html
-<div class="list">
-  <div class="item">
-    <slot class="slot"></slot>
-  </div>
-</div>
-```
-
-```css
-@scope (.list) to (.slot) {
-  /* Scoped styles target only inside `.card` but not inside `.slot` */
-  :scope {
-  }
-
-  .item {
-  }
-}
-```
-
-</div>
 
 ---
 
@@ -466,9 +524,9 @@ Zkompilovaný výstup
 
 ---
 
-# Ukázka přizpůsobení - CondensedCard
+# Ukázka přizpůsobení - TinyCard
 
-<div class="grid grid-cols-2 h-full">
+<div class="grid grid-cols-2">
 
 ```html
 <style>
@@ -477,23 +535,8 @@ Zkompilovaný výstup
     --space-2: 0.3rem;
     --space-3: 0.5rem;
     --space-4: 0.7rem;
-  }
-</style>
-```
-
-<Iframe html-file="card-condensed" />
-
-</div>
-
----
-
-# Ukázka přizpůsobení - TinyCard
-
-<div class="grid grid-cols-2">
-
-```html
-<style>
-  :root {
+    --radius-default: 2rem;
+    --button-height-default: 1.8rem;
     --font-size--1: 0.8rem;
     --font-size-0: 0.9rem;
   }
@@ -524,11 +567,11 @@ Zkompilovaný výstup
 
 # Shrnutí
 
-- nativní podpora v prohlížečích se dost posunula
-- techniky a nástroje nejsou přímočaré nebo standardizované<br>
+- Nativní podpora v prohlížečích se dost posunula
+- Techniky a nástroje nejsou přímočaré nebo standardizované<br>
   (narozdíl třeba od Tailwindu)
 - CSS je mocné a vlastní design je možné tvořit rychle<br>
-  (možné zatím neznamená jednoduché)
+  (možné nemusí znamenat jednoduché)
 
 ---
 layout: quote
