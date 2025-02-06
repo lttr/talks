@@ -50,17 +50,6 @@
         display: grid;
         gap: var(--space-1);
       }
-
-      .cancel {
-        --_text-color: var(--text-color-1);
-        --_bg-color: var(--surface-0);
-        --_bg-hover: var(--surface-1);
-        --_bg-active: var(--surface-2);
-      }
-
-      .submit {
-        --_bg-color: var(--brand-color);
-      }
     </style>
     <main>
       <div class="card p-flow">
@@ -71,8 +60,8 @@
           <input id="name" type="text" />
         </div>
         <div class="p-cluster">
-          <button class="cancel">Cancel</button>
-          <button class="submit">Submit</button>
+          <button class="cancel p-button-secondary">Cancel</button>
+          <button class="submit p-button-brand">Submit</button>
         </div>
       </div>
       <div></div>
