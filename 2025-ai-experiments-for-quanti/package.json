@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2025-ai-experiments-for-quanti --out ../dist/2025-ai-experiments-for-quanti"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.5.13",
+    "vue": "^3.5.13"
+  }
+}
