@@ -9,17 +9,17 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@iconify-json/fe": "^1.2.2",
-    "@iconify-json/logos": "^1.2.4",
-    "@slidev/cli": "^51.1.0",
+    "@iconify-json/fe": "^1.2.4",
+    "@iconify-json/logos": "^1.2.9",
+    "@slidev/cli": "^52.1.0",
     "@slidev/theme-default": "^0.25.0",
-    "eslint": "^9.19.0",
-    "execa": "^9.5.2",
-    "playwright-chromium": "^1.50.1",
-    "prettier": "^3.4.2",
+    "eslint": "^9.35.0",
+    "execa": "^9.6.0",
+    "playwright-chromium": "^1.55.0",
+    "prettier": "^3.6.2",
     "prettier-plugin-slidev": "^1.0.5",
     "rimraf": "^6.0.1",
-    "serve": "^14.2.4",
-    "tsx": "^4.19.2"
+    "serve": "^14.2.5",
+    "tsx": "^4.20.5"
   }
 }
