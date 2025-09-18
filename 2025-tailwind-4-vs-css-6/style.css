@@ -1,24 +1,6 @@
-.slidev-layout :is(h1, h2) {
-  color: var(--vhs-magenta);
-  font-weight: 600;
-  position: relative;
-}
-
-.two-cols-header {
-  grid-template-rows: auto 1fr !important;
-  column-gap: 2rem;
-}
-
-.slidev-runner-output {
-  display: none;
-}
-
-button[title="Run code"] {
-  display: none;
-}
-
 :root {
   /* VHS-inspired color palette (light mode) */
+  --vhs-text: rgb(31 41 55);
   --vhs-pink: #e056fd;
   --vhs-magenta: #9c27b0;
   --vhs-cyan: #4ecdc4;
@@ -51,6 +33,24 @@ button[title="Run code"] {
     rgba(255, 107, 157, 0.02) 20px,
     rgba(255, 107, 157, 0.02) 22px
   );
+}
+
+.slidev-layout :is(h1, h2) {
+  font-weight: 600;
+  color: var(--vhs-text);
+}
+
+.two-cols-header {
+  grid-template-rows: auto 1fr !important;
+  column-gap: 2rem;
+}
+
+.slidev-runner-output {
+  display: none;
+}
+
+button[title="Run code"] {
+  display: none;
 }
 
 /* Subtle background pattern for slides */

@@ -5,7 +5,7 @@ author: Lukáš Trumm
 keywords: web,css,tailwind
 colorSchema: light
 themeConfig:
-  primary: "var(--vhs-magenta)"
+  primary: "var(--vhs-text)"
 favicon: https://lukastrumm.com/favicon.ico
 highlighter: shiki
 fonts:
@@ -25,9 +25,8 @@ htmlAttrs:
   </h1>
 </div>
 
-<div class="absolute bottom-12 left-12 text-left">
+<div class="absolute bottom-12 left-12">
   <div class="text-3xl font-semibold text-gray-700">Lukáš Trumm</div>
-  <div class="text-xl text-gray-500">Software Engineer</div>
 </div>
 
 <div class="absolute bottom-12 right-12">
@@ -37,88 +36,64 @@ htmlAttrs:
 </div>
 
 ---
+layout: quote
+---
 
-# Perlička na úvod
+<h2 class="text-center" style="text-wrap: balance; line-height: 1.5;">
+Myslím, že jsem nenapsal ani jednu řádku frontendového kódu v posledních 3 měsících.
+</h2>
 
-<div class="text-2xl">
-
-> "Myslím, že jsem nenapsal jedinou řádku frontendového kódu v posledních 3 měsících."
-
-</div>
-
-<div class="mt-8 text-lg text-gray-600">
+<div class="mt-8 text-lg text-gray-600 text-right">
 Autor Base44 - platformy prodané za 80 mil. dolarů
 </div>
 
-<div class="mt-12 text-xl">
-Pokud je vaším cílem zaujmout investory do AI technologií, můžete jít klidně domů...
+<!--
+Pokud je vaším cílem zaujmout investory do AI technologií, můžete jít klidně domů... ale možná jste tu proto, že vás frontend technologie baví, tak pojďme na to!
+-->
 
-...ale možná jste tu proto, že vás frontend technologie baví, tak pojďme na to!
+---
+layout: quote
+---
+
+<div class="text-center">
+
+# CSS se stále zlepšuje<br>&ndash; využijme toho!
 
 </div>
 
----
-
-# O mně
-
-- **Lukáš Trumm** - Software Engineer
-- Loni jsem mluvil na meetupu frontendistů o tom, že **CSS se stále zlepšuje**
-- Zkoumal jsem, zda jde postavit design systém jen pomocí čistého, moderního CSS
-- **Odpověď: Ano, jde!**
-
-<div class="mt-8 text-center text-gray-500">
-Dnes si povíme, jak se to má s Tailwindem...
-</div>
+<!--
+- Minulý jsem mluvil na meetupu frontendistů o tom, že CSS se stále zlepšuje.
+- Zkoumal jsem, zda jde postavit design systém jen pomocí čistého, moderního CSS.
+- A ano jde to!
+-->
 
 ---
+layout: quote
+---
 
-# TLDR
+<div class="text-center">
 
-<div class="text-4xl font-bold text-center mt-16 mb-8">
-Oba přístupy fungují dobře! 🎉
+# TLDR: Oba přístupy fungují!
+
 </div>
 
 <div class="text-center text-xl text-gray-600">
-Jen lidé mají často vyhraněné názory...
+Jen lidé mají často vyhraněné názory
 </div>
 
-<div class="mt-12 text-lg">
-- Tailwind i CSS frameworky jsou **dospělé technologie**
-- Každý vyžaduje **trochu jiné znalosti**
-- Volba závisí na **konkrétním projektu**
-</div>
+<!--
+Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
+-->
 
 ---
 
-# Co má smysl porovnávat?
+<h1 class="text-center">
+ Co má smysl porovnávat?
+  </h1>
 
-<div class="grid grid-cols-2 gap-8 mt-8">
-
-<div>
-<h3 class="text-2xl font-semibold mb-4 text-blue-600">Tailwind</h3>
-
-- **Systém** utility-first tříd
-- Předpřipravené komponenty
-- Konzistentní design tokens
-- Build step optimalizace
-
-</div>
-
-<div>
-<h3 class="text-2xl font-semibold mb-4 text-purple-600">Custom CSS framework</h3>
-
-- **Systém** postavený nad CSS
-- Vlastní komponenty
-- Custom design tokens
-- Moderní CSS vlastnosti
-
-</div>
-
-</div>
-
-<div class="mt-12 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-<strong>Pozor:</strong> Neporovnávám raw CSS vs Tailwind!
-</div>
+<FullHeightImage>
+  <ObrazekAbstrakce />
+</FullHeightImage>
 
 ---
 
@@ -127,7 +102,7 @@ Jen lidé mají často vyhraněné názory...
 <div class="grid grid-cols-2 gap-8 mt-8">
 
 <div class="bg-blue-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-blue-800">Tailwind 4</h3>
+<h3 class="text-2xl font-semibold mb-4 text-gray-800">Tailwind 4</h3>
 
 - ⚡ **Rychlost buildu** - nový engine
 - 🎨 **CSS variables** - dynamické vlastnosti
@@ -137,7 +112,7 @@ Jen lidé mají často vyhraněné názory...
 </div>
 
 <div class="bg-purple-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-purple-800">CSS 6 (moderní CSS)</h3>
+<h3 class="text-2xl font-semibold mb-4 text-gray-800">CSS 6 (moderní CSS)</h3>
 
 - 🎯 **Container queries** - responzivní komponenty
 - 🎨 **CSS layers** - kaskáda pod kontrolou
@@ -518,7 +493,7 @@ Komponenta = struktura +
 <div class="grid grid-cols-2 gap-8 mt-8">
 
 <div class="bg-blue-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-blue-800">Tailwind</h3>
+<h3 class="text-2xl font-semibold mb-4 text-gray-800">Tailwind</h3>
 
 - 🤖 **Default pro AI modely**
 - 📚 **Default pro knihovny komponent**
@@ -529,7 +504,7 @@ Komponenta = struktura +
 </div>
 
 <div class="bg-purple-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-purple-800">Custom CSS</h3>
+<h3 class="text-2xl font-semibold mb-4 text-gray-800">Custom CSS</h3>
 
 - 🏷️ **White label produkty**
 - 🎨 **Unikátní design identity**
@@ -611,9 +586,12 @@ layout: quote
 Otázky?
 </h1>
 
-<br>
-
-<div class="text-center">
-<div class="text-2xl mb-4">Lukáš Trumm</div>
-<div class="text-lg text-gray-600">https://lukastrumm.com/talks/</div>
+<div class="mb-10 mt-16">
+  <div class="text-3xl font-semibold text-gray-700">Lukáš Trumm</div>
 </div>
+
+&#8594; https://bsky.app/profile/lukastrumm.com
+
+&#8594; https://lukastrumm.com/talks
+
+&#8594; https://github.com/lttr/puleo
