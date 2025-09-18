@@ -63,7 +63,7 @@ button[title="Run code"] {
   overflow: hidden;
 }
 
-/* Geometric shapes on all slides */
+/* CSS t-shirt inspired flat geometric shapes on all slides */
 .slidev-layout::before {
   content: "";
   position: absolute;
@@ -71,10 +71,13 @@ button[title="Run code"] {
   left: 40px;
   width: 50px;
   height: 50px;
-  background: var(--vhs-pink);
-  opacity: 0.12;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 157, 0.12) 0%,
+    rgba(224, 86, 253, 0.15) 50%,
+    rgba(196, 69, 105, 0.12) 100%
+  );
   transform: rotate(45deg);
-  border-radius: 6px;
   z-index: -1;
 }
 
@@ -85,9 +88,13 @@ button[title="Run code"] {
   right: 30px;
   width: 40px;
   height: 40px;
-  background: var(--vhs-cyan);
-  opacity: 0.15;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(76, 201, 240, 0.12) 0%,
+    rgba(78, 205, 196, 0.15) 50%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  transform: rotate(45deg);
   z-index: -1;
 }
 
@@ -113,36 +120,39 @@ button[title="Run code"] {
   font-family: "Courier New", "Monaco", monospace !important;
 }
 
-/* 80s VHS recorder graphics - three colored dots */
+/* CSS t-shirt inspired flat geometric accent */
 .vhs-code-block::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 16px;
-  width: 8px;
-  height: 8px;
-  background: #ff006e;
-  border-radius: 50%;
-  box-shadow:
-    16px 0 0 #4cc9f0,
-    32px 0 0 #7209b7,
-    0 0 3px #ff006e,
-    16px 0 3px #4cc9f0,
-    32px 0 3px #7209b7;
+  top: 12px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #e056fd 50%, #c44569 100%);
+  transform: rotate(45deg);
   z-index: 1;
 }
 
-/* VHS timestamp/counter effect */
+/* Very subtle horizontal lines background */
 .vhs-code-block::after {
-  content: "●REC";
+  content: "";
   position: absolute;
-  top: 8px;
-  right: 16px;
-  color: #ff006e;
-  font-size: 10px;
-  font-weight: bold;
-  font-family: "Courier New", monospace;
-  text-shadow: 0 0 4px #ff006e;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(76, 201, 240, 0.02) 8px,
+    rgba(76, 201, 240, 0.02) 9px,
+    rgba(156, 39, 176, 0.015) 9px,
+    rgba(156, 39, 176, 0.015) 10px
+  );
+  border-radius: 6px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Inline code styling */
@@ -213,7 +223,7 @@ button[title="Run code"] {
   overflow: hidden;
 }
 
-/* Corner geometric shapes for specific slides */
+/* CSS-inspired corner geometric shapes for specific slides */
 .slidev-layout .corner-shapes {
   position: absolute;
   z-index: -1;
@@ -226,10 +236,18 @@ button[title="Run code"] {
   left: 20px;
   width: 80px;
   height: 80px;
-  background: var(--gradient-primary);
-  opacity: 0.1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 157, 0.12) 0%,
+    rgba(224, 86, 253, 0.15) 30%,
+    rgba(196, 69, 105, 0.12) 60%,
+    rgba(255, 159, 243, 0.1) 100%
+  );
   transform: rotate(45deg);
   border-radius: 8px;
+  box-shadow:
+    0 0 12px rgba(224, 86, 253, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .slidev-layout .corner-shapes::after {
@@ -239,9 +257,17 @@ button[title="Run code"] {
   right: 20px;
   width: 60px;
   height: 60px;
-  background: var(--gradient-warm);
-  opacity: 0.1;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(76, 201, 240, 0.12) 0%,
+    rgba(78, 205, 196, 0.15) 50%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  transform: rotate(45deg);
+  border-radius: 6px;
+  box-shadow:
+    0 0 10px rgba(76, 201, 240, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* VHS tape reel decoration for title slides */
