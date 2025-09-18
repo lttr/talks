@@ -91,28 +91,67 @@ button[title="Run code"] {
   z-index: -1;
 }
 
-/* Code block styling with VHS terminal aesthetic */
-.slidev-layout pre,
-.slidev-layout code {
-  background: linear-gradient(
-    135deg,
-    rgba(78, 205, 196, 0.05),
-    rgba(255, 107, 157, 0.05)
-  ) !important;
-  border: 1px solid rgba(78, 205, 196, 0.2);
-  border-radius: 8px;
+/* 80s VHS code block styling */
+.vhs-code-block {
+  background:
+    linear-gradient(180deg, transparent 50%, rgba(76, 201, 240, 0.04) 50%),
+    linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 30%, #16213e 70%, #0f1419 100%) !important;
+  background-size:
+    100% 4px,
+    100% 100% !important;
+  border: 1px solid #4cc9f0 !important;
+  border-radius: 6px !important;
   position: relative;
+  box-shadow:
+    0 0 25px rgba(76, 201, 240, 0.3),
+    inset 0 2px 0 rgba(76, 201, 240, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.5) !important;
+  font-size: var(--shiki-font-size, 1.4rem) !important;
+  line-height: var(--shiki-line-height, 1.5) !important;
+  padding: 2.5rem 2rem 2rem 2rem !important;
+  overflow: visible !important;
+  font-family: "Courier New", "Monaco", monospace !important;
 }
 
-.slidev-layout pre::before {
-  content: "●●●";
+/* 80s VHS recorder graphics - three colored dots */
+.vhs-code-block::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: 8px;
+  height: 8px;
+  background: #ff006e;
+  border-radius: 50%;
+  box-shadow:
+    16px 0 0 #4cc9f0,
+    32px 0 0 #7209b7,
+    0 0 3px #ff006e,
+    16px 0 3px #4cc9f0,
+    32px 0 3px #7209b7;
+  z-index: 1;
+}
+
+/* VHS timestamp/counter effect */
+.vhs-code-block::after {
+  content: "●REC";
   position: absolute;
   top: 8px;
-  left: 12px;
-  color: var(--vhs-pink);
-  font-size: 12px;
+  right: 16px;
+  color: #ff006e;
+  font-size: 10px;
   font-weight: bold;
-  letter-spacing: 4px;
+  font-family: "Courier New", monospace;
+  text-shadow: 0 0 4px #ff006e;
+}
+
+/* Inline code styling */
+.slidev-layout code:not(.vhs-code-block code) {
+  background: rgba(78, 205, 196, 0.1) !important;
+  color: var(--vhs-cyan) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-size: 1.1em !important;
 }
 
 /* Section dividers with scan line effect */

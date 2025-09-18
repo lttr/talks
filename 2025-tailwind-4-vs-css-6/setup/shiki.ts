@@ -5,8 +5,27 @@ import { defineShikiSetup } from "@slidev/types"
 export default defineShikiSetup((): ShikiSetupReturn => {
   return {
     themes: {
-      light: "vitesse-light",
+      light: "synthwave-84",
+      dark: "synthwave-84",
     },
-    langs: ["ts", "js", "vue", "html"],
+    langs: ["ts", "js", "vue", "html", "css"],
+    transformers: [
+      {
+        name: "vhs-style",
+        pre(node) {
+          // Add VHS styling classes
+          this.addClassToHast(node, "vhs-code-block")
+
+          // Set custom CSS variables for larger font
+          node.properties.style = [
+            node.properties.style,
+            "--shiki-font-size: 1.4rem",
+            "--shiki-line-height: 1.5",
+          ]
+            .filter(Boolean)
+            .join("; ")
+        },
+      },
+    ],
   }
 })

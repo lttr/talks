@@ -37,11 +37,28 @@ htmlAttrs:
 </div>
 
 ---
+layout: two-cols-header
+---
+
+::left::
+
+```css
+@t base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vhs-pink: #e056fd;
+}
+```
+
+::right::
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --vhs-pink: #e056fd;
 }

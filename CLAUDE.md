@@ -8,6 +8,8 @@ This is a talks repository containing presentation slides built with Slidev. The
 
 ## Development Workflow
 
+- Always use Playwright MCP to check how the edited slides look in the browser
+
 ### Starting Development
 
 - the dev server is already running at http://localhost:3030
