@@ -5,7 +5,7 @@ author: Lukáš Trumm
 keywords: web,css,tailwind
 colorSchema: light
 themeConfig:
-  primary: "#ff6b9d"
+  primary: "var(--vhs-pink)"
 favicon: https://lukastrumm.com/favicon.ico
 highlighter: shiki
 fonts:
@@ -20,14 +20,22 @@ htmlAttrs:
 
 # Tailwind 4 vs CSS 6
 
-<div class="vhs-badge">FRONTEND</div> <div class="vhs-badge">2025</div>
-
-<br>
 <b>Lukáš Trumm</b>
 
 Software engineer
 
 </div>
+
+---
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --vhs-pink: #e056fd;
+}
+```
 
 ---
 

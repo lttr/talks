@@ -1,22 +1,7 @@
 .slidev-layout :is(h1, h2) {
-  background: var(--gradient-primary);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--slidev-theme-primary);
+  color: var(--vhs-magenta);
   font-weight: 600;
   position: relative;
-}
-
-.slidev-layout h1::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
 }
 
 .two-cols-header {
@@ -33,11 +18,9 @@ button[title="Run code"] {
 }
 
 :root {
-  --gray-9: #212529;
-
   /* VHS-inspired color palette (light mode) */
-  --vhs-pink: #ff6b9d;
-  --vhs-magenta: #c44569;
+  --vhs-pink: #e056fd;
+  --vhs-magenta: #9c27b0;
   --vhs-cyan: #4ecdc4;
   --vhs-purple: #6c5ce7;
   --vhs-orange: #fdcb6e;
@@ -80,38 +63,31 @@ button[title="Run code"] {
   overflow: hidden;
 }
 
-/* VHS-inspired side decorations */
+/* Geometric shapes on all slides */
 .slidev-layout::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100px;
-  width: 200px;
-  height: 100vh;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(255, 107, 157, 0.08) 50%,
-    transparent 60%
-  );
-  transform: skewX(-15deg);
+  bottom: 40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  background: var(--vhs-pink);
+  opacity: 0.12;
+  transform: rotate(45deg);
+  border-radius: 6px;
   z-index: -1;
 }
 
 .slidev-layout::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: -100px;
-  width: 200px;
-  height: 100vh;
-  background: linear-gradient(
-    -45deg,
-    transparent 40%,
-    rgba(78, 205, 196, 0.08) 50%,
-    transparent 60%
-  );
-  transform: skewX(15deg);
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: var(--vhs-cyan);
+  opacity: 0.15;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   z-index: -1;
 }
 
@@ -149,31 +125,6 @@ button[title="Run code"] {
   overflow: hidden;
 }
 
-.slidev-layout hr::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-  animation: scan 2s infinite;
-}
-
-@keyframes scan {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
 /* Geometric bullet points */
 .slidev-layout ul li::marker {
   content: "◆ ";
@@ -194,7 +145,36 @@ button[title="Run code"] {
   margin: 0 4px;
 }
 
-/* Corner geometric shapes */
+/* Additional floating geometric elements */
+.slidev-layout {
+  background-image:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 107, 157, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(78, 205, 196, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 90%,
+      rgba(108, 92, 231, 0.05) 0%,
+      transparent 40%
+    ),
+    var(--scan-lines), var(--diagonal-stripes);
+  background-size:
+    300px 300px,
+    250px 250px,
+    200px 200px,
+    100% 100%,
+    40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corner geometric shapes for specific slides */
 .slidev-layout .corner-shapes {
   position: absolute;
   z-index: -1;
