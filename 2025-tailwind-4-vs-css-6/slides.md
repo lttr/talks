@@ -43,7 +43,7 @@ layout: two-cols-header
 ::left::
 
 ```css
-@t base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
