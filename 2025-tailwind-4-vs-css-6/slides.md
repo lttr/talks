@@ -5,19 +5,22 @@ author: Lukáš Trumm
 keywords: web,css,tailwind
 colorSchema: light
 themeConfig:
-  primary: "var(--gray-9)"
+  primary: "#ff6b9d"
 favicon: https://lukastrumm.com/favicon.ico
 highlighter: shiki
 fonts:
-  sans: Roboto Slab
-  mono: Fira Mono
+  sans: "Inter, system-ui, sans-serif"
+  mono: "JetBrains Mono, Fira Code, monospace"
 htmlAttrs:
   lang: cs
 ---
 
-<div class="text-center">
+<div class="text-center title-slide">
+<div class="corner-shapes"></div>
 
 # Tailwind 4 vs CSS 6
+
+<div class="vhs-badge">FRONTEND</div> <div class="vhs-badge">2025</div>
 
 <br>
 <b>Lukáš Trumm</b>
@@ -29,6 +32,8 @@ Software engineer
 ---
 
 # Knihovna Puleo CSS
+
+<hr>
 
 <div>
 
@@ -46,9 +51,11 @@ Software engineer
 
 # Shrnutí
 
+<hr>
+
 - nativní podpora v prohlížečích se dost posunula
 - techniky a nástroje nejsou přímočaré nebo standardizované<br>
-  (narozdíl třeba od Tailwindu)
+  (narozdíl třeba od <span class="vhs-badge">Tailwind</span>)
 - CSS je mocné a vlastní design je možné tvořit rychle<br>
   (možné zatím neznamená jednoduché)
 
