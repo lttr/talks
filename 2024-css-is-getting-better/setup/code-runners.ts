@@ -1,5 +1,4 @@
 // https://github.com/slidevjs/slidev/blob/main/demo/vue-runner/setup/code-runners.ts
-/* eslint-disable no-new-func */
 import { defineCodeRunnersSetup } from "@slidev/types"
 
 export default defineCodeRunnersSetup(() => {
