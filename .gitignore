@@ -5,3 +5,6 @@ dist
 
 # Local Netlify folder
 .netlify
+
+# Temporary files
+.playwright-mcp
