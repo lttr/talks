@@ -19,8 +19,8 @@ export default defineShikiSetup((): ShikiSetupReturn => {
           // Set custom CSS variables for larger font
           node.properties.style = [
             node.properties.style,
-            "--shiki-font-size: 1.4rem",
-            "--shiki-line-height: 1.5",
+            "--shiki-font-size: 1.3rem",
+            "--shiki-line-height: 1.45",
           ]
             .filter(Boolean)
             .join("; ")
