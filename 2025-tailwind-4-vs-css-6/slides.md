@@ -55,11 +55,7 @@ Pokud je vaším cílem zaujmout investory do AI technologií, můžete jít kli
 layout: quote
 ---
 
-<div class="text-center">
-
 # CSS se stále zlepšuje<br>&ndash; využijme toho!
-
-</div>
 
 <!--
 - Minulý jsem mluvil na meetupu frontendistů o tom, že CSS se stále zlepšuje.
@@ -89,7 +85,7 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 
 <h1 class="text-center">
  Co má smysl porovnávat?
-  </h1>
+</h1>
 
 <FullHeightImage>
   <ObrazekAbstrakce />
@@ -97,32 +93,53 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 
 ---
 
-# Čím jsou nové verze specifické?
+# Tailwind 4
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="">
 
-<div class="bg-blue-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-gray-800">Tailwind 4</h3>
-
-- ⚡ **Rychlost buildu** - nový engine
-- 🎨 **CSS variables** - dynamické vlastnosti
-- 📦 **Größer CSS** na výstupu (kvůli variables)
-- 🔄 **Lepší dev experience**
+|                                  | v3.4  | v4.0  | Improvement |
+| -------------------------------- | ----- | ----- | ----------- |
+| Full build                       | 378ms | 100ms | 3.78x       |
+| Incremental rebuild with new CSS | 44ms  | 5ms   | 8.8x        |
 
 </div>
 
-<div class="bg-purple-50 p-6 rounded-lg">
-<h3 class="text-2xl font-semibold mb-4 text-gray-800">CSS 6 (moderní CSS)</h3>
+---
+layout: two-cols-header
+---
 
-- 🎯 **Container queries** - responzivní komponenty
-- 🎨 **CSS layers** - kaskáda pod kontrolou
-- 🔍 **:has()** - parent selector
-- 🏗️ **CSS nesting** - vnořené selektory
-- 🎪 **CSS scoping** - izolace stylů
+# Tailwind 4
 
-</div>
+::left::
 
-</div>
+```css [Tailwind v3]
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+```
+
+::right::
+
+```css [Tailwind v4]
+@layer utilities {
+  .mx-5 {
+    margin-inline: calc(var(--spacing) * 5);
+  }
+}
+```
+
+---
+
+# Tailwind 4
+
+- konfigurace v CSS souboru
+
+---
+
+# Tailwind 4
+
+- použití moderního CSS
 
 ---
 
@@ -200,8 +217,8 @@ layout: two-cols-header
 ```
 
 ---
-layout: two-cols-header
----
+
+## layout: two-cols-header
 
 # Přepisování stylů
 
@@ -257,8 +274,8 @@ layout: two-cols-header
 ```
 
 ---
-layout: two-cols-header
----
+
+## layout: two-cols-header
 
 # Responsivní design
 
@@ -312,8 +329,8 @@ layout: two-cols-header
 ```
 
 ---
-layout: two-cols-header
----
+
+## layout: two-cols-header
 
 # Generování pomocí AI
 
@@ -595,3 +612,9 @@ Otázky?
 &#8594; https://lukastrumm.com/talks
 
 &#8594; https://github.com/lttr/puleo
+
+<div class="absolute right-16 bottom-16 text-right">
+
+  <PoweredBySlidev />
+
+</div>

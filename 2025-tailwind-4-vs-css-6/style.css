@@ -38,6 +38,7 @@
 .slidev-layout :is(h1, h2) {
   font-weight: 600;
   color: var(--vhs-text);
+  text-align: center;
 }
 
 .two-cols-header {
