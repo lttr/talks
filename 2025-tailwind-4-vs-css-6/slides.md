@@ -93,7 +93,7 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 
 ---
 
-# Tailwind 4
+# Tailwind <TailwindFour />
 
 <div class="">
 
@@ -108,7 +108,7 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 layout: two-cols-header
 ---
 
-# Tailwind 4
+# Tailwind <TailwindFour />
 
 ::left::
 
@@ -131,13 +131,13 @@ layout: two-cols-header
 
 ---
 
-# Tailwind 4
+# Tailwind <TailwindFour />
 
 - konfigurace v CSS souboru
 
 ---
 
-# Tailwind 4
+# Tailwind <TailwindFour />
 
 - použití moderního CSS
 
