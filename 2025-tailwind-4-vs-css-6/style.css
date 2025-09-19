@@ -107,18 +107,16 @@ button[title="Run code"] {
   background-size:
     100% 4px,
     100% 100% !important;
-  border: 1px solid #4cc9f0 !important;
   border-radius: 6px !important;
   position: relative;
   box-shadow:
     0 0 25px rgba(76, 201, 240, 0.3),
     inset 0 2px 0 rgba(76, 201, 240, 0.1),
     inset 0 -2px 0 rgba(0, 0, 0, 0.5) !important;
-  font-size: var(--shiki-font-size, 1.4rem) !important;
+  font-size: var(--shiki-font-size, 1rem) !important;
   line-height: var(--shiki-line-height, 1.5) !important;
-  padding: 2.5rem 2rem 2rem 2rem !important;
+  padding: 2.3rem 1.5rem 1.8rem 1.5rem !important;
   overflow: visible !important;
-  font-family: "Courier New", "Monaco", monospace !important;
 }
 
 /* CSS t-shirt inspired flat geometric accent */
@@ -132,6 +130,7 @@ button[title="Run code"] {
   background: linear-gradient(135deg, #ff6b9d 0%, #e056fd 50%, #c44569 100%);
   transform: rotate(45deg);
   z-index: 1;
+  opacity: 0.8;
 }
 
 /* Very subtle horizontal lines background */
