@@ -9,14 +9,5 @@ export default defineShikiSetup((): ShikiSetupReturn => {
       dark: "synthwave-84",
     },
     langs: ["ts", "js", "vue", "html", "css"],
-    transformers: [
-      {
-        name: "vhs-style",
-        pre(node) {
-          // Add VHS styling classes
-          this.addClassToHast(node, "vhs-code-block")
-        },
-      },
-    ],
   }
 })

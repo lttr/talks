@@ -138,13 +138,16 @@ layout: content-center
 </table>
 
 ---
-layout: content-center
+layout: full
 ---
 
 # Tailwind <TailwindFour />
 
-<div class="max-w-3xl">
-<span class="font-semibold">Tailwind v3</span>
+<div class="grid grid-flow-col gap-7">
+
+<div class="max-w-xl">
+
+**v3**
 
 ```css
 .mx-5 {
@@ -155,8 +158,9 @@ layout: content-center
 
 </div>
 
-<div class="max-w-3xl">
-<span class="font-semibold">Tailwind v4</span>
+<div>
+
+**v4**
 
 ```css
 @layer theme {
@@ -174,11 +178,47 @@ layout: content-center
 
 </div>
 
+</div>
+
 ---
 
 # Tailwind <TailwindFour />
 
-- konfigurace v CSS souboru
+````md magic-move
+```css
+/* Custom framework */
+
+:root {
+  /* 4.5px => 5.0px */
+  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
+
+```css
+/* Tailwind config */
+
+@theme {
+  /* 4.5px => 5.0px */
+  --spacing-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --spacing-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --spacing-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --spacing-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --spacing-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
+````
 
 ---
 

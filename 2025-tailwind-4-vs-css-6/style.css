@@ -100,7 +100,8 @@ button[title="Run code"] {
 }
 
 /* 80s VHS code block styling */
-.vhs-code-block {
+.vhs-code-block,
+.slidev-code-wrapper pre {
   background:
     linear-gradient(180deg, transparent 50%, rgba(76, 201, 240, 0.04) 50%),
     linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 30%, #16213e 70%, #0f1419 100%) !important;
@@ -120,7 +121,8 @@ button[title="Run code"] {
 }
 
 /* CSS t-shirt inspired flat geometric accent */
-.vhs-code-block::before {
+.vhs-code-block::before,
+.slidev-code-wrapper pre::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -134,7 +136,7 @@ button[title="Run code"] {
 }
 
 /* Very subtle horizontal lines background */
-.vhs-code-block::after {
+.vhs-code-block::after, .slidev-code-wrapper pre::after {
   content: "";
   position: absolute;
   top: 0;

@@ -8,7 +8,6 @@
 .content-center {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 1rem;
   place-items: center;
 }
 </style>
