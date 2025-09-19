@@ -9,8 +9,8 @@ themeConfig:
 favicon: https://lukastrumm.com/favicon.ico
 highlighter: shiki
 fonts:
-  sans: "Inter, system-ui, sans-serif"
-  mono: "JetBrains Mono, Fira Code, monospace"
+  sans: "Exo"
+  mono: "JetBrains Mono"
 htmlAttrs:
   lang: cs
 ---
@@ -55,6 +55,21 @@ Pokud je vaším cílem zaujmout investory do AI technologií, můžete jít kli
 layout: quote
 ---
 
+<div class="text-center text-[7rem]">
+🙋🏻
+</div>
+
+<!--
+Zvedněte prosím ruku, kdo má radši práci na projektu, kde se používá Tailwind, než čisté CSS nebo vlasntí CSS framework. Kdo má naopak radši projekty, kde je CSS.
+
+Fajn a teď ruce dolů, kdo většinu svého času, pracuje na projektu, kde je Tailwind.
+Kdo většinu svého času, pracuje na projektu, kde není Tailwind.
+-->
+
+---
+layout: quote
+---
+
 # CSS se stále zlepšuje<br>&ndash; využijme toho!
 
 <!--
@@ -82,52 +97,82 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 -->
 
 ---
+layout: content-center
+---
 
-<h1 class="text-center">
- Co má smysl porovnávat?
-</h1>
+# Co má smysl porovnávat?
 
 <FullHeightImage>
   <ObrazekAbstrakce />
 </FullHeightImage>
 
 ---
-
-# Tailwind <TailwindFour />
-
-<div class="">
-
-|                                  | v3.4  | v4.0  | Improvement |
-| -------------------------------- | ----- | ----- | ----------- |
-| Full build                       | 378ms | 100ms | 3.78x       |
-| Incremental rebuild with new CSS | 44ms  | 5ms   | 8.8x        |
-
-</div>
-
----
-layout: two-cols-header
+layout: content-center
 ---
 
 # Tailwind <TailwindFour />
 
-::left::
+<table class="text-lg max-w-3xl mt--10">
+  <thead>
+    <tr>
+      <th class="pb-4 pr-8 text-left font-medium"></th>
+      <th class="pb-4 pr-6 font-medium">v3.4</th>
+      <th class="pb-4 pr-6 font-medium">v4.0</th>
+      <th class="pb-4 font-medium">Improvement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="py-4 pr-8 text-gray-700">Full build</td>
+      <td class="py-4 pr-6 font-mono">378ms</td>
+      <td class="py-4 pr-6 font-mono">100ms</td>
+      <td class="py-4 font-semibold">3.78x</td>
+    </tr>
+    <tr>
+      <td class="py-4 pr-8 text-gray-700">Incremental rebuild with new CSS</td>
+      <td class="py-4 pr-6 font-mono">44ms</td>
+      <td class="py-4 pr-6 font-mono">5ms</td>
+      <td class="py-4 font-semibold">8.8x</td>
+    </tr>
+  </tbody>
+</table>
 
-```css [Tailwind v3]
+---
+layout: content-center
+---
+
+# Tailwind <TailwindFour />
+
+<div class="max-w-3xl">
+<span class="font-semibold">Tailwind v3</span>
+
+```css
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
 ```
 
-::right::
+</div>
 
-```css [Tailwind v4]
+<div class="max-w-3xl">
+<span class="font-semibold">Tailwind v4</span>
+
+```css
+@layer theme {
+  :root {
+    --spacing: 0.25rem;
+  }
+}
+
 @layer utilities {
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
 }
 ```
+
+</div>
 
 ---
 
