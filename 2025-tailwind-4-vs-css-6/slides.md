@@ -183,10 +183,45 @@ layout: content-center
 </div>
 
 ---
+layout: two-cols-header
+---
 
 # Tailwind <TailwindFour />
 
-````md magic-move
+::left::
+
+**HTML**
+
+```html
+<div class="p-48">...</div>
+```
+
+::right::
+
+**Vygenerované CSS**
+
+```css
+.p-101 {
+  padding: calc(var(--spacing) * 101);
+}
+```
+
+---
+
+<v-switch>
+  <template #0>
+
+# Tailwind <TailwindFour />
+
+  </template>
+  <template #1>
+
+# CSS <CssSix />
+
+</template>
+</v-switch>
+
+````md magic-move {at:1}
 ```css
 /* Custom framework */
 
