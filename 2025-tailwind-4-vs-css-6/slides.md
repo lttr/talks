@@ -19,9 +19,13 @@ htmlAttrs:
 
 <div class="mb-12">
   <h1 class="text-7xl font-bold mb-6 leading-none">
-    <div class="text-gray-800 mb-2 flex items-center justify-center gap-4">Tailwind <span class="text-8xl font-black" style="background: linear-gradient(45deg, oklch(74.6% .16 232.661), #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 2px 4px rgba(56, 189, 248, 0.2); filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.3));">4</span></div>
+    <div class="text-gray-800 mb-2 flex items-center justify-center gap-5">
+        <span>Tailwind</span> <TailwindFour class="text-8xl" />
+      </div>
     <div class="text-4xl text-gray-500 font-normal mb-2">vs</div>
-    <div class="text-gray-800 flex items-center justify-center gap-4">CSS <span class="text-8xl font-black" style="background: linear-gradient(45deg, rebeccapurple, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 2px 4px rgba(102, 51, 153, 0.2); filter: drop-shadow(0 0 6px rgba(102, 51, 153, 0.3));">6</span></div>
+    <div class="text-gray-800 flex items-center justify-center gap-5">
+      <span>CSS</span> <CssSix class="text-8xl" />
+      </div>
   </h1>
 </div>
 
@@ -138,12 +142,10 @@ layout: content-center
 </table>
 
 ---
-layout: full
----
 
 # Tailwind <TailwindFour />
 
-<div class="grid grid-flow-col gap-7">
+<div class="grid grid-flow-col gap-8">
 
 <div class="max-w-xl">
 
