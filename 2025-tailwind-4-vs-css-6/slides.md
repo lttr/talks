@@ -253,8 +253,12 @@ Custom framework
 ````
 
 ---
+layout: two-cols-header
+---
 
 # CSS <CssSix />
+
+::left::
 
 Kaskáda a specificita
 
@@ -272,6 +276,16 @@ Kaskáda a specificita
 }
 ```
 
+::right::
+
+<p>&nbsp;</p>
+
+```css
+body {
+  font-size: max(20px, 1rem);
+}
+```
+
 <!--
 Co je to teda CSS 6: CSS má fůru nových vlastností. Rozhodně víc, než kolik
 se vejde do jedné přednášky, nicméně vypíchnu tady pár, které mají nějaký
@@ -281,8 +295,6 @@ další.
 
 ---
 layout: two-cols-header
----
-
 ---
 
 # CSS <CssSix />
@@ -298,18 +310,31 @@ Scoping
   }
 
   a {
-    color: rebeccapurple;
+    text-decoration: none;
   }
 }
 ```
 
 ::right::
 
-<div class="bg-[plum]">
-  <div class="text-[rebeccapurple]">
-    <a href="#">Link</a>
+<p>&nbsp;</p>
+
+<div class="flex flex-col gap-6">
+  <div class="bg-[plum] p-4 max-w-[22ch] rounded-lg shadow-md">
+    <div class="text-lg font-semibold">Nadpis karty</div>
+    <p class="text-xs leading-4! font-normal!">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="#" class="border-0! text-[rebeccapurple] font-semibold
+      text-lg leading-6! w-full block text-right">Link &rarr;</a>
+  </div>
+  <div class="bg-gray-200 p-4 text-md">
+    Normální text upozorňující na <a class="underline border-0!" href="#">link</a>.
   </div>
 </div>
+
+<!--
+Dekorace odkazu je nastylovaná pouze v mé komponentě. Všimněte si, že není nutné
+pojmenovávat žádnou CSS třídu, protože styly jsou omezené na mojí komponentu.
+-->
 
 ---
 layout: quote
