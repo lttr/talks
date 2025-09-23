@@ -15,7 +15,7 @@ htmlAttrs:
   lang: cs
 ---
 
-<div class="text-center relative h-full flex flex-col justify-center items-center px-12 py-16">
+<div class="text-center relative h-full flex flex-col justify-center items-center px-12 pt-8 pb-16">
 
 <div class="mb-12">
   <h1 class="text-7xl font-bold mb-6 leading-none">
@@ -29,11 +29,12 @@ htmlAttrs:
   </h1>
 </div>
 
-<div class="absolute bottom-12 left-12">
+<div class="absolute bottom-6 left-12 text-left">
   <div class="text-3xl font-semibold text-gray-700">Lukáš Trumm</div>
+  <div class="text-xl font-semibold text-gray-600"><span class="line-through">Software</span> Context engineer</div>
 </div>
 
-<div class="absolute bottom-12 right-12">
+<div class="absolute bottom-6 right-12">
   <img src="/frontkon-logo.svg" alt="FrontCon 25" class="w-32 h-auto opacity-80" />
 </div>
 
