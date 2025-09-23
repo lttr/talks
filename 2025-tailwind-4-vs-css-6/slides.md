@@ -142,14 +142,14 @@ layout: content-center
 </table>
 
 ---
+layout: two-cols-header
+---
 
 # Tailwind <TailwindFour />
 
-<div class="grid grid-flow-col gap-8">
+::left::
 
-<div class="max-w-xl">
-
-**v3**
+v3
 
 ```css
 .mx-5 {
@@ -158,11 +158,9 @@ layout: content-center
 }
 ```
 
-</div>
+::right::
 
-<div>
-
-**v4**
+v4
 
 ```css
 @layer theme {
@@ -178,10 +176,6 @@ layout: content-center
 }
 ```
 
-</div>
-
-</div>
-
 ---
 layout: two-cols-header
 ---
@@ -190,7 +184,7 @@ layout: two-cols-header
 
 ::left::
 
-**HTML**
+HTML
 
 ```html
 <div class="p-48">...</div>
@@ -198,7 +192,7 @@ layout: two-cols-header
 
 ::right::
 
-**Vygenerované CSS**
+Vygenerované CSS
 
 ```css
 .p-101 {
@@ -213,35 +207,20 @@ layout: two-cols-header
 
 # Tailwind <TailwindFour />
 
+Tailwind config
+
   </template>
   <template #1>
 
 # CSS <CssSix />
 
-</template>
+Custom framework
+
+  </template>
 </v-switch>
 
 ````md magic-move {at:1}
 ```css
-/* Custom framework */
-
-:root {
-  /* 4.5px => 5.0px */
-  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
-  /* 9.0px => 10.0px */
-  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
-  /* 13.5px => 15.0px */
-  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
-  /* 18.0px => 20.0px */
-  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
-  /* 27.0px => 30.0px */
-  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
-}
-```
-
-```css
-/* Tailwind config */
-
 @theme {
   /* 4.5px => 5.0px */
   --spacing-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
@@ -255,7 +234,81 @@ layout: two-cols-header
   --spacing-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
 }
 ```
+
+```css
+:root {
+  /* 4.5px => 5.0px */
+  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
 ````
+
+---
+
+# CSS <CssSix />
+
+Kaskáda a specificita
+
+```css
+@layer theme {
+  :root {
+    --font-size-body: 1.1rem;
+  }
+}
+
+@layer base {
+  :where(body) {
+    font-size: font-size: var(--font-size-body);
+  }
+}
+```
+
+<!--
+Co je to teda CSS 6: CSS má fůru nových vlastností. Rozhodně víc, než kolik
+se vejde do jedné přednášky, nicméně vypíchnu tady pár, které mají nějaký
+specifický vliv na naše srovnání, v dalších přednáškách se můžete těšit na
+další.
+-->
+
+---
+layout: two-cols-header
+---
+
+---
+
+# CSS <CssSix />
+
+::left::
+
+Scoping
+
+```css
+@scope (.card) {
+  :scope {
+    background-color: plum;
+  }
+
+  a {
+    color: rebeccapurple;
+  }
+}
+```
+
+::right::
+
+<div class="bg-[plum]">
+  <div class="text-[rebeccapurple]">
+    <a href="#">Link</a>
+  </div>
+</div>
 
 ---
 layout: quote

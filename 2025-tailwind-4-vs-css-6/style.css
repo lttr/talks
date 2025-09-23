@@ -41,6 +41,14 @@
   text-align: center;
 }
 
+.slidev-layout h1 + p,
+.two-cols-header :is(.col-left, .col-right) p:first-of-type {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: 1;
+}
+
 .two-cols-header {
   grid-template-rows: auto 1fr !important;
   column-gap: 2rem;
@@ -136,7 +144,8 @@ button[title="Run code"] {
 }
 
 /* Very subtle horizontal lines background */
-.vhs-code-block::after, .slidev-code-wrapper pre::after {
+.vhs-code-block::after,
+.slidev-code-wrapper pre::after {
   content: "";
   position: absolute;
   top: 0;
