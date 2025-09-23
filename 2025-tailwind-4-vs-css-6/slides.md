@@ -266,7 +266,7 @@ Kaskáda a specificita
 
 @layer base {
   :where(body) {
-    font-size: font-size: var(--font-size-body);
+    font-size: var(--font-size-body);
   }
 }
 ```

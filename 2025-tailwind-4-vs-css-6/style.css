@@ -167,7 +167,7 @@ button[title="Run code"] {
 }
 
 /* Inline code styling */
-.slidev-layout code:not(.vhs-code-block code) {
+.slidev-layout pre:not(.slidev-code) code:not(.vhs-code-block code) {
   background: rgba(78, 205, 196, 0.1) !important;
   color: var(--vhs-cyan) !important;
   padding: 2px 6px !important;
