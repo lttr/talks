@@ -324,7 +324,7 @@ Scoping
     <div class="text-lg font-semibold">Nadpis karty</div>
     <p class="text-xs leading-4! font-normal!">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <a href="#" class="border-0! text-[rebeccapurple] font-semibold
-      text-lg leading-6! w-full block text-right">Link &rarr;</a>
+      text-lg leading-6! w-full block text-right mt-8">Link &rarr;</a>
   </div>
   <div class="bg-gray-200 p-4 text-md">
     Normální text upozorňující na <a class="underline border-0!" href="#">link</a>.
@@ -335,6 +335,59 @@ Scoping
 Dekorace odkazu je nastylovaná pouze v mé komponentě. Všimněte si, že není nutné
 pojmenovávat žádnou CSS třídu, protože styly jsou omezené na mojí komponentu.
 -->
+
+---
+layout: two-cols-header
+---
+
+# CSS <CssSix />
+
+::left::
+
+```html
+<nav>
+  <ul class="submenu">
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    ...
+  </ul>
+</nav>
+```
+
+````md magic-move {at:1}
+```css
+/* 7+ items */
+.submenu:has(li:nth-last-child(n + 7)) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 25ch;
+}
+```
+
+```css
+/* 5+ items */
+.submenu:has(li:nth-last-child(n + 5)) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 25ch;
+}
+```
+````
+
+::right::
+
+<v-switch>
+  <template #0>
+
+ <ExampleHas :should-break="false" />
+
+  </template>
+  <template #1>
+
+ <ExampleHas :should-break="true" />
+
+  </template>
+</v-switch>
 
 ---
 layout: quote
