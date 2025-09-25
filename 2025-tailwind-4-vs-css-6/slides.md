@@ -425,36 +425,39 @@ sloupcích.
 
 <div class="text-gray-700 text-3xl mt-10">Tailwind má lepší konzistenci</div>
 
-**Nemá protože**
+**Jen když...**
 
 <div class="grid grid-cols-2 gap-8">
 
-```html
-<div
-  class="bg-gray-200 pl-4
-  max-w-[200px] rounded-md"
+<!-- prettier-ignore-start -->
+
+```html {all|2|3|4|5}
+<div class="
+    max-w-[200px]
+    rounded-md
+    px-4
+    bg-gray-200
+  "
 >
   <h2>My card component</h2>
 </div>
 ```
 
-<v-click>
-
-```css
+```css {all|none|2|3|4-5}{at:1}
 @theme {
   --radius: var(--radius-md);
   --spacing: 0.4rem;
-  --content-width-md: 40ch;
-  --color-surface-1: var(--color-slate-200);
+  --color-surface-1:
+      var(--color-slate-200);
 }
 ```
 
-</v-click>
+<!-- prettier-ignore-end -->
 
 </div>
 
 ---
-layout: quote
+# layout: quote
 ---
 
 <h1 class="text-center">
