@@ -9,6 +9,8 @@
           <li><a href="#">Item 3</a></li>
           <li><a href="#">Item 4</a></li>
           <li><a href="#">Item 5</a></li>
+          <li v-if="shouldBreak"><a href="#">Item 6</a></li>
+          <li v-if="shouldBreak"><a href="#">Item 7</a></li>
         </ul>
       </li>
     </ul>
@@ -47,24 +49,23 @@ defineProps<{
 }
 
 .submenu {
-  background-color: rgba(116, 185, 255, 0.2);
-  padding-inline: 0.3rem;
+  background-color: rgba(116, 185, 255, 0.3);
+  padding-inline: 1rem;
   padding-block: 0.7rem;
   border-radius: 0.5rem;
-  width: 10ch;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.3);
+  width: fit-content;
+
+  li {
+    margin: 0;
+    padding-inline: 0.8rem;
+    padding-block: 0.1rem;
+  }
 }
 
 .submenu:has(li:nth-last-child(n + 7)) {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 25ch;
-}
-
-.submenu-break:has(li:nth-last-child(n + 5)) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 25ch;
 }
 
 a {

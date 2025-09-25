@@ -253,6 +253,18 @@ Custom framework
 ````
 
 ---
+layout: center
+---
+
+<h1 class="flex justify-center items-center">
+  <span class="text-7xl">Moderní CSS <CssSix class="text-7xl" /></span>
+</h1>
+
+<div class="flex justify-center mt-25">
+  <img class="max-w-[18rem]" src="/baseline-wordmark.svg" />
+</div>
+
+---
 layout: two-cols-header
 ---
 
@@ -285,6 +297,8 @@ body {
   font-size: max(20px, 1rem);
 }
 ```
+
+<BaselineCard feature="Cascade layers" available="widely" />
 
 <!--
 Co je to teda CSS 6: CSS má fůru nových vlastností. Rozhodně víc, než kolik
@@ -323,13 +337,15 @@ Scoping
   <div class="bg-[plum] p-4 max-w-[22ch] rounded-lg shadow-md">
     <div class="text-lg font-semibold">Nadpis karty</div>
     <p class="text-xs leading-4! font-normal!">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="#" class="border-0! text-[rebeccapurple] font-semibold
+    <a href="#" class="border-0! text-gray-800 font-semibold
       text-lg leading-6! w-full block text-right mt-8">Link &rarr;</a>
   </div>
   <div class="bg-gray-200 p-4 text-md">
     Normální text upozorňující na <a class="underline border-0!" href="#">link</a>.
   </div>
 </div>
+
+<BaselineCard feature="@scope" available="limited" />
 
 <!--
 Dekorace odkazu je nastylovaná pouze v mé komponentě. Všimněte si, že není nutné
@@ -354,27 +370,17 @@ layout: two-cols-header
 </nav>
 ```
 
-````md magic-move {at:1}
 ```css
 /* 7+ items */
 .submenu:has(li:nth-last-child(n + 7)) {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 25ch;
 }
 ```
-
-```css
-/* 5+ items */
-.submenu:has(li:nth-last-child(n + 5)) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 25ch;
-}
-```
-````
 
 ::right::
+
+<div class="w-full pr-10">
 
 <v-switch>
   <template #0>
@@ -388,6 +394,18 @@ layout: two-cols-header
 
   </template>
 </v-switch>
+
+</div>
+
+<BaselineCard feature="has" available="newly" />
+
+<!--
+HAS je takové nenápadné klíčové slovo, je trochu schované támhle v tom
+druhém bloku kódu.
+HAS: pomůže se vyhnout javascriptu, vyřeší problém elegantně
+Co tento kód dělá? Pokud má submenu více než 7 prvků, tak jej zobrazí ve dvou
+sloupcích.
+-->
 
 ---
 layout: quote
