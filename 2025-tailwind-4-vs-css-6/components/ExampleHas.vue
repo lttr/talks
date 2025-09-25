@@ -1,5 +1,5 @@
 <template>
-  <nav class="mt-7">
+  <nav class="mt-7 fade-in">
     <ul>
       <li class="wrapper">
         <a href="#">Products &darr;</a>
@@ -22,6 +22,17 @@ defineProps<{
 </script>
 
 <style scoped>
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .wrapper {
   display: grid;
   justify-content: end;
