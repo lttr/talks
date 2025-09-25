@@ -408,6 +408,52 @@ sloupcích.
 -->
 
 ---
+
+# Mýtus 1
+
+<div class="text-gray-700 text-3xl mt-10">Je potřeba vymýšlet názvy tříd</div>
+
+**Není protože**
+
+- AI vygeneruje celou komponentu nebo třídy doplní
+- některá jména již existují v dané doméně
+- díky scopingu není třeba řešit konflikty, názvy mohou být triviální
+
+---
+
+# Mýtus 2
+
+<div class="text-gray-700 text-3xl mt-10">Tailwind má lepší konzistenci</div>
+
+**Nemá protože**
+
+<div class="grid grid-cols-2 gap-8">
+
+```html
+<div
+  class="bg-gray-200 pl-4
+  max-w-[200px] rounded-md"
+>
+  <h2>My card component</h2>
+</div>
+```
+
+<v-click>
+
+```css
+@theme {
+  --radius: var(--radius-md);
+  --spacing: 0.4rem;
+  --content-width-md: 40ch;
+  --color-surface-1: var(--color-slate-200);
+}
+```
+
+</v-click>
+
+</div>
+
+---
 layout: quote
 ---
 
