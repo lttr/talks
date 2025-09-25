@@ -1,7 +1,7 @@
 <template>
-  <div class="absolute right-16 bottom-10">
+  <div class="absolute bottom-10 right-16">
     <div
-      class="max-w-[18ch] px-4 py-3 border rounded-md bg-white bg-opacity-60"
+      class="max-w-[18ch] rounded-md border bg-white bg-opacity-60 px-4 py-3"
     >
       <div class="text-md mb-3">{{ feature }}</div>
       <img :src />

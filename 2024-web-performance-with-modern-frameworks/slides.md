@@ -461,3 +461,4 @@ Otázky?
 &#8594; https://lukastrumm.com/talks/
 
 ---
+

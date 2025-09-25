@@ -1,5 +1,5 @@
 <template>
-  <iframe class="w-full h-full min-h-[40ex]" :src></iframe>
+  <iframe class="h-full min-h-[40ex] w-full" :src></iframe>
 </template>
 
 <script lang="ts" setup>

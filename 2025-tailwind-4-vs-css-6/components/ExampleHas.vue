@@ -1,5 +1,5 @@
 <template>
-  <nav class="mt-7 fade-in">
+  <nav class="fade-in mt-7">
     <ul>
       <li class="wrapper">
         <a href="#">Products &darr;</a>
