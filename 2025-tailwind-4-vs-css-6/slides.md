@@ -496,6 +496,18 @@ layout: quote
 
 ---
 
+# Head to Head
+
+<<< @/snippets/pricing-card-tailwind.html
+
+---
+
+# Head to Head
+
+<<< @/snippets/pricing-card-puleo.html
+
+---
+
 # AI
 
 ---
