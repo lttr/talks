@@ -464,15 +464,39 @@ sloupcích.
 
 **Ano, ale jen pokud**
 
-- znáte všechny potřebné třídy a syntaxi
-- píšete styly ručně, _nebo používáme AI nástroj bez dalšího kontextu_
+- znáte všechny potřebné třídy a syntax
+
+---
+layout: quote
+---
+
+# Adam Wathan (video)
+
+---
+
+<SlidevVideo autoplay>
+  <source src="/remember-the-syntax.mp4" type="video/mp4" />
+</SlidevVideo>
+
+---
+
+# Mýtus 3
+
+<div class="text-gray-700 text-3xl mt-10">Tailwind je skvělý pro rychlý vývoj</div>
+
+**Ano, ale jen pokud**
+
+<v-clicks>
+
+- znáte všechny potřebné třídy a syntax
 - design není předem pevně daný
+- píšete styly ručně, _nebo používáme AI nástroj bez dalšího kontextu_
+
+</v-clicks>
 
 ---
-layout: full
----
 
-<Youtube class="w-full h-full" id="HTFHoA12MJk?start=255&cc_load_policy=1&cc_lang_pref=en" />
+# AI
 
 ---
 # layout: quote
