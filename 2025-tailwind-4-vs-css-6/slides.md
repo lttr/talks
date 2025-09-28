@@ -102,157 +102,6 @@ Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je mož
 -->
 
 ---
-layout: content-center
----
-
-# Co má smysl porovnávat?
-
-<FullHeightImage>
-  <ObrazekAbstrakce />
-</FullHeightImage>
-
----
-layout: content-center
----
-
-# Tailwind <TailwindFour />
-
-<table class="text-lg max-w-3xl mt--10">
-  <thead>
-    <tr>
-      <th class="pb-4 pr-8 text-left font-medium"></th>
-      <th class="pb-4 pr-6 font-medium">v3.4</th>
-      <th class="pb-4 pr-6 font-medium">v4.0</th>
-      <th class="pb-4 font-medium">Improvement</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="py-4 pr-8 text-gray-700">Full build</td>
-      <td class="py-4 pr-6 font-mono">378ms</td>
-      <td class="py-4 pr-6 font-mono">100ms</td>
-      <td class="py-4 font-semibold">3.78x</td>
-    </tr>
-    <tr>
-      <td class="py-4 pr-8 text-gray-700">Incremental rebuild with new CSS</td>
-      <td class="py-4 pr-6 font-mono">44ms</td>
-      <td class="py-4 pr-6 font-mono">5ms</td>
-      <td class="py-4 font-semibold">8.8x</td>
-    </tr>
-  </tbody>
-</table>
-
----
-layout: two-cols-header
----
-
-# Tailwind <TailwindFour />
-
-::left::
-
-v3
-
-```css
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-```
-
-::right::
-
-v4
-
-```css
-@layer theme {
-  :root {
-    --spacing: 0.25rem;
-  }
-}
-
-@layer utilities {
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
-  }
-}
-```
-
----
-layout: two-cols-header
----
-
-# Tailwind <TailwindFour />
-
-::left::
-
-HTML
-
-```html
-<div class="p-48">...</div>
-```
-
-::right::
-
-Vygenerované CSS
-
-```css
-.p-101 {
-  padding: calc(var(--spacing) * 101);
-}
-```
-
----
-
-<v-switch>
-  <template #0>
-
-# Tailwind <TailwindFour />
-
-Tailwind config
-
-  </template>
-  <template #1>
-
-# CSS <CssSix />
-
-Custom framework
-
-  </template>
-</v-switch>
-
-````md magic-move {at:1}
-```css
-@theme {
-  /* 4.5px => 5.0px */
-  --spacing-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
-  /* 9.0px => 10.0px */
-  --spacing-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
-  /* 13.5px => 15.0px */
-  --spacing-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
-  /* 18.0px => 20.0px */
-  --spacing-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
-  /* 27.0px => 30.0px */
-  --spacing-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
-}
-```
-
-```css
-:root {
-  /* 4.5px => 5.0px */
-  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
-  /* 9.0px => 10.0px */
-  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
-  /* 13.5px => 15.0px */
-  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
-  /* 18.0px => 20.0px */
-  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
-  /* 27.0px => 30.0px */
-  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
-}
-```
-````
-
----
 layout: center
 ---
 
@@ -265,38 +114,72 @@ layout: center
 </div>
 
 ---
-layout: two-cols-header
----
 
 # CSS <CssSix />
 
-::left::
+<div class="absolute right-20 text-right text-md font-semibold">
+    Kaskáda a specificita
+</div>
 
-Kaskáda a specificita
+<div class="max-w-xl">
+
+````md magic-move
+```css
+@media (prefers-color-scheme: dark) {
+  html:not(.is-light) {
+    --text-color: var(--gray-light);
+  }
+}
+```
 
 ```css
 @layer theme {
-  :root {
-    --font-size-body: 1.1rem;
-  }
-}
-
-@layer base {
-  :where(body) {
-    font-size: var(--font-size-body);
+  @media (prefers-color-scheme: dark) {
+    html:not(.is-light) {
+      --text-color: var(--gray-light);
+    }
   }
 }
 ```
-
-::right::
-
-<p>&nbsp;</p>
 
 ```css
-body {
-  font-size: max(20px, 1rem);
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    html:not(.is-light) {
+      --text-color: var(--gray-light);
+    }
+  }
+}
+/* custom text color */
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    html {
+      --text-color: white;
+    }
+  }
 }
 ```
+
+```css
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    html:where(not(.is-light)) {
+      --text-color: var(--gray-light);
+    }
+  }
+}
+/* custom text color */
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    html {
+      --text-color: white;
+    }
+  }
+}
+```
+````
+
+</div>
 
 <BaselineCard feature="Cascade layers" available="widely" />
 
@@ -408,6 +291,157 @@ sloupcích.
 -->
 
 ---
+layout: content-center
+---
+
+# Tailwind <TailwindFour />
+
+<table class="text-lg max-w-3xl mt--10">
+  <thead>
+    <tr>
+      <th class="pb-4 pr-8 text-left font-medium"></th>
+      <th class="pb-4 pr-6 font-medium">v3.4</th>
+      <th class="pb-4 pr-6 font-medium">v4.0</th>
+      <th class="pb-4 font-medium">Improvement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="py-4 pr-8 text-gray-700">Full build</td>
+      <td class="py-4 pr-6 font-mono">378ms</td>
+      <td class="py-4 pr-6 font-mono">100ms</td>
+      <td class="py-4 font-semibold">3.78x</td>
+    </tr>
+    <tr>
+      <td class="py-4 pr-8 text-gray-700">Incremental rebuild with new CSS</td>
+      <td class="py-4 pr-6 font-mono">44ms</td>
+      <td class="py-4 pr-6 font-mono">5ms</td>
+      <td class="py-4 font-semibold">8.8x</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+layout: two-cols-header
+---
+
+# Tailwind <TailwindFour />
+
+::left::
+
+v3
+
+```css
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+```
+
+::right::
+
+v4
+
+```css
+@layer theme {
+  :root {
+    --spacing: 0.25rem;
+  }
+}
+
+@layer utilities {
+  .mx-5 {
+    margin-inline: calc(var(--spacing) * 5);
+  }
+}
+```
+
+---
+layout: two-cols-header
+---
+
+# Tailwind <TailwindFour />
+
+::left::
+
+HTML
+
+```html
+<div class="p-101">...</div>
+```
+
+::right::
+
+Vygenerované CSS
+
+```css
+.p-101 {
+  padding: calc(var(--spacing) * 101);
+}
+```
+
+---
+
+<v-switch>
+  <template #0>
+
+# Tailwind <TailwindFour />
+
+Tailwind config
+
+  </template>
+  <template #1>
+
+# CSS <CssSix />
+
+Custom framework
+
+  </template>
+</v-switch>
+
+````md magic-move {at:1}
+```css
+@theme {
+  /* 4.5px => 5.0px */
+  --spacing-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --spacing-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --spacing-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --spacing-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --spacing-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
+
+```css
+:root {
+  /* 4.5px => 5.0px */
+  --space-1: clamp(0.281rem, 0.27rem + 0.05vw, 0.313rem);
+  /* 9.0px => 10.0px */
+  --space-2: clamp(0.563rem, 0.54rem + 0.11vw, 0.625rem);
+  /* 13.5px => 15.0px */
+  --space-3: clamp(0.844rem, 0.81rem + 0.16vw, 0.938rem);
+  /* 18.0px => 20.0px */
+  --space-4: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  /* 27.0px => 30.0px */
+  --space-5: clamp(1.688rem, 1.62rem + 0.33vw, 1.875rem);
+}
+```
+````
+
+---
+layout: content-center
+---
+
+# Co má smysl porovnávat?
+
+<FullHeightImage>
+  <ObrazekAbstrakce />
+</FullHeightImage>
+
+---
 
 # Mýtus 1
 
@@ -496,15 +530,36 @@ layout: quote
 
 ---
 
-# Head to Head
+<PricingTailwind class="mt-4" />
 
-<<< @/snippets/pricing-card-tailwind.html
+<!--
+Porovnání zdrojáků 1
+Pojme na srovnání na jedné vcelku jednoduché komponentě - předplatné SAAS služby
+-->
 
 ---
 
-# Head to Head
+<<< @/snippets/pricing-card-tailwind.html
+
+<!--
+Porovnání zdrojáků 2
+-->
+
+---
 
 <<< @/snippets/pricing-card-puleo.html
+
+<!--
+Porovnání zdrojáků 3
+-->
+
+---
+
+<<< @/snippets/pricing-card-puleo-styles.vue
+
+<!--
+Porovnání zdrojáků 4
+-->
 
 ---
 
