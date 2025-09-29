@@ -220,8 +220,7 @@ Scoping
   <div class="bg-[plum] p-4 max-w-[22ch] rounded-lg shadow-md">
     <div class="text-lg font-semibold">Nadpis karty</div>
     <p class="text-xs leading-4! font-normal!">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <a href="#" class="border-0! text-gray-800 font-semibold
-      text-lg leading-6! w-full block text-right mt-8">Link &rarr;</a>
+    <a href="#" class="border-0! text-gray-800 text-md leading-6! w-full block text-right mt-8">Link &rarr;</a>
   </div>
   <div class="bg-gray-200 p-4 text-md">
     Normální text upozorňující na <a class="underline border-0!" href="#">link</a>.
@@ -440,6 +439,17 @@ layout: content-center
 <FullHeightImage>
   <ObrazekAbstrakce />
 </FullHeightImage>
+
+---
+
+# Custom CSS framework
+
+- scoping stylů
+- vrstvení stylů
+- škály pro typografii, mezery, velikosti, barvy
+- sady hodnot pro stíny, okraje, radiusy atp.
+- pomocné třídy
+- možná grid systém
 
 ---
 
