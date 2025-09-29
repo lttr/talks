@@ -188,7 +188,7 @@ button[title="Run code"] {
 /* Geometric bullet points */
 .slidev-layout ul li::marker {
   content: "◆ ";
-  color: var(--vhs-cyan);
+  color: var(--vhs-purple);
 }
 
 /* VHS badge-style elements */
