@@ -576,11 +576,61 @@ Porovnání zdrojáků 4
 # AI
 
 ---
+layout: two-cols-header
+---
+
+# Závěry
+
+::left::
+
+Tailwind
+
+<v-clicks>
+
+- e-shop
+- line of business aplikace
+- website
+
+</v-clicks>
+
+::right::
+
+Custom CSS
+
+<v-clicks>
+
+- e-shop
+- line of businees aplikace
+- website
+
+</v-clicks>
+
+---
+layout: image
+image: /state-of-css.png
+backgroundSize: 35rem
+---
+
+<style>
+
+</style>
+
+---
 # layout: quote
 ---
 
 <h1 class="text-center">
-Otázky?
+  <span
+    class="text-5xl"
+    style="
+      background: linear-gradient(45deg, rebeccapurple, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(102, 51, 153, 0.2);
+      filter: drop-shadow(0 0 6px rgba(102, 51, 153, 0.3));
+    "
+    >Díky!</span
+  >
 </h1>
 
 <div class="mb-10 mt-16">
