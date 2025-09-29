@@ -787,6 +787,8 @@ layout: two-cols-header
 
 # Závěry
 
+TODO vennův diagram
+
 ::left::
 
 Tailwind
@@ -802,25 +804,6 @@ Custom CSS
 - <v-click at="1">e-shop</v-click>
 - <v-click at="2">line of businees aplikace</v-click>
 - <v-click at="3">website</v-click>
-
----
-layout: quote
----
-
-<div class="text-center">
-
-# TLDR: Oba přístupy fungují!
-
-</div>
-
-<div class="text-center text-xl text-gray-600">
-Jen lidé mají často vyhraněné názory
-</div>
-
-<!--
-Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
-A sice na to mají lidi vyhraněné názory, ale není potřeba se za to na ně zlobit.
--->
 
 ---
 layout: two-cols-header
@@ -851,6 +834,25 @@ Custom CSS
 - white label projekty
 
 </v-clicks>
+
+---
+layout: quote
+---
+
+<div class="text-center">
+
+# TLDR: Oba přístupy fungují!
+
+</div>
+
+<div class="text-center text-xl text-gray-600">
+Jen lidé mají často vyhraněné názory
+</div>
+
+<!--
+Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
+A sice na to mají lidi vyhraněné názory, ale není potřeba se za to na ně zlobit.
+-->
 
 ---
 layout: image
