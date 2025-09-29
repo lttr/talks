@@ -698,6 +698,55 @@ layout: quote
 
 ---
 
+# AI - Prompt
+
+<PromptExample />
+
+---
+layout: quote
+---
+
+<div class="rounded-xl ring-1 ring-gray-400 p-7 mb-7">
+
+<div class="text-left text-2xl text-gray-600 mr-12 mb-2">
+  research.md
+</div>
+
+<h1 class="text-left!">
+Custom CSS: Rejected due <br>to development time constraints
+</h1>
+
+</div>
+
+<div class="text-right text-2xl text-gray-600 mr-12">
+&mdash; Claude Code
+</div>
+
+---
+layout: two-cols-header
+---
+
+# Filozofie
+
+::left::
+
+<span class="font-normal">Definujte výchozí hodnoty, které <span class="text-2xl font-semibold text-cyan-800" style="color: light-blue">nejsou</span> užitečné<br>bez dalšího stylování</span>
+
+<v-click at="1">
+
+## Tailwind
+
+</v-click>
+
+::right::
+
+<span class="font-normal">Definujte výchozí hodnoty, které <span class="text-2xl font-semibold text-purple-800" style="color: light-blue">jsou</span> užitečné<br>bez dalšího stylování</span>
+
+<v-click at="1">
+
+## Custom CSS framework
+
+</v-click>
 
 ---
 
@@ -731,30 +780,6 @@ Porovnání zdrojáků 3
 <!--
 Porovnání zdrojáků 4
 -->
-
----
-
-# AI
-
----
-layout: quote
----
-
-<div class="rounded-xl ring-1 ring-gray-400 p-7 mb-7">
-
-<div class="text-left text-2xl text-gray-600 mr-12 mb-2">
-  research.md
-</div>
-
-<h1 class="text-left!">
-Custom CSS: Rejected due <br>to development time constraints
-</h1>
-
-</div>
-
-<div class="text-right text-2xl text-gray-600 mr-12">
-&mdash; Claude Code
-</div>
 
 ---
 layout: two-cols-header
@@ -798,14 +823,40 @@ A sice na to mají lidi vyhraněné názory, ale není potřeba se za to na ně 
 -->
 
 ---
+layout: two-cols-header
+---
+
+# Závěry
+
+::left::
+
+Tailwind
+
+<v-clicks>
+
+- mám knihovnu komponent
+- nechci toho moc vymýšlet
+- nevadí mi hromada tříd
+
+</v-clicks>
+
+::right::
+
+Custom CSS
+
+<v-clicks>
+
+- poběží i za 10 let
+- je výhodné nemít build step
+- white label projekty
+
+</v-clicks>
+
+---
 layout: image
 image: /state-of-css.png
 backgroundSize: 35rem
 ---
-
-<style>
-
-</style>
 
 ---
 # layout: quote
