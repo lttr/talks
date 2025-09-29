@@ -84,24 +84,6 @@ layout: quote
 -->
 
 ---
-layout: quote
----
-
-<div class="text-center">
-
-# TLDR: Oba přístupy fungují!
-
-</div>
-
-<div class="text-center text-xl text-gray-600">
-Jen lidé mají často vyhraněné názory
-</div>
-
-<!--
-Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
--->
-
----
 layout: center
 ---
 
@@ -356,30 +338,6 @@ v4
 ```
 
 ---
-layout: two-cols-header
----
-
-# Tailwind <TailwindFour />
-
-::left::
-
-HTML
-
-```html
-<div class="p-101">...</div>
-```
-
-::right::
-
-Vygenerované CSS
-
-```css
-.p-101 {
-  padding: calc(var(--spacing) * 101);
-}
-```
-
----
 
 <v-switch>
   <template #0>
@@ -450,6 +408,186 @@ layout: content-center
 - sady hodnot pro stíny, okraje, radiusy atp.
 - pomocné třídy
 - možná grid systém
+
+---
+layout: quote
+---
+
+# Problémy a řešení
+
+---
+layout: two-cols-header
+---
+
+# Scoping
+
+::left::
+
+<v-switch>
+<template #0>
+<div class="max-w-md">
+```html
+<div class="rounded-3xl bg-white p-10 shadow-2xl ring-1 ring-gray-900/10">
+  <h2 class="text-base/7 font-semibold text-indigo-600">Card title</h3>
+  ...
+</div>
+```
+</div>
+</template>
+<template #1>
+```html
+<div
+  class="rounded-3xl bg-white p-10
+  shadow-2xl ring-1 ring-gray-900/10"
+>
+  <h2
+    class="text-base/7 font-semibold
+    text-indigo-600"
+  >
+    Card title
+  </h3>
+  ...
+</div>
+```
+
+</template>
+</v-switch>
+
+::right::
+
+```vue
+<template>
+  <div class="card">
+    <h2 class="title">Card title</h2>
+    ...
+</template>
+
+<style scoped>
+.card {
+  ...
+}
+
+.title {
+  ...
+}
+</style>
+```
+
+---
+layout: two-cols-header
+---
+
+# Naming is hard
+
+::left::
+
+```html
+<div
+  class="rounded-3xl bg-white p-10
+  shadow-2xl ring-1 ring-gray-900/10"
+>
+  <h2
+    class="text-base/7 font-semibold
+    text-indigo-600"
+  >
+    Card title
+  </h3>
+  ...
+</div>
+```
+
+::right::
+
+```vue
+<template>
+  <div class="card">
+    <h2 class="title">Card title</h2>
+    ...
+</template>
+
+<style scoped>
+.card {
+  ...
+}
+
+.title {
+  ...
+}
+</style>
+```
+
+---
+
+<SlidevVideo autoplay>
+  <source src="/add-classes.mp4" type="video/mp4" />
+</SlidevVideo>
+
+---
+layout: two-cols-header
+---
+
+# Naming is hard
+
+::left::
+
+```html
+<div
+  class="rounded-3xl bg-white p-10
+  shadow-2xl ring-1 ring-gray-900/10"
+>
+  <h2
+    class="text-base/7 font-semibold
+    text-indigo-600"
+  >
+    Card title
+  </h3>
+  ...
+</div>
+```
+
+::right::
+
+```vue
+<template>
+  <div class="card">
+    <h2 class="title">Card title</h2>
+    ...
+</template>
+
+<style scoped>
+.card {
+  ...
+}
+
+.title {
+  ...
+}
+</style>
+```
+
+---
+layout: two-cols-header
+---
+
+# Tailwind <TailwindFour />
+
+::left::
+
+HTML
+
+```html
+<div class="p-101">...</div>
+```
+
+::right::
+
+Vygenerované CSS
+
+```css
+.p-101 {
+  padding: calc(var(--spacing) * 101);
+}
+```
 
 ---
 
@@ -585,25 +723,36 @@ layout: two-cols-header
 
 Tailwind
 
-<v-clicks>
-
-- e-shop
-- line of business aplikace
-- website
-
-</v-clicks>
+- <v-click at="1">e-shop</v-click>
+- <v-click at="2">line of business aplikace</v-click>
+- <v-click at="3">website</v-click>
 
 ::right::
 
 Custom CSS
 
-<v-clicks>
+- <v-click at="1">e-shop</v-click>
+- <v-click at="2">line of businees aplikace</v-click>
+- <v-click at="3">website</v-click>
 
-- e-shop
-- line of businees aplikace
-- website
+---
+layout: quote
+---
 
-</v-clicks>
+<div class="text-center">
+
+# TLDR: Oba přístupy fungují!
+
+</div>
+
+<div class="text-center text-xl text-gray-600">
+Jen lidé mají často vyhraněné názory
+</div>
+
+<!--
+Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
+A sice na to mají lidi vyhraněné názory, ale není potřeba se za to na ně zlobit.
+-->
 
 ---
 layout: image
