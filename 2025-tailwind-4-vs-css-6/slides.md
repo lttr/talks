@@ -569,45 +569,45 @@ layout: two-cols-header
 layout: two-cols-header
 ---
 
-# Tailwind <TailwindFour />
+# Konzistence - CSS
 
 ::left::
 
-HTML
+```css
+:root {
+  --text-color-1: var(--gray-1);
+  --text-color-2: var(--gray-4);
 
-```html
-<div class="p-101">...</div>
+  --positive-color: var(--green-6);
+  --negative-color: var(--red-6);
+
+  --brand-color: var(--blue-7);
+  --link-color: var(--brand-color);
+
+  --font-size-0: 1rem;
+  --font-size-1: 1.25rem;
+  --font-size-2: 1.5rem;
+  ...
+}
 ```
 
 ::right::
 
-Vygenerované CSS
-
 ```css
-.p-101 {
-  padding: calc(var(--spacing) * 101);
+.heading-1 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-headings);
+}
+
+.heading-2 {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-headings);
 }
 ```
 
 ---
 
-# Mýtus 1
-
-<div class="text-gray-700 text-3xl mt-10">Je potřeba vymýšlet názvy tříd</div>
-
-**Není protože**
-
-- AI vygeneruje celou komponentu nebo třídy doplní
-- některá jména již existují v dané doméně
-- díky scopingu není třeba řešit konflikty, názvy mohou být triviální
-
----
-
-# Mýtus 2
-
-<div class="text-gray-700 text-3xl mt-10">Tailwind má lepší konzistenci</div>
-
-**Jen když...**
+# Konzistence - Tailwind
 
 <div class="grid grid-cols-2 gap-8">
 
@@ -639,12 +639,34 @@ Vygenerované CSS
 </div>
 
 ---
+layout: two-cols-header
+---
 
-# Mýtus 3
+# Konzistence - Tailwind
 
-<div class="text-gray-700 text-3xl mt-10">Tailwind je skvělý pro rychlý vývoj</div>
+::left::
 
-**Ano, ale jen pokud**
+HTML
+
+```html
+<div class="p-101">...</div>
+```
+
+::right::
+
+Vygenerované CSS
+
+```css
+.p-101 {
+  padding: calc(var(--spacing) * 101);
+}
+```
+
+---
+
+# Rychlý vývoj
+
+**Tailwind je rychlý pokud**
 
 - znáte všechny potřebné třídy a syntax
 
@@ -662,11 +684,9 @@ layout: quote
 
 ---
 
-# Mýtus 3
+# Rychlý vývoj
 
-<div class="text-gray-700 text-3xl mt-10">Tailwind je skvělý pro rychlý vývoj</div>
-
-**Ano, ale jen pokud**
+**Tailwind je rychlý pokud**
 
 <v-clicks>
 
@@ -675,6 +695,9 @@ layout: quote
 - píšete styly ručně, _nebo používáme AI nástroj bez dalšího kontextu_
 
 </v-clicks>
+
+---
+
 
 ---
 
@@ -712,6 +735,26 @@ Porovnání zdrojáků 4
 ---
 
 # AI
+
+---
+layout: quote
+---
+
+<div class="rounded-xl ring-1 ring-gray-400 p-7 mb-7">
+
+<div class="text-left text-2xl text-gray-600 mr-12 mb-2">
+  research.md
+</div>
+
+<h1 class="text-left!">
+Custom CSS: Rejected due <br>to development time constraints
+</h1>
+
+</div>
+
+<div class="text-right text-2xl text-gray-600 mr-12">
+&mdash; Claude Code
+</div>
 
 ---
 layout: two-cols-header
