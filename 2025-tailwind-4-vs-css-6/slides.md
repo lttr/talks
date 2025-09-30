@@ -424,10 +424,16 @@ layout: content-center
 
 # Custom CSS framework
 
-- scoping stylů
-- vrstvení stylů
-- škály pro typografii, mezery, velikosti, barvy
-- sady hodnot pro stíny, okraje, radiusy atp.
+<style>
+li {
+  margin-top: 0.3rem;
+}
+</style>
+
+- scoping stylů <pre class="inline-flex"><code>@scope / &lt;style scoped&gt;</code></pre>
+- vrstvení stylů <pre class="inline-flex"><code>@layer</code></pre>
+- škály pro typografii, mezery, velikosti, barvy <pre class="inline-flex"><code>Open Props</code></pre>
+- sady hodnot pro stíny, okraje, radiusy atp. <pre class="inline-flex"><code>Open Props</code></pre>
 - pomocné třídy
 - možná grid systém
 
