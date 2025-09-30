@@ -258,7 +258,7 @@ layout: two-cols-header
 
 ```css
 /* 7+ items */
-.submenu:has(li:nth-last-child(n + 7)) {
+.submenu:has(li:nth-child(n + 7)) {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
