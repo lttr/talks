@@ -434,7 +434,7 @@ li {
 - vrstvení stylů <pre class="inline-flex"><code>@layer</code></pre>
 - škály pro typografii, mezery, velikosti, barvy <pre class="inline-flex"><code>Open Props</code></pre>
 - sady hodnot pro stíny, okraje, radiusy atp. <pre class="inline-flex"><code>Open Props</code></pre>
-- pomocné třídy
+- pomocné třídy <pre class="inline-flex"><code>Every Layout</code></pre>
 - možná grid systém
 
 ---
