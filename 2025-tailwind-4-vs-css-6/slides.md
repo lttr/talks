@@ -100,7 +100,7 @@ layout: center
 # CSS <CssSix />
 
 <div class="absolute right-20 text-right text-md font-semibold">
-    Kaskáda a specificita
+    Kaskáda a specifičnost
 </div>
 
 <div class="max-w-xl">
