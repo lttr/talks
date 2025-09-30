@@ -736,6 +736,8 @@ layout: two-cols-header
 
 ## Tailwind
 
+- další styly přidávají všechno, pokaždé
+
 </v-click>
 
 ::right::
@@ -745,6 +747,8 @@ layout: two-cols-header
 <v-click at="1">
 
 ## Custom CSS framework
+
+- další styly přidávají detaily a/nebo zavádějí výjimky
 
 </v-click>
 
@@ -782,58 +786,14 @@ Porovnání zdrojáků 4
 -->
 
 ---
-layout: two-cols-header
+layout: center
 ---
 
-# Závěry
+<div class="absolute left-12 top-12 text-left">
+  <h1>Závěry</h1>
+</div>
 
-TODO vennův diagram
-
-::left::
-
-Tailwind
-
-- <v-click at="1">e-shop</v-click>
-- <v-click at="2">line of business aplikace</v-click>
-- <v-click at="3">website</v-click>
-
-::right::
-
-Custom CSS
-
-- <v-click at="1">e-shop</v-click>
-- <v-click at="2">line of businees aplikace</v-click>
-- <v-click at="3">website</v-click>
-
----
-layout: two-cols-header
----
-
-# Závěry
-
-::left::
-
-Tailwind
-
-<v-clicks>
-
-- mám knihovnu komponent
-- nechci toho moc vymýšlet
-- nevadí mi hromada tříd
-
-</v-clicks>
-
-::right::
-
-Custom CSS
-
-<v-clicks>
-
-- poběží i za 10 let
-- je výhodné nemít build step
-- white label projekty
-
-</v-clicks>
+<VennDiagram class="mt-8" />
 
 ---
 layout: quote
