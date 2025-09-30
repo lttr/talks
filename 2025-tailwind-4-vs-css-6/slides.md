@@ -683,7 +683,7 @@ layout: quote
 
 ---
 
-# AI - Prompt
+# AI &mdash; prompt
 
 <PromptExample />
 
