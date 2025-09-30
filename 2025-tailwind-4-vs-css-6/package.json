@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /2025-tailwind-4-vs-css-6 --out ../dist/2025-tailwind-4-vs-css-6"
+    "build": "slidev build --base /2025-tailwind-4-vs-css-6/ --out ../dist/2025-tailwind-4-vs-css-6/"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.5.13",

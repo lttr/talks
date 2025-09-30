@@ -3,6 +3,6 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /2024-web-performance-with-nuxt --out ../dist/2024-web-performance-with-nuxt"
+    "build": "slidev build --base /2024-web-performance-with-nuxt/ --out ../dist/2024-web-performance-with-nuxt/"
   }
 }
