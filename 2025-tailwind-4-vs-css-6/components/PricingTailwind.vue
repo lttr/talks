@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto max-w-md">
+  <div class="mx-auto max-w-[36ch]">
     <div
       class="relative rounded-3xl bg-white p-10 shadow-2xl ring-1 ring-gray-900/10"
     >
-      <h3 class="text-base/7 font-semibold text-indigo-600">Personal</h3>
+      <h3 class="text-[1.1rem]! font-semibold text-indigo-600">Personal</h3>
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="text-5xl font-semibold tracking-tight text-gray-900"
           >$29</span
@@ -14,15 +14,15 @@
         The perfect plan if you're just getting started with our product.
       </p>
       <ul class="mt-8 space-y-3 text-sm/6 text-gray-600">
-        <li class="flex items-start gap-x-3">
+        <li class="ml-0! flex items-start gap-x-3">
           <span class="flex text-lg text-indigo-600">✓</span>
           Unlimited projects with real-time collaboration
         </li>
-        <li class="flex items-start gap-x-3">
+        <li class="ml-0! flex items-start gap-x-3">
           <span class="text-lg text-indigo-600">✓</span>
           Advanced analytics and detailed reporting
         </li>
-        <li class="flex items-start gap-x-3">
+        <li class="ml-0! flex items-start gap-x-3">
           <span class="text-lg text-indigo-600">✓</span>
           Seamless integrations with popular tools
         </li>

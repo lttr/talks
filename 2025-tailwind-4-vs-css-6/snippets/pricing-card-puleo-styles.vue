@@ -1,13 +1,4 @@
 <style scoped>
-.card {
-  padding: var(--space-6);
-  border-radius: var(--radius-4);
-  box-shadow: var(--shadow-card);
-  border: var(--border-default);
-  color: var(--text-color-2);
-  background-color: var(--surface-1);
-}
-
 .title {
   --flow-space: var(--space-2);
   line-height: var(--font-lineheight-4);
@@ -57,4 +48,14 @@
     background-color: var(--blue-7);
   }
 }
+
+.card {
+  padding: var(--space-6);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-card);
+  border: var(--border-default);
+  color: var(--text-color-2);
+  background-color: var(--surface-1);
+}
+
 </styles>
