@@ -40,6 +40,11 @@ htmlAttrs:
 
 </div>
 
+<!--
+Ahoj, já jsem Lukáš Trumm, a mám tu čest začít na této stagi vcelku ostrým tématem.
+Tailwind 4 vs CSS 6!
+-->
+
 ---
 layout: quote
 ---
@@ -65,19 +70,27 @@ layout: quote
 </div>
 
 <!--
-Zvedněte prosím ruku, kdo má radši práci na projektu, kde se používá Tailwind, než čisté CSS nebo vlasntí CSS framework. Kdo má naopak radši projekty, kde je CSS.
+Vyberte si teď nějaký projekt na kterém jste poslední dobou hlavně pracovali.
+Ideláně v týmu a ideálně nějaký, kde bylo potřeba stylovat a nebylo vše
+zajištěno nějakou hotovou knihovnou komponent.
 
-Fajn a teď ruce dolů, kdo většinu svého času, pracuje na projektu, kde je Tailwind.
-Kdo většinu svého času, pracuje na projektu, kde není Tailwind.
+Zvedněte prosím ruku, jestli to byl projekt, kde se používá Tailwind. A nyní
+nechte nahoře ruku ti, kteří jsou spokojení s tím jak je nebo byl na tom
+projektu Tailwind používán.
+
+Fajn a teď ruce dolů, a teď zvendne ruku ten, kdo pracoval na projektu, kde bylo
+hlavně čisté CSS nebo nějaký vlastní CSS framework. Ok a zase nechají nahoře
+ruku ti, kteří jsou spokojení s tím jak je nebo bylo na tom projektu CSS používáno.
 -->
 
 ---
 layout: quote
 ---
 
-# CSS se stále zlepšuje<br>&ndash; využijme toho!
+<h1 class="leading-13!">CSS se stále zlepšuje<br>&ndash; využijme toho!</h1>
 
 <!--
+- Ještě pro kontext - odkud přicházím k tomuto tématu?
 - Minulý jsem mluvil na meetupu frontendistů o tom, že CSS se stále zlepšuje.
 - Zkoumal jsem, zda jde postavit design systém jen pomocí čistého, moderního CSS.
 - A ano jde to!
@@ -688,9 +701,10 @@ layout: quote
 
 **Tailwind je rychlý pokud**
 
+- znáte všechny potřebné třídy a syntax
+
 <v-clicks>
 
-- znáte všechny potřebné třídy a syntax
 - design není předem pevně daný
 - píšete styly ručně, _nebo používáme AI nástroj bez dalšího kontextu_
 
@@ -730,27 +744,35 @@ layout: two-cols-header
 
 ::left::
 
+<div class="flex flex-col items-center text-center">
+
 <span class="font-normal">Definujte výchozí hodnoty, které <span class="text-2xl font-semibold text-cyan-800" style="color: light-blue">nejsou</span> užitečné<br>bez dalšího stylování</span>
 
 <v-click at="1">
 
+- stylovat je třeba vše od začátku
+
 ## Tailwind
 
-- další styly přidávají všechno, pokaždé
-
 </v-click>
+
+</div>
 
 ::right::
 
+<div class="flex flex-col items-center text-center">
+
 <span class="font-normal">Definujte výchozí hodnoty, které <span class="text-2xl font-semibold text-purple-800" style="color: light-blue">jsou</span> užitečné<br>bez dalšího stylování</span>
 
-<v-click at="1">
+<v-click at="2">
+
+- další styly přidávají detaily a výjimky
 
 ## Custom CSS framework
 
-- další styly přidávají detaily a/nebo zavádějí výjimky
-
 </v-click>
+
+</div>
 
 ---
 
