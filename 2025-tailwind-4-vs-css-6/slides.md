@@ -113,17 +113,56 @@ layout: center
 # CSS <CssSix />
 
 <div class="absolute right-20 text-right text-md font-semibold">
-    Kaskáda a specifičnost
+  <v-switch>
+    <template #1>
+      <span class="text-[blue]">Kaskáda</span> <span class="text-[blue]"> a specifičnost</span>
+    </template>
+    <template #2>
+      <span class="text-[blue]">Kaskáda</span> <span class="text-[blue]"> a specifičnost</span>
+    </template>
+    <template #3>
+      <span class="text-[red]">Kaskáda</span> <span class="text-[red]"> a specifičnost</span>
+    </template>
+    <template #4>
+      <span class="text-[red]">Kaskáda</span> <span class="text-[red]"> a specifičnost</span>
+    </template>
+  </v-switch>
 </div>
 
-<div class="max-w-xl">
+<div v-click="1" class="max-w-xl">
 
-````md magic-move
+````md magic-move {at:2}
 ```css
 @media (prefers-color-scheme: dark) {
   html:not(.is-light) {
-    --text-color: var(--gray-light);
+    --text-color: blue;
   }
+}
+```
+
+```css
+@media (prefers-color-scheme: dark) {
+  html:not(.is-light) {
+    --text-color: blue;
+  }
+}
+
+/* custom text color */
+html {
+  --text-color: red;
+}
+```
+
+```css
+@media (prefers-color-scheme: dark) {
+  html:where(:not(.is-light)) {
+    --text-color: blue;
+  }
+}
+
+/* custom text color */
+html {
+  --text-color: red;
 }
 ```
 
@@ -131,51 +170,21 @@ layout: center
 @layer theme {
   @media (prefers-color-scheme: dark) {
     html:not(.is-light) {
-      --text-color: var(--gray-light);
+      --text-color: blue;
     }
   }
 }
-```
 
-```css
-@layer theme {
-  @media (prefers-color-scheme: dark) {
-    html:not(.is-light) {
-      --text-color: var(--gray-light);
-    }
-  }
-}
 /* custom text color */
-@layer theme {
-  @media (prefers-color-scheme: dark) {
-    html {
-      --text-color: white;
-    }
-  }
-}
-```
-
-```css
-@layer theme {
-  @media (prefers-color-scheme: dark) {
-    html:where(not(.is-light)) {
-      --text-color: var(--gray-light);
-    }
-  }
-}
-/* custom text color */
-@layer theme {
-  @media (prefers-color-scheme: dark) {
-    html {
-      --text-color: white;
-    }
-  }
+html {
+  --text-color: red;
 }
 ```
 ````
 
 </div>
 
+<BaselineCard feature=":where()" available="widely" class="bottom-34" />
 <BaselineCard feature="Cascade layers" available="widely" />
 
 <!--
@@ -539,49 +548,6 @@ layout: two-cols-header
 layout: two-cols-header
 ---
 
-# Naming is hard
-
-::left::
-
-```html
-<div
-  class="rounded-3xl bg-white p-10
-  shadow-2xl ring-1 ring-gray-900/10"
->
-  <h2
-    class="text-base/7 font-semibold
-    text-indigo-600"
-  >
-    Card title
-  </h3>
-  ...
-</div>
-```
-
-::right::
-
-```vue
-<template>
-  <div class="card">
-    <h2 class="title">Card title</h2>
-    ...
-</template>
-
-<style scoped>
-.card {
-  ...
-}
-
-.title {
-  ...
-}
-</style>
-```
-
----
-layout: two-cols-header
----
-
 # Konzistence - CSS
 
 ::left::
@@ -628,17 +594,17 @@ layout: two-cols-header
 
 ```html {all|2|3|4|5}
 <div class="
-    max-w-[200px]
     rounded-md
     px-4
     bg-gray-200
+    max-w-[200px]
   "
 >
   <h2>My card component</h2>
 </div>
 ```
 
-```css {all|none|2|3|4-5}{at:1}
+```css {all|2|3|4-5|noe}{at:1}
 @theme {
   --radius: var(--radius-md);
   --spacing: 0.4rem;
@@ -705,8 +671,7 @@ layout: quote
 
 <v-clicks>
 
-- design není předem pevně daný
-- píšete styly ručně, _nebo používáme AI nástroj bez dalšího kontextu_
+- používáme AI nástroj bez dalšího kontextu
 
 </v-clicks>
 
@@ -816,25 +781,6 @@ layout: center
 </div>
 
 <VennDiagram class="mt-8" />
-
----
-layout: quote
----
-
-<div class="text-center">
-
-# TLDR: Oba přístupy fungují!
-
-</div>
-
-<div class="text-center text-xl text-gray-600">
-Jen lidé mají často vyhraněné názory
-</div>
-
-<!--
-Nebudu vás dlouho napínat, Tailwind i CSS jsou dospělé technologie a je možné je pro většinu situací použít úspěšně.
-A sice na to mají lidi vyhraněné názory, ale není potřeba se za to na ně zlobit.
--->
 
 ---
 layout: image
