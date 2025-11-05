@@ -41,3 +41,8 @@
   from = "/2025-tailwind-4-vs-css-6/*"
   to = "/2025-tailwind-4-vs-css-6/index.html"
   status = 200
+
+[[redirects]]
+  from = "/2025-context-engineering-and-claude-code/*"
+  to = "/2025-context-engineering-and-claude-code/index.html"
+  status = 200

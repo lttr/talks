@@ -1,0 +1,333 @@
+:root {
+  /* VHS-inspired color palette (light mode) */
+  --vhs-text: rgb(31 41 55);
+  --vhs-pink: #e056fd;
+  --vhs-magenta: #9c27b0;
+  --vhs-cyan: #4ecdc4;
+  --vhs-purple: #6c5ce7;
+  --vhs-orange: #fdcb6e;
+  --vhs-blue: #74b9ff;
+
+  /* Subtle gradients */
+  --gradient-primary: linear-gradient(135deg, var(--vhs-pink), var(--vhs-cyan));
+  --gradient-accent: linear-gradient(
+    45deg,
+    var(--vhs-magenta),
+    var(--vhs-purple)
+  );
+  --gradient-warm: linear-gradient(90deg, var(--vhs-orange), var(--vhs-pink));
+
+  /* Background patterns */
+  --scan-lines: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(116, 185, 255, 0.03) 2px,
+    rgba(116, 185, 255, 0.03) 4px
+  );
+
+  --diagonal-stripes: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 107, 157, 0.02) 20px,
+    rgba(255, 107, 157, 0.02) 22px
+  );
+}
+
+.slidev-layout :is(h1, h2) {
+  font-weight: 600;
+  color: var(--vhs-text);
+  text-align: center;
+}
+
+.slidev-layout h1 + p,
+.two-cols-header :is(.col-left, .col-right) p:first-of-type {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.two-cols-header {
+  grid-template-rows: auto 1fr !important;
+  column-gap: 2rem;
+}
+
+.slidev-runner-output {
+  display: none;
+}
+
+button[title="Run code"] {
+  display: none;
+}
+
+/* Subtle background pattern for slides */
+.slidev-layout {
+  background-image: var(--scan-lines), var(--diagonal-stripes);
+  background-size:
+    100% 100%,
+    40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CSS t-shirt inspired flat geometric shapes on all slides */
+.slidev-layout::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 157, 0.12) 0%,
+    rgba(224, 86, 253, 0.15) 50%,
+    rgba(196, 69, 105, 0.12) 100%
+  );
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.slidev-layout::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(76, 201, 240, 0.12) 0%,
+    rgba(78, 205, 196, 0.15) 50%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* 80s VHS code block styling */
+.vhs-code-block,
+.slidev-code-wrapper pre {
+  background:
+    linear-gradient(180deg, transparent 50%, rgba(76, 201, 240, 0.04) 50%),
+    linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 30%, #16213e 70%, #0f1419 100%) !important;
+  background-size:
+    100% 4px,
+    100% 100% !important;
+  border-radius: 6px !important;
+  position: relative;
+  box-shadow:
+    0 0 25px rgba(76, 201, 240, 0.3),
+    inset 0 2px 0 rgba(76, 201, 240, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.5) !important;
+  font-size: var(--shiki-font-size, 1rem) !important;
+  line-height: var(--shiki-line-height, 1.5) !important;
+  padding: 2.3rem 1.5rem 1.8rem 1.5rem !important;
+  overflow: visible !important;
+}
+
+/* CSS t-shirt inspired flat geometric accent */
+.vhs-code-block::before,
+.slidev-code-wrapper pre::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #e056fd 50%, #c44569 100%);
+  transform: rotate(45deg);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Very subtle horizontal lines background */
+.vhs-code-block::after,
+.slidev-code-wrapper pre::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(76, 201, 240, 0.02) 8px,
+    rgba(76, 201, 240, 0.02) 9px,
+    rgba(156, 39, 176, 0.015) 9px,
+    rgba(156, 39, 176, 0.015) 10px
+  );
+  border-radius: 6px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Inline code styling */
+.slidev-layout pre:not(.slidev-code) code:not(.vhs-code-block code) {
+  background: rgba(78, 205, 196, 0.1) !important;
+  color: var(--vhs-cyan) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-size: 1.1em !important;
+}
+
+/* Section dividers with scan line effect */
+.slidev-layout hr {
+  border: none;
+  height: 2px;
+  background: var(--gradient-primary);
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric bullet points */
+.slidev-layout ul li::marker {
+  content: "◆ ";
+  color: var(--vhs-purple);
+}
+
+/* VHS badge-style elements */
+.vhs-badge {
+  display: inline-block;
+  background: var(--gradient-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 4px;
+}
+
+/* Additional floating geometric elements */
+.slidev-layout {
+  background-image:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 107, 157, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(78, 205, 196, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 90%,
+      rgba(108, 92, 231, 0.05) 0%,
+      transparent 40%
+    ),
+    var(--scan-lines), var(--diagonal-stripes);
+  background-size:
+    300px 300px,
+    250px 250px,
+    200px 200px,
+    100% 100%,
+    40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CSS-inspired corner geometric shapes for specific slides */
+.slidev-layout .corner-shapes {
+  position: absolute;
+  z-index: -1;
+}
+
+.slidev-layout .corner-shapes::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 157, 0.12) 0%,
+    rgba(224, 86, 253, 0.15) 30%,
+    rgba(196, 69, 105, 0.12) 60%,
+    rgba(255, 159, 243, 0.1) 100%
+  );
+  transform: rotate(45deg);
+  border-radius: 8px;
+  box-shadow:
+    0 0 12px rgba(224, 86, 253, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.slidev-layout .corner-shapes::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    rgba(76, 201, 240, 0.12) 0%,
+    rgba(78, 205, 196, 0.15) 50%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  transform: rotate(45deg);
+  border-radius: 6px;
+  box-shadow:
+    0 0 10px rgba(76, 201, 240, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* VHS tape reel decoration for title slides */
+.slidev-layout.title-slide::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(255, 107, 157, 0.2);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(78, 205, 196, 0.1) 35%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 15%,
+      rgba(255, 107, 157, 0.15) 20%,
+      transparent 25%
+    );
+  z-index: -1;
+}
+
+.slidev-layout.title-slide::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(78, 205, 196, 0.2);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 25%,
+      rgba(255, 107, 157, 0.1) 30%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 10%,
+      rgba(108, 92, 231, 0.15) 15%,
+      transparent 20%
+    );
+  z-index: -1;
+}
