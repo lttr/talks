@@ -33,6 +33,73 @@ htmlAttrs:
 </div>
 
 ---
+
+# Vývoj modelů 2025
+
+<v-clicks>
+
+- chytřejší model
+  - méně záleží na promptu
+  - více na kontextu
+- více nástrojů
+  - více dat
+  - více šumu
+
+</v-clicks>
+
+---
+
+<FullHeightImage>
+  <img src="/anthropic-context-vs-prompt.png" alt="Context vs Prompt" />
+</FullHeightImage>
+
+<div class="text-center">
+<Source text="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" />
+</div>
+
+---
+layout: quote
+---
+
+# DEMO: Claude.ai Chat
+
+---
+layout: two-cols-header
+---
+
+# Agenti
+
+::left::
+
+**AGENTS.md for Codex**
+
+```text
+# Vue Component Conventions
+
+- Use <script setup lang="ts"> so
+  setup context stays type-safe.
+
+- Reach for ref() before reactive()
+  for simpler reactivity.
+```
+
+více odvozuje
+
+::right::
+
+**CLAUDE.md for Claude**
+
+```text
+# Vue Components
+
+- ALWAYS use `<script setup lang="ts">`
+
+- PREFER ref() over reactive()
+```
+
+více následuje vzory
+
+---
 # layout: quote
 ---
 

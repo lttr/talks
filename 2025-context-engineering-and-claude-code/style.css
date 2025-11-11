@@ -186,9 +186,28 @@ button[title="Run code"] {
 }
 
 /* Geometric bullet points */
-.slidev-layout ul li::marker {
+.slidev-layout ul > li::marker {
   content: "◆ ";
   color: var(--vhs-purple);
+}
+
+/* Second level bullets as circles */
+.slidev-layout ul > li > ul {
+  list-style-type: disc;
+}
+
+.slidev-layout ul > li > ul > li::marker {
+  content: normal;
+}
+
+/* List spacing */
+.slidev-layout ul > li {
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout ul > li > ul > li {
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 /* VHS badge-style elements */
