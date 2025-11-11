@@ -79,10 +79,20 @@ htmlAttrs:
 </div>
 
 ---
-layout: quote
+layout: center
 ---
 
-# DEMO: Claude.ai Chat
+# DEMO - Claude Desktop Chat
+
+## Task: Personalised YouTube Summary
+
+---
+
+<img src="/claude-project.png" alt="Claude Project" class="max-h-full max-w-full object-contain mx-auto" />
+
+---
+
+<img src="/claude-youtube-summary.png" alt="Claude YouTube Summary" class="max-h-full max-w-full object-contain mx-auto" />
 
 ---
 layout: two-cols-header
@@ -121,7 +131,15 @@ více odvozuje
 více následuje vzory
 
 ---
-# layout: quote
+layout: center
+---
+
+# DEMO - Claude Code
+
+## Task: Vytvoření nové funkce ve webové aplikaci
+
+---
+layout: quote
 ---
 
 <h1 class="text-center mt-10">
