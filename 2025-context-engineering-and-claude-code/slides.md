@@ -36,16 +36,37 @@ htmlAttrs:
 
 # Vývoj modelů 2025
 
-<v-clicks>
+<div v-click="1">
 
-- chytřejší model
+- chytřejší modely
   - méně záleží na promptu
   - více na kontextu
+
+</div>
+
+<div v-click="3" class="mt-37">
+
 - více nástrojů
   - více dat
   - více šumu
 
-</v-clicks>
+</div>
+
+<div v-click="2" class="absolute left-20 top-55">
+  <img src="/commit-command.png" alt="Commit command" class="h-22" />
+</div>
+
+<div v-click="4" class="absolute right-110 top-30">
+  <img src="/tools-1.png" alt="Tools 1" />
+</div>
+
+<div v-click="4" class="absolute right-40 top-35">
+  <img src="/tools-2.png" alt="Tools 2" />
+</div>
+
+<div v-click="4" class="absolute right-30 top-90">
+  <img src="/tools-3.png" alt="Tools 3" />
+</div>
 
 ---
 
