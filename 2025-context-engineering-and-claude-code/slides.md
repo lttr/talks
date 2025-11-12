@@ -69,6 +69,14 @@ htmlAttrs:
 </div>
 
 ---
+layout: center
+---
+
+# context engineering
+
+<h2>Je jako čtení knihy</h2>
+
+---
 
 <FullHeightImage>
   <img src="/anthropic-context-vs-prompt.png" alt="Context vs Prompt" />
