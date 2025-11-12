@@ -139,6 +139,43 @@ layout: center
 ## Task: Vytvoření nové funkce ve webové aplikaci
 
 ---
+layout: two-cols-header
+---
+
+::left::
+
+**Claude Chat - Project**
+
+- Claude's system prompt
+- System tools
+- User's prompt
+
+<hr class="m-5! max-w-50">
+
+- User's instructions
+- User's memory
+- Project's memory
+- MCP tools
+- Project instructions
+- Project files
+- Message history
+
+::right::
+
+**Claude Code's context**
+
+- Claude Code's system prompt
+- System tools
+- Memory files (user, project, folder specific)
+- MCP tools definitions
+- Custom commands
+- Skills descriptions
+- Agents descriptions
+- File references
+- Message history
+- User's prompt
+
+---
 layout: quote
 ---
 
