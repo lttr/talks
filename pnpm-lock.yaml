@@ -73,6 +73,15 @@ importers:
         specifier: ^3.5.13
         version: 3.5.21(typescript@5.9.2)
 
+  2025-context-engineering-and-claude-code:
+    devDependencies:
+      '@vue/compiler-sfc':
+        specifier: ^3.5.13
+        version: 3.5.21
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.21(typescript@5.9.2)
+
   2025-css-is-getting-better-for-quanti:
     devDependencies:
       '@vue/compiler-sfc':
