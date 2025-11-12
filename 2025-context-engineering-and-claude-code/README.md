@@ -1,8 +1,8 @@
 ---
 title: Context Engineering and Claude Code
-date: 2025-11-15
+date: 2025-11-12
 lang: czech
-image:
+image: cover.svg
 video:
 ---
 
