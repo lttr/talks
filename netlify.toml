@@ -46,3 +46,8 @@
   from = "/2025-context-engineering-and-claude-code/*"
   to = "/2025-context-engineering-and-claude-code/index.html"
   status = 200
+
+[[redirects]]
+  from = "/2026-context-engineering-and-claude-code-students/*"
+  to = "/2026-context-engineering-and-claude-code-students/index.html"
+  status = 200
