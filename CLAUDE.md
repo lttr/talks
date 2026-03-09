@@ -8,7 +8,7 @@ This is a talks repository containing presentation slides built with Slidev. The
 
 ## Development Workflow
 
-- Always use Playwright MCP to check how the edited slides look in the browser
+- Always use browser to check how the edited slides look like
 
 ### Starting Development
 
