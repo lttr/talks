@@ -94,7 +94,7 @@ layout: center
 layout: center
 ---
 
-# DEMO - Claude Desktop Chat
+# DEMO - Claude Chat
 
 ## Task: Personalised YouTube Summary
 
@@ -105,42 +105,6 @@ layout: center
 ---
 
 <img src="/claude-youtube-summary.png" alt="Claude YouTube Summary" class="max-h-full max-w-full object-contain mx-auto" />
-
----
-layout: two-cols-header
----
-
-# Agenti
-
-::left::
-
-**AGENTS.md for Codex**
-
-```text
-# Vue Component Conventions
-
-- Use <script setup lang="ts"> so
-  setup context stays type-safe.
-
-- Reach for ref() before reactive()
-  for simpler reactivity.
-```
-
-více odvozuje
-
-::right::
-
-**CLAUDE.md for Claude**
-
-```text
-# Vue Components
-
-- ALWAYS use `<script setup lang="ts">`
-
-- PREFER ref() over reactive()
-```
-
-více následuje vzory
 
 ---
 layout: center
@@ -156,7 +120,7 @@ layout: two-cols-header
 
 ::left::
 
-**Claude Chat - Project**
+**Claude Chat - project**
 
 - Claude's system prompt
 - System tools
