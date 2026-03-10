@@ -30,11 +30,9 @@ htmlAttrs:
   <div class="text-xl font-semibold text-gray-600"><span class="line-through">Software</span> Context engineer</div>
 </div>
 
-<div class="absolute left-16 bottom-16 flex items-center gap-3">
-  <img src="/quanti.png" class="h-16" alt="Quanti" />
 </div>
 
-</div>
+<img src="/quanti.png" class="absolute right-16 bottom-16 h-20" alt="Quanti" />
 
 ---
 
@@ -168,6 +166,6 @@ layout: quote
 
 &#8594; https://lukastrumm.com/talks
 
-<div class="absolute left-16 bottom-16 flex items-center gap-3">
-  <img src="/quanti.png" class="h-16" alt="Quanti" />
+<div class="absolute right-16 bottom-16 flex items-center gap-3">
+  <img src="/quanti.png" class="h-20" alt="Quanti" />
 </div>

@@ -82,19 +82,13 @@ button[title="Run code"] {
   margin: 2rem 0;
 }
 
-/* Geometric bullet points */
-.slidev-layout ul > li::marker {
-  content: "\25C6 ";
-  color: var(--quanti-plum);
-}
-
-/* Second level bullets as circles */
-.slidev-layout ul > li > ul {
+/* Round bullet points */
+.slidev-layout ul {
   list-style-type: disc;
 }
 
-.slidev-layout ul > li > ul > li::marker {
-  content: normal;
+.slidev-layout ul > li::marker {
+  color: var(--quanti-plum);
 }
 
 /* List spacing */
