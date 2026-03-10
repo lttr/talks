@@ -1,8 +1,7 @@
 ---
-title: Context Engineering and Claude Code
-date: 2025-11-12
+title: Context Engineering and Claude Code for Students
+date: 2026-03-10
 lang: czech
-image: cover.svg
 video:
 ---
 

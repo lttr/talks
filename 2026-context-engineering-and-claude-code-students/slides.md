@@ -5,12 +5,12 @@ author: Lukáš Trumm
 keywords: web,css,tailwind
 colorSchema: light
 themeConfig:
-  primary: "var(--vhs-text)"
+  primary: "#4d1254"
 favicon: https://lukastrumm.com/favicon.ico
 highlighter: shiki
 fonts:
-  sans: "Exo"
-  mono: "JetBrains Mono"
+  sans: "Montserrat"
+  mono: "Fira Mono"
 htmlAttrs:
   lang: cs
 ---
@@ -19,7 +19,7 @@ htmlAttrs:
 
 <div class="mb-20">
   <h1 class="text-7xl font-bold mb-6 leading-none">
-    <div class="text-gray-800 mb-2 flex items-center justify-center gap-5">
+    <div class="mb-2 flex items-center justify-center gap-5">
         Ovládání kontextu<br>a Claude Code
       </div>
   </h1>
@@ -28,6 +28,10 @@ htmlAttrs:
 <div class="absolute bottom-6 text-center">
   <div class="text-3xl font-semibold text-gray-700">Lukáš Trumm</div>
   <div class="text-xl font-semibold text-gray-600"><span class="line-through">Software</span> Context engineer</div>
+</div>
+
+<div class="absolute left-16 bottom-16 flex items-center gap-3">
+  <img src="/quanti.png" class="h-16" alt="Quanti" />
 </div>
 
 </div>
@@ -200,8 +204,6 @@ layout: quote
 
 &#8594; https://lukastrumm.com/talks
 
-<div class="absolute right-16 bottom-16 text-right">
-
-  <PoweredBySlidev />
-
+<div class="absolute left-16 bottom-16 flex items-center gap-3">
+  <img src="/quanti.png" class="h-16" alt="Quanti" />
 </div>
